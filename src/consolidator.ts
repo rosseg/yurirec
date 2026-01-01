@@ -31,6 +31,5 @@ export default class Consolidator{
 				this.pairings.add(rating);
 			}
 		}
-		console.log(this.ratings, this.tags);
 	}
 }

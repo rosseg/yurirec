@@ -316,7 +316,6 @@ export default class Root extends Page{
 	SetFilters(){
 		{
 			const landmines = this.Element.querySelector(".list.landmines");
-			console.log(Consolidator.landmines)
 			const ls = Array.from(Consolidator.landmines);;
 			for (let i = 0; i < ls.length; i++){
 				landmines.append(this.AddFilter(ls[i], this.landmines[ls[i]] ?? undefined, (r, t)=>{
@@ -445,7 +444,6 @@ export default class Root extends Page{
 						}else{
 							this.ratingDir *= -1;
 						}
-						console.log(this.ratingDir);
 					}else{
 						this.rating = ls[i];
 						this.ratingDir = 1;

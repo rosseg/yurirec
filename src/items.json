@@ -1,6 +1,37 @@
 [
 	{
 		"names":{
+			"jp":"やがて君になる",
+			"romanized":"Yagate Kimi ni Naru",
+			"en":"Bloom Into You"
+		},
+		"added": "24-02-2026",
+		"type":"manga",
+		"pairings": {
+			"lesbian" : 10
+		},
+		"short":"Unrequited Kouhai x Senpai",
+		"description":"Kouhai fantasizes about having her own Shoujo love story, but feels nothing when confessed to by a boy. When her beautiful senpai suddenly confesses to her, will her shoujo romance begin?",
+		"length": "long",
+		"status": "completed",
+		"targets": [],
+		"image":"./assets/bloom_into_you_cover.jpg",
+		"recommendations":{
+			"priestess' reverence": 9.0,
+			"uniqueness": 6.0,
+			"intensity": 9.0,
+			"story": 8.5,
+			"romance": 9.0,
+			"horny": 5.0,
+			"wholesome": 8.0,
+			"toxic": 5.0,
+			"art": 8.0
+			
+		},
+		"tags":["romance", "school life", "slice of life"]
+	},
+	{
+		"names":{
 			"jp":"君と綴るうたかた",
 			"romanized":"Kimi to Tsuzuru Utakata",
 			"en":"The Summer You Were There"

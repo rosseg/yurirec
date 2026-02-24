@@ -5,6 +5,7 @@
 			"romanized":"Yagate Kimi ni Naru",
 			"en":"Bloom Into You"
 		},
+		"mangadex": "https://mangadex.org/title/69060a67-1d4e-4110-9d29-838bfd99917f/bloom-into-you",
 		"added": "24-02-2026",
 		"type":"manga",
 		"pairings": {
@@ -24,12 +25,47 @@
 			"romance": 9.0,
 			"horny": 5.0,
 			"wholesome": 8.0,
-			"toxic": 5.0,
+			"toxic": 6.0,
 			"art": 8.0
 			
 		},
-		"tags":["romance", "school life", "slice of life"]
+		"tags":["romance", "school life", "slice of life", "drama"]
 	},
+	{
+		"names":{
+			"jp":"やがて君になる",
+			"romanized":"Qīn'ài De Sǐduìtóu",
+			"en":"My Dearest Nemesis"
+		},
+		"mangadex": "https://mangadex.org/title/32f887f1-824f-4dbc-8e15-70a5b0b8112a/qin-ai-de-siduitou",
+		"added": "24-02-2026",
+		"type":"manhua",
+		"pairings": {
+			"lesbian" : 10
+		},
+		"short":"rival director x rival director",
+		"description":"The whole company knew that they they were polar opposites who fought like cats and dogs. Yet during the year-end party, the wall between them shattered after they got drunk! And so the two of them went from always being close to going off on each other to feeling very strange things following the accidental mishap...",
+		"length": "long",
+		"status": "completed",
+		"targets": [],
+		"image":"./assets/my_dearest_nemesis_cover.jpg",
+		"recommendations":{
+			"priestess' reverence": 8.5,
+			"uniqueness": 7.0,
+			"intensity": 8.0,
+			"story": 8.0,
+			"romance": 8.0,
+			"comedy": 5.0,
+			"horny": 7.0,
+			"kinky": 6.0,
+			"wholesome": 7.0,
+			"toxic": 6.0,
+			"art": 8.5
+			
+		},
+		"tags":["romance", "office workers", "slice of life", "drama", "comedy"]
+	},
+
 	{
 		"names":{
 			"jp":"君と綴るうたかた",

@@ -5,6 +5,14 @@
 			"romanized":"Yagate Kimi ni Naru",
 			"en":"Bloom Into You"
 		},
+		"author":{
+			"jp":"仲谷鳰",
+			"romanized":"NAKATANI Nio"
+		},
+		"artist":{
+			"jp":"仲谷鳰",
+			"romanized":"NAKATANI Nio"
+		},
 		"mangadex": "https://mangadex.org/title/69060a67-1d4e-4110-9d29-838bfd99917f/bloom-into-you",
 		"added": "24-02-2026",
 		"type":"manga",
@@ -13,7 +21,7 @@
 		},
 		"short":"Unrequited Kouhai x Senpai",
 		"description":"Kouhai fantasizes about having her own Shoujo love story, but feels nothing when confessed to by a boy. When her beautiful senpai suddenly confesses to her, will her shoujo romance begin?",
-		"length": "long",
+		"length": "medium",
 		"status": "completed",
 		"targets": [],
 		"image":"./assets/bloom_into_you_cover.jpg",
@@ -33,9 +41,17 @@
 	},
 	{
 		"names":{
-			"jp":"やがて君になる",
+			"cn":"亲爱的死对头",
 			"romanized":"Qīn'ài De Sǐduìtóu",
 			"en":"My Dearest Nemesis"
+		},
+		"author":{
+			"cn":"闲君",
+			"romanized":"Xian Jun"
+		},
+		"artist":{
+			"cn":"闲君",
+			"romanized":"Xian Jun"
 		},
 		"mangadex": "https://mangadex.org/title/32f887f1-824f-4dbc-8e15-70a5b0b8112a/qin-ai-de-siduitou",
 		"added": "24-02-2026",
@@ -43,9 +59,9 @@
 		"pairings": {
 			"lesbian" : 10
 		},
-		"short":"rival director x rival director",
+		"short":"rival directors going at it",
 		"description":"The whole company knew that they they were polar opposites who fought like cats and dogs. Yet during the year-end party, the wall between them shattered after they got drunk! And so the two of them went from always being close to going off on each other to feeling very strange things following the accidental mishap...",
-		"length": "long",
+		"length": "medium",
 		"status": "completed",
 		"targets": [],
 		"image":"./assets/my_dearest_nemesis_cover.jpg",
@@ -64,6 +80,77 @@
 			
 		},
 		"tags":["romance", "office workers", "slice of life", "drama", "comedy"]
+	},
+	{
+		"names":{
+			"en":"I Love Amy",
+			"romanized": "Naneun Amy-reul Saranghae",
+			"kr": "나는 에이미를 사랑해"
+		},
+		"added": "24-02-2026",
+		"type":"manhwa",
+		"author":{
+			"romanized":"UNNI",
+			"kr":"언니"
+		},
+		"artist":{
+			"romanized":"UNNI",
+			"kr":"언니"
+		},
+		"mangadex":"https://mangadex.org/title/52ab10b8-d539-4839-9b31-7937fb08c813/i-love-amy)-",
+		"pairings": {
+			"lesbian" : 10.0
+		},
+		"short":" yandere \"straight\" stalker x shy girl",
+		"description":"Bibi is obsessed with Peter, the prince of the school. When she spots Amy next to him, she starts to feel jealous. She invites Amy to her house to warn her, but instead takes a liking to the girl. They agree to be friends on the condition that Amy has to help Bibi confess.",
+		"length": "medium",
+		"status": "completed",
+		"targets":[],
+		"image":"./assets/i_love_amy_cover.jpg",
+		"recommendations":{
+			"priestess' reverence": 8.5,
+			"uniqueness": 9.0,
+			"intensity": 8.0,
+			"story": 8.5,
+			"romance": 8.0,
+			"comedy": 5.0,
+			"kinky": 7.0,
+			"wholesome": 8.0,
+			"toxic":5.0,
+			"art": 9.5
+			
+		},
+		"landmines": ["family trauma"],
+		"tags":["romance", "slice of life", "stalker", "yandere", "school life", "full colour"],
+		"spoiler tags":["friends to lovers"]
+	},
+		{
+		"names":{
+			"jp":"負けませんからと言い張る顔のいい女の子を、全力で屈服させる百合のお話",
+			"romanized":"Makemasen kara to Iiharu Kao no Ii Onnanoko wo, Zenryoku de Kuppuku Saseru Yuri no Ohanashi",
+			"en":""
+		},
+		"added": "31-12-2025",
+		"type":"manga",
+		"pairings": {
+			"lesbian" : 10
+		},
+		"short":"Switch x Bottom",
+		"description":"Two girls compete to see which one is the top and who is the bottom. Of the class. And eachother.",
+		"length": "short",
+		"status": "in progress",
+		"targets": ["lotte"],
+		"image":"./assets/4a129246246b2c1bbb27e957b220c37e645b34ea_600_600_69396.webp",
+		"recommendations":{
+			"horny": 9.5,
+			"comedy": 7.0,
+			"uniqueness": 7.0,
+			"intensity": 6.0,
+			"freaky": 8.0,
+			"art": 6.0,
+			"story": 6.0
+		},
+		"tags":["romance", "bdsm", "school life", "slice of life"]
 	},
 
 	{
@@ -577,32 +664,6 @@
 		},
 		"landmines": [],
 		"tags":["romance", "crime", "drama", "owner/pet", "dog"]
-	},{
-		"names":{
-			"en":"I Love Amy"
-		},
-		"added": "31-12-2025",
-		"type":"manhwa",
-		"author":"unni",
-		"pairings": {
-			"lesbian" : 10.0
-		},
-		"short":"stalker turns into yuri",
-		"description":"",
-		"length": "medium",
-		"status": "completed",
-		"targets": ["lotte"],
-		"image":"./assets/733f7365-20a6-4d05-9ecf-f40a6a583b85.jpg",
-		"recommendations":{
-			"uniqueness": 9.5,
-			"intensity": 8.5,
-			"freaky": 6.0,
-			"romance": 9.0,
-			"art": 9.5,
-			"story": 8.5
-		},
-		"landmines": [],
-		"tags":["romance", "slice of life", "stalker", "school life"]
 	},{
 		"names":{
 			"jp":"コンカフェ嬢は恋を着る",

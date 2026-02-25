@@ -22,7 +22,7 @@ module.exports = merge(common,
 			hot: "only",
 			historyApiFallback: true,
 		// writeToDisk: true,
-			port:9090,
+			port:8080,
 			watchFiles:["./**/*.ts", "./**/*.html", "../Server/**/*.ts"],
 			static: { 
 				directory: path.resolve(__dirname, './assets'), 

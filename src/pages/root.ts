@@ -256,8 +256,8 @@ export default class Root extends Page{
 		cloned = this.Filter(cloned, "pairings");
 		cloned = this.Filter(cloned, "type", true);
 		if (this.onlyNew){
-			//cloned = cloned.filter((a)=>a.added == Consolidator.latestDate);
-			cloned = cloned.filter((a)=>this.IsNew(a) != Newness.NOT_NEW);
+			cloned = cloned.filter((a)=>a.added == Consolidator.latestDate);
+			//cloned = cloned.filter((a)=>this.IsNew(a) != Newness.NOT_NEW);
 		}
 		for (let i = 0; i < cloned.length; i++){
 			const item = cloned[i];
@@ -266,12 +266,13 @@ export default class Root extends Page{
 			let elem = Template.Clone(article);
 			
 			elem.classList.add("medium")
-			elem.classList.add("ltTwoWeeksNew");
-			elem.classList.add("ltOneMonthNew");
+			//elem.classList.add("ltTwoWeeksNew");
+			//elem.classList.add("ltOneMonthNew");
 			//TODO fix how new is designated
-			elem.classList.toggle("new", this.IsNew(item) != Newness.NOT_NEW);
-			elem.classList.toggle("ltTwoWeeksNew", this.IsNew(item) == Newness.LT_TW0_WEEKS_OLDER);
-			elem.classList.toggle("ltOneMonthNew", this.IsNew(item) == Newness.LT_ONE_MONTH_OLDER);
+			//elem.classList.toggle("new", this.IsNew(item) != Newness.NOT_NEW);
+			elem.classList.toggle("new", item.added == Consolidator.latestDate);
+		//elem.classList.toggle("ltTwoWeeksNew", this.IsNew(item) == Newness.LT_TW0_WEEKS_OLDER);
+			//elem.classList.toggle("ltOneMonthNew", this.IsNew(item) == Newness.LT_ONE_MONTH_OLDER);
 			
 			elem.querySelector("img").src = item.image;
 			elem.querySelector(".desc").innerHTML = convertText(item.description);
@@ -551,30 +552,30 @@ export default class Root extends Page{
 		}
 	}
 
-	IsNew(i) : Newness {
+	// IsNew(i) : Newness {
 		
-		let mrDate : string = Consolidator.latestDate;
+	// 	let mrDate : string = Consolidator.latestDate;
 	
-		let itemYear : number = +mrDate.substring(8);
-		let itemMonth : number = +mrDate.substring(3, 2);
-		let itemDay : number = +mrDate.substring(0, 2);
+	// 	let itemYear : number = +mrDate.substring(8);
+	// 	let itemMonth : number = +mrDate.substring(3, 2);
+	// 	let itemDay : number = +mrDate.substring(0, 2);
 
-		let mostRecentDay : number = (itemYear - 1) * 360 + (itemMonth - 1) * 30 + itemDay;
+	// 	let mostRecentDay : number = (itemYear - 1) * 360 + (itemMonth - 1) * 30 + itemDay;
 
 	
-		let iYear : number = +i.added.substring(8);
-		let iMonth : number = +i.added.substring(3, 2);
-		let iDay : number = +i.added.substring(0, 2);
+	// 	let iYear : number = +i.added.substring(8);
+	// 	let iMonth : number = +i.added.substring(3, 2);
+	// 	let iDay : number = +i.added.substring(0, 2);
 
-		let iTotal = (iYear - 1) * 360 + (iMonth - 1) * 30 + iDay;
+	// 	let iTotal = (iYear - 1) * 360 + (iMonth - 1) * 30 + iDay;
 
-		let diff : number = mostRecentDay - iTotal;
+	// 	let diff : number = mostRecentDay - iTotal;
 
-		if (diff == 0) return Newness.MOST_RECENT;
-		if (diff <= 14) return Newness.LT_TW0_WEEKS_OLDER;
-		if (diff <= 31) return Newness.LT_ONE_MONTH_OLDER;
-		return Newness.NOT_NEW;
-	}
+	// 	if (diff == 0) return Newness.MOST_RECENT;
+	// 	if (diff <= 14) return Newness.LT_TW0_WEEKS_OLDER;
+	// 	if (diff <= 31) return Newness.LT_ONE_MONTH_OLDER;
+	// 	return Newness.NOT_NEW;
+	// }
 
 	
 }

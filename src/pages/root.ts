@@ -269,7 +269,7 @@ export default class Root extends Page{
 			elem.classList.add("ltTwoWeeksNew");
 			elem.classList.add("ltOneMonthNew");
 			//TODO fix how new is designated
-			elem.classList.toggle("new", item.added == Consolidator.latestDate);
+			elem.classList.toggle("new", this.IsNew(item) != Newness.NOT_NEW);
 			elem.classList.toggle("ltTwoWeeksNew", this.IsNew(item) == Newness.LT_TW0_WEEKS_OLDER);
 			elem.classList.toggle("ltOneMonthNew", this.IsNew(item) == Newness.LT_ONE_MONTH_OLDER);
 			

@@ -31,11 +31,10 @@
 			"uniqueness": 6.0,
 			"intensity": 9.0,
 			"story": 8.5,
-			"romance": 9.0,
-			"horny": 5.0,
+			"romance": 8.5,
 			"wholesome": 8.0,
-			"toxic": 6.0,
-			"art": 8.0
+			"toxic": 6.0
+			
 			
 		},
 		"tags":["romance", "school life", "slice of life", "drama"]
@@ -71,13 +70,9 @@
 			"priestess' reverence": 8.5,
 			"uniqueness": 7.0,
 			"intensity": 8.0,
-			"story": 8.0,
 			"romance": 8.0,
-			"comedy": 5.0,
 			"horny": 7.0,
-			"kinky": 6.0,
-			"wholesome": 7.0,
-			"toxic": 6.0,
+			"toxic": 5.0,
 			"art": 8.5
 			
 		},
@@ -99,7 +94,7 @@
 			"romanized":"UNNI",
 			"kr":"언니"
 		},
-		"mangadex":"https://mangadex.org/title/52ab10b8-d539-4839-9b31-7937fb08c813/i-love-amy)-",
+		
 		"pairings": {
 			"lesbian" : 10.0
 		},
@@ -113,19 +108,43 @@
 		"recommendations":{
 			"priestess' reverence": 8.5,
 			"uniqueness": 9.0,
-			"intensity": 8.0,
+			"intensity": 8.5,
 			"story": 8.5,
 			"romance": 8.0,
-			"comedy": 5.0,
-			"kinky": 7.0,
-			"wholesome": 8.0,
-			"toxic":5.0,
 			"art": 9.5
 			
 		},
 		"landmines": ["family trauma"],
 		"tags":["romance", "slice of life", "stalker", "yandere", "school life", "full colour"],
 		"spoiler tags":["friends to lovers"]
+	},
+
+	{
+		"names":{
+			"en": "A Lying Bride's Case for Same-Sex Marriage",
+			"romanized":"Usotsuki Hanayome to Dousei Kekkon-ron",
+			"jp": "嘘つき花嫁と同性結婚論"
+		},
+		"added": "18-03-2026",
+		"type":"manga",
+		"author":"Kodama Naoko",
+		"pairings": {
+			"lesbian" : 10.0
+		},
+		"short":"lesbian x married girl",
+		"description":"",
+		"length": "short",
+		"status": "completed",
+		"targets": [],
+		"image":"./assets/lying_bride_cover.jpg",
+		"recommendations":{
+			"priestess' reverence": 7.5,
+			"uniqueness": 7.0,
+			"intensity": 8.5,
+			"romance": 7.0,
+			"toxic": 5.0
+		},
+		"landmines": [], 
+		"tags": ["romance", "drama", "office", "slice of life"]
 	}
-	
 ]

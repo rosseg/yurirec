@@ -1747,6 +1747,42 @@
 		"landmines": [], 
 		"tags": ["romance", "drama", "road trip","\"slice of life\""]
 	}
+	,
+	{
+		"names":{
+			
+			"en":"Not So Shoujo Love Story"
+		},
+		"author":{
+			"en": "Curryuku"
+		},
+		"artist":{
+			"en": "Curryuku"
+		},
+		"added": "19-03-2026",
+		"type":"webtoon",
+		"pairings": {
+			"lesbian" : 10
+		},
+		"short": "shoujo-obsessed girl x persistent girl with a crush on her",
+		"description":"",
+		
+		"status": "hiatus",
+		"targets": [],
+		"image":"./assets/not_so_shoujo_cover2.jpg",
+		"recommendations":{
+			"priestess' reverence": 9.6,
+			"uniqueness": 6.0,
+			"intensity": 9.0,
+			"romance": 9.5,
+			"wholesome": 9.0,
+			"comedy": 6.0,
+			"art": 9.5
+			
+			
+		},
+		"tags":["romance", "comedy", "school life", "slice of life"]
+	}
 	,{
 		"names":{
 			"en": "After the Curtain Call",

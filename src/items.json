@@ -173,5 +173,35 @@
 		},
 		"landmines": [], 
 		"tags": ["romance", "drama", "slice of life", "time travel", "school life", "full colour" ]
+	},
+	
+	{
+		"names":{
+			"en":"Not So Shoujo Love Story"
+		},
+		"added": "19-03-2026",
+		"author": "Curryuku",
+		"artist": "Curryuku",
+		
+		"type":"webtoon",
+		"pairings": {
+			"lesbian" : 10
+		},
+		"short": "shoujo-obsessed girl x persistent girl with a crush on her",
+		"description":"",
+		"length":"long",
+		"status": "hiatus",
+		"targets": [],
+		"image":"./assets/not_so_shoujo_cover2.jpg",
+		"recommendations":{
+			"priestess' reverence": 9.6,
+			"uniqueness": 6.0,
+			"intensity": 9.0,
+			"romance": 9.5,
+			"wholesome": 9.0,
+			"comedy": 6.0,
+			"art": 9.5
+		},
+		"tags":["romance", "comedy", "school life", "\"slice of life"]
 	}
 ]

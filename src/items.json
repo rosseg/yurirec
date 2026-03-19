@@ -2,7 +2,7 @@
 	{
 		"names":{
 			"jp":"やがて君になる",
-			"romanized":"Yagate Kimi ni Naru",
+			"romanized-jp":"Yagate Kimi ni Naru",
 			"en":"Bloom Into You"
 		},
 		"author":{
@@ -13,7 +13,6 @@
 			"jp":"仲谷鳰",
 			"romanized":"NAKATANI Nio"
 		},
-		"mangadex": "https://mangadex.org/title/69060a67-1d4e-4110-9d29-838bfd99917f/bloom-into-you",
 		"added": "20-01-2026",
 		"type":"manga",
 		"pairings": {
@@ -42,16 +41,16 @@
 	{
 		"names":{
 			"cn":"亲爱的死对头",
-			"romanized":"Qīn'ài De Sǐduìtóu",
+			"romanized-cn":"Qīn'ài De Sǐduìtóu",
 			"en":"My Dearest Nemesis"
 		},
 		"author":{
 			"cn":"闲君",
-			"romanized":"Xian Jun"
+			"romanized-cn":"Xian Jun"
 		},
 		"artist":{
 			"cn":"闲君",
-			"romanized":"Xian Jun"
+			"romanized-cn":"Xian Jun"
 		},
 		"mangadex": "https://mangadex.org/title/32f887f1-824f-4dbc-8e15-70a5b0b8112a/qin-ai-de-siduitou",
 		"added": "12-02-2026",
@@ -81,7 +80,7 @@
 	{
 		"names":{
 			"en":"I Love Amy",
-			"romanized": "Naneun Amy-reul Saranghae",
+			"romanized-kr": "Naneun Amy-reul Saranghae",
 			"kr": "나는 에이미를 사랑해"
 		},
 		"added": "24-02-2026",
@@ -122,7 +121,7 @@
 	{
 		"names":{
 			"en": "A Lying Bride's Case for Same-Sex Marriage",
-			"romanized":"Usotsuki Hanayome to Dousei Kekkon-ron",
+			"romanized-jp":"Usotsuki Hanayome to Dousei Kekkon-ron",
 			"jp": "嘘つき花嫁と同性結婚論"
 		},
 		"added": "18-03-2026",
@@ -146,5 +145,33 @@
 		},
 		"landmines": [], 
 		"tags": ["romance", "drama", "office", "slice of life"]
+	},
+	{
+		"names":{
+			"en": "Soulmate"
+			
+		},
+		"added": "19-03-2026",
+		"type":"manhua",
+		"author":"Wenzhi Lizi (文枝栗子), Ke Ran Bing (可燃冰)",
+		"pairings": {
+			"lesbian" : 10.0
+		},
+		"short":"girl who's 17 and 27-year-old self hasve swapped bodies tries to save sick gf",
+		"description":"",
+		"length": "medium",
+		"status": "completed",
+		"targets": [],
+		"image":"./assets/soulmate_cover.jpg",
+		"recommendations":{
+			"priestess' reverence": 8.4,
+			"uniqueness": 8.0,
+			"intensity": 8.5,
+			"story":8.0,
+			"romance": 8.5,
+			"wholesome": 9.0
+		},
+		"landmines": [], 
+		"tags": ["romance", "drama", "slice of life", "time travel", "school life", "full colour" ]
 	}
 ]

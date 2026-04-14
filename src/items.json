@@ -251,6 +251,37 @@
 		"landmines":["abuse", "sexual violence"],
 		"tags":["sci-fi", "androids", "drama", "romance", "Boy's Love", "Not Yuri", "dark", "intersex", "disability"],
 		"spoiler-y tags":["poly"]
+	},
+
+	{
+		"names":{
+			"en":"PaperTeeth!"
+		},
+		"added": "19-03-2026",
+		"authors": ["Wulvert"],
+		"artists": ["Wulvert"],
+		
+		"type":"webtoon",
+		"pairings": {
+			"lesbian" : "TBD"
+		},
+		"short": "vampire hunter gets turned into a vampire",
+		"description":"",
+		"length":"long",
+		"status": "ongoing",
+		"targets": [],
+		"image":"./assets/paperteeth_cover.webp",
+		"recommendations":{
+			"priestess' reverence": 9.0,
+			"uniqueness": 9.0,
+			"intensity": 8.5,
+			"story": 8.0,
+			"comedy":9.0,
+			"art": 9.0
+		},
+		"landmines":["blood"],
+		"tags":["comedy", "vampires", "drama", "Yuri TBD"],
+		"spoiler-y tags":[]
 	}
 	
 ]

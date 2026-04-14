@@ -5,14 +5,8 @@
 			"romanized-jp":"Yagate Kimi ni Naru",
 			"en":"Bloom Into You"
 		},
-		"author":{
-			"jp":"仲谷鳰",
-			"romanized":"NAKATANI Nio"
-		},
-		"artist":{
-			"jp":"仲谷鳰",
-			"romanized":"NAKATANI Nio"
-		},
+		"authors":["NAKATANI Nio (仲谷鳰)"],
+		"artists":["NAKATANI Nio (仲谷鳰)"],
 		"added": "20-01-2026",
 		"type":"manga",
 		"pairings": {
@@ -44,15 +38,10 @@
 			"romanized-cn":"Qīn'ài De Sǐduìtóu",
 			"en":"My Dearest Nemesis"
 		},
-		"author":{
-			"cn":"闲君",
-			"romanized-cn":"Xian Jun"
-		},
-		"artist":{
-			"cn":"闲君",
-			"romanized-cn":"Xian Jun"
-		},
-		"mangadex": "https://mangadex.org/title/32f887f1-824f-4dbc-8e15-70a5b0b8112a/qin-ai-de-siduitou",
+		"authors":["Xian Jun (闲君)"],
+
+		"artists":["Xian Jun (闲君)"],
+		
 		"added": "12-02-2026",
 		"type":"manhua",
 		"pairings": {
@@ -85,14 +74,8 @@
 		},
 		"added": "24-02-2026",
 		"type":"manhwa",
-		"author":{
-			"romanized":"UNNI",
-			"kr":"언니"
-		},
-		"artist":{
-			"romanized":"UNNI",
-			"kr":"언니"
-		},
+		"authors":["UNNI (언니)"],
+		"artists":["UNNI (언니)"],
 		
 		"pairings": {
 			"lesbian" : 10.0
@@ -126,7 +109,8 @@
 		},
 		"added": "18-03-2026",
 		"type":"manga",
-		"author":"Kodama Naoko",
+		"authors":["Kodama Naoko"],
+		"artists":["Kodama Naoko"],
 		"pairings": {
 			"lesbian" : 10.0
 		},
@@ -153,7 +137,8 @@
 		},
 		"added": "19-03-2026",
 		"type":"manhua",
-		"author":"Wenzhi Lizi (文枝栗子), Ke Ran Bing (可燃冰)",
+		"authors":["Ke Ran Bing (可燃冰)", "Wenzhi Lizi (文枝栗子)"],
+		"artists":["Wenzhi Lizi (文枝栗子)"],
 		"pairings": {
 			"lesbian" : 10.0
 		},
@@ -180,8 +165,8 @@
 			"en":"Not So Shoujo Love Story"
 		},
 		"added": "19-03-2026",
-		"author": "Curryuku",
-		"artist": "Curryuku",
+		"authors": ["Curryuku"],
+		"artists": ["Curryuku"],
 		
 		"type":"webtoon",
 		"pairings": {
@@ -211,14 +196,14 @@
 			"en":"Muted"
 		},
 		"added": "19-03-2026",
-		"author": "Miranda Mundt",
-		"artist": "Miranda Mundt",
+		"authors": ["Miranda Mundt"],
+		"artists": ["Miranda Mundt"],
 		
 		"type":"webtoon",
 		"pairings": {
 			"lesbian" : 10
 		},
-		"short": "witch from rival family x witch x ?",
+		"short": "witch x witch from rival family",
 		"description":"a witch's coming-of-age ceremony threatens to expose family secrets",
 		"length":"long",
 		"status": "completed",
@@ -233,7 +218,39 @@
 			"art": 10.0
 		},
 		"landmines":["family trauma", "abusive parental figure"],
-		"tags":["witches", "drama", "urban fantasy", "romance", "poly", "dark" ]
+		"tags":["witches", "drama", "urban fantasy", "romance", "dark" ],
+		"spoiler-y tags":["poly"]
+	},
+
+	{
+		"names":{
+			"en":"LoveBot"
+		},
+		"added": "19-03-2026",
+		"authors": ["Chase Keels","Miranda Mundt"],
+		"artists": ["Miranda Mundt"],
+		
+		"type":"webtoon",
+		"pairings": {
+			"gay" : 10
+		},
+		"short": "LoveBot x hacker/repairman",
+		"description":"A LoveBot (ahem, affectionate android) becomes sentient after illicit modifications and pandemonium ensues",
+		"length":"long",
+		"status": "completed",
+		"targets": [],
+		"image":"./assets/lovebot_cover.jpg",
+		"recommendations":{
+			"priestess' reverence": 9.5,
+			"uniqueness": 7.0,
+			"intensity": 9.5,
+			"story": 9,
+			"romance": 9,
+			"art": 10.0
+		},
+		"landmines":["abuse", "sexual violence"],
+		"tags":["sci-fi", "androids", "drama", "romance", "Boy's Love", "Not Yuri", "dark", "intersex", "disability"],
+		"spoiler-y tags":["poly"]
 	}
 	
 ]

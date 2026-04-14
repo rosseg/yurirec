@@ -188,7 +188,7 @@
 			"lesbian" : 10
 		},
 		"short": "shoujo-obsessed girl x persistent girl with a crush on her",
-		"description":"",
+		"description":"2 seasons are out, guessing 1 or 2 more on the way",
 		"length":"long",
 		"status": "hiatus",
 		"targets": [],
@@ -202,6 +202,38 @@
 			"comedy": 6.0,
 			"art": 9.5
 		},
-		"tags":["romance", "comedy", "school life", "\"slice of life"]
+		"landmines":[],
+		"tags":["romance", "comedy", "school life", "slice of life"]
+	},
+	
+	{
+		"names":{
+			"en":"Muted"
+		},
+		"added": "19-03-2026",
+		"author": "Miranda Mundt",
+		"artist": "Miranda Mundt",
+		
+		"type":"webtoon",
+		"pairings": {
+			"lesbian" : 10
+		},
+		"short": "witch from rival family x witch x ?",
+		"description":"a witch's coming-of-age ceremony threatens to expose family secrets",
+		"length":"long",
+		"status": "completed",
+		"targets": [],
+		"image":"./assets/muted_cover.jpg",
+		"recommendations":{
+			"priestess' reverence": 8.2,
+			"uniqueness": 7.0,
+			"intensity": 9.0,
+			"story":8.5,
+			"romance": 7.5,
+			"art": 10.0
+		},
+		"landmines":["family trauma", "abusive parental figure"],
+		"tags":["witches", "drama", "urban fantasy", "romance", "poly", "dark" ]
 	}
+	
 ]

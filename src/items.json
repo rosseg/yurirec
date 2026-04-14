@@ -282,6 +282,38 @@
 		"landmines":["blood"],
 		"tags":["comedy", "vampires", "drama", "Yuri TBD"],
 		"spoiler-y tags":[]
+	},
+	{
+		"names":{
+			"en":"Masonry of the Body"
+		},
+		"added": "19-03-2026",
+		"authors": ["Wulvert"],
+		"artists": ["Wulvert"],
+		
+		"type":"webtoon",
+		"pairings": {
+			"lesbian" : 10,
+			"trans": 10
+		},
+		"short": "",
+		"description":"arranged marriage escapee shelters in ominous castle with a masked butler, cold Master, and an unseen wife",
+		"length":"medium",
+		"status": "ongoing",
+		"targets": [],
+		"image":"./assets/masonry_cover.png",
+		"recommendations":{
+			"priestess' reverence": 9.5,
+			"uniqueness": 10.0,
+			"intensity": 9.5,
+			"story": 9.0,
+			"romance":8.0,
+			"toxic": "TBD",
+			"art": 10.0
+		},
+		"landmines":["blood", "gore", "transphobia", "homophobia", "abuse"],
+		"tags":["gothic", "body horror", "drama"],
+		"spoiler-y tags":[]
 	}
 	
 ]

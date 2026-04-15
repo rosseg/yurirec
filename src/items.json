@@ -291,7 +291,7 @@
 		"authors": ["Wulvert"],
 		"artists": ["Wulvert"],
 		
-		"type":"webtoon",
+		"type":"webcomic",
 		"pairings": {
 			"lesbian" : 10,
 			"trans": 10
@@ -314,6 +314,36 @@
 		"landmines":["blood", "gore", "transphobia", "homophobia", "abuse"],
 		"tags":["gothic", "body horror", "drama"],
 		"spoiler-y tags":[]
+	},
+	{
+		"names":{
+			"en": "A Lonely Female CEO Falls for A Lesbian Prostitute in Seconds",
+			"romanized":"Sabishi Sugiru Onna Shachou ga Lesbian Fuuzokujou ni Byou de Ochiru Hanashi",
+			"jp":"寂しすぎる女社長がレズ風俗嬢に秒で落ちる話"
+		},
+		"added": "31-03-2026",
+		"type":"manga",
+		"authors":["6th Manager"],
+		"artists": ["MISAKI Tenmu (みさき天夢)"],
+		"pairings": {
+			"lesbian" : 10.0
+		},
+		"short":"useless lesbian CEO x prostitute",
+		"description":"a bit of a rushed end",
+		"length": "short",
+		"status": "completed",
+		"targets": [],
+		"image":"./assets/lonelyceo_cover.jpg",
+		"recommendations":{
+			"priestess' reverence": 7.5,
+			"uniqueness": 7.0,
+			"intensity": 7.0,
+			"comedy": 5.0,
+			"romance": 8.0,
+			"wholesome": 8.5
+		},
+		"landmines": [], 
+		"tags": ["romance", "slice of life","office workers", "CEO", "sex worker", "suggestive"]
 	}
 	
 ]

@@ -257,7 +257,7 @@ export default class Root extends Page{
 		cloned = this.Filter(cloned, "type", true);
 		if (this.onlyNew){
 			cloned = cloned.filter((a)=>a.added == Consolidator.latestDate);
-			//cloned = cloned.filter((a)=>this.IsNew(a) != Newness.NOT_NEW);
+			
 		}
 		for (let i = 0; i < cloned.length; i++){
 			const item = cloned[i];
@@ -266,13 +266,9 @@ export default class Root extends Page{
 			let elem = Template.Clone(article);
 			
 			elem.classList.add("medium")
-			//elem.classList.add("ltTwoWeeksNew");
-			//elem.classList.add("ltOneMonthNew");
-			//TODO fix how new is designated
-			//elem.classList.toggle("new", this.IsNew(item) != Newness.NOT_NEW);
+
 			elem.classList.toggle("new", item.added == Consolidator.latestDate);
-		//elem.classList.toggle("ltTwoWeeksNew", this.IsNew(item) == Newness.LT_TW0_WEEKS_OLDER);
-			//elem.classList.toggle("ltOneMonthNew", this.IsNew(item) == Newness.LT_ONE_MONTH_OLDER);
+	
 			
 			elem.querySelector("img").src = item.image;
 			elem.querySelector(".desc").innerHTML = convertText(item.description);

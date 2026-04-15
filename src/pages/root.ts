@@ -292,14 +292,15 @@ export default class Root extends Page{
 				max = Math.max(item.recommendations[rec], max);
 			}
 			for (let key in item.recommendations){
-				if (max - item.recommendations[key] < 2.5 || key == this.rating){ 
+				
+				//if (max - item.recommendations[key] < 2.5 || key == this.rating){ 
 					let rating = document.createElement("div");
 					if (key == this.rating){
 						rating.style.fontWeight = "bold";
 					}
 					rating.innerText = key+": "+item.recommendations[key];
 					elem.querySelector(".ratings").append(rating)
-				}
+				//}
 			}
 			elem.querySelector("p").innerHTML = convertText(item.short);
 			const tags = elem.querySelector(".tags");

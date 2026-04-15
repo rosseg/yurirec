@@ -224,13 +224,13 @@
 			display:flex;
 			flex-wrap: wrap;
 			flex-direction: column;
-			justify-content: space-between;
+			
 			min-height:2em;
 			position: relative;
 			width:100%;
 			max-width:calc(260px + 0.5em + 13em);
 			min-width: 0px;
-			align-content: center;
+			align-content: left;
 
 			h2{
 				margin:0em;
@@ -345,13 +345,14 @@
 				font-size:0.8em;
 				margin-bottom:0.5em;
 			}
-			display:inline-flex;
-			flex-direction:column;
+			
 			.top{
-				height:auto;
+				height:max-content;
+				overflow-y: visible;
 			}
 			.bottom{
-				height:auto;
+				height:max-content;
+				overflow-y: visible;
 			}
 
 			.ratings{

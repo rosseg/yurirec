@@ -208,7 +208,7 @@
 				}
 		
 		}
-		.blocktop{
+		.topsection{
 			grid-row: 1;
 			grid-column: 1 / 3;
 			display:flex;
@@ -266,7 +266,7 @@
 			max-width:13em;
 			height:calc(370px);
 			
-			.top{
+			.topdata{
 				height:max-content;
 				overflow-y: visible;
 				.pairings{
@@ -341,7 +341,7 @@
 					margin-bottom:0.5em;
 				}
 			}
-			.bottom{
+			.btmsection{
 				height:max-content;
 				overflow-y: visible;
 				.ratings{
@@ -367,7 +367,7 @@
 		}
 		
 		
-		.blockbtm{
+		.btmsection{
 			grid-row: 3;
 			grid-column: 1 / 3;
 			display:block;
@@ -408,7 +408,7 @@
 			}
 		}
 	}
-	@media (max-width: 1000px) {
+	@media (max-width: 48rem) {
 		article:nth-child(2n){
 			flex-direction:row-reverse;
 		}
@@ -448,7 +448,7 @@
 			margin-left:0px;
 			margin-right:0px;
 
-			.blocktop{
+			.topsection{
 				
 				display:flex;
 				flex-wrap: wrap;
@@ -462,19 +462,42 @@
 
 				align-content: left;
 			}
+			.data{
+				width:100%;
+				max-width:unset;
+				padding-left:0.5em;
+				height:calc(370px * 1.5 - 0.8em);
+
+				.topdata{
+					height:max-content;
+					overflow-y: visible;
+				
+				}
+				.btmsection{
+					height:max-content;
+					overflow-y: visible;
+					.ratings{
+						margin-bottom:0.5em;
+					}
+				}
+			}
+			
+
+		
 
 			.pairings, .tags{
 				button{
 					font-size:0.8em;
 				}
 			}
-			>div{
+			
+			.img{
+
 				width:100%;
 				max-width:unset;
 				padding-left:0.5em;
 				height:calc(370px * 1.5 - 0.8em);
-			}
-			.img{
+
 				width:calc(260px * 1.5);
 				max-width:calc(40vw);
 				height:calc(370px * 1.5);

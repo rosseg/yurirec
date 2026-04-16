@@ -214,7 +214,7 @@
 			display:flex;
 			flex-wrap: wrap;
 			flex-direction: column;
-			;
+			
 			min-height:2em;
 			height:max-content;
 			position: relative;
@@ -234,7 +234,8 @@
 
 				-webkit-box-orient: vertical; /* Indicate the text direction */
 				    display: -webkit-box; /* Specify that we want to use webkit-box */
-				-webkit-line-clamp: 3; /* Set the desired number of lines */
+				-webkit-line-clamp: 3;
+				line-clamp: 3; /* Set the desired number of lines */
 				
 
 			}
@@ -425,7 +426,17 @@
 				background-color:#f7736e;
 			}
 		}
+		.content{
+				display:block;
+				flex-wrap:wrap;
+				justify-content:start;
+				flex-direction:row;
+				align-items:flex-start;
+				overflow-y:auto;
+			}
 		article{
+			display:flex;
+			flex-direction: column;
 			width:calc(100vw - 1em);
 			height:calc(370px * 1.5 + 20px);
 			font-size:1.5em;
@@ -436,6 +447,22 @@
 			padding-right:0.5em;
 			margin-left:0px;
 			margin-right:0px;
+
+			.blocktop{
+				
+				display:flex;
+				flex-wrap: wrap;
+				flex-direction: column;
+				
+				min-height:2em;
+				height:max-content;
+				position: relative;
+				width:100%;
+				
+
+				align-content: left;
+			}
+
 			.pairings, .tags{
 				button{
 					font-size:0.8em;

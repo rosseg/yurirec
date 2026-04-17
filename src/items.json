@@ -342,7 +342,7 @@
 			"romance": 8.0,
 			"wholesome": 8.5
 		},
-		"landmines": [], 
+		"landmines": ["test"], 
 		"tags": ["romance", "slice of life","office workers", "CEO", "sex worker", "suggestive"]
 	}
 	

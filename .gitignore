@@ -1,9 +1,4 @@
 node_modules
-*.png
-*.jpg
-*.webp
-*.jpeg
-*.avif
 *.eps
 dist/
-package-lock.json
+

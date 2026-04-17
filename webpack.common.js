@@ -78,7 +78,7 @@ module.exports = {
          // minify:{
          //   removeRedundantAttributes: false, // do not remove type="text"
          // },
-		      baseUrl: process.env.NODE_ENV == 'development'? '/':'/',
+		      baseUrl: process.env.NODE_ENV == 'development'? '/yurirec':'/yurirec',
           chunks: ['Index']
         }),
 

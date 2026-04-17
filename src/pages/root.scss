@@ -175,18 +175,18 @@
 		//grid-template-rows: max-content 370px 2em;
 		display:flex;
 		flex-direction: column;
-		margin:0.5em;
-		padding:1em;
-		padding-bottom:0em;
+		//flex-grow: 1;
+		margin:0.5rem;
+		padding:1rem;
+		
 		position:relative;
 		background-color:#bb5f5fd5;
-		border-radius:0.5em;
-		//overflow-x: hidden;
-		//overflow-y:visible;
-		//max-width:calc(100vw - 3em);
-		min-height:calc(370px + 4em);
-		//height:max-content;
-		//max-width:calc(500px + 20px);
+		//border-radius:0.5rem;
+		align-self: stretch;
+
+		min-height:calc(370px + 4rem);
+		width:calc(0.5rem + 0.5rem + 260px + 0.5rem + 0.5rem + 13rem + 0.5rem);
+
 		.new{
 			display:none;
 		}
@@ -214,20 +214,18 @@
 			display:flex;
 			flex-wrap: wrap;
 			flex-direction: column;
-			
-			min-height:2em;
+			align-self: stretch;
+			min-height:2rem;
 			height:max-content;
 			position: relative;
-			width:100%;
-			max-width:calc(260px + 0.5em + 13em);
-			min-width: 0px;
 
 			align-content: left;
+			margin: 0.5rem;
 
 			h2{
-				margin:0em;
+				margin:0.5rem;
 				display:block;
-				font-size:1.5em;
+				font-size:1.5rem;
 				text-overflow:ellipsis;
 				overflow-x:hidden; 
 				display: inline; 
@@ -236,21 +234,20 @@
 				    display: -webkit-box; /* Specify that we want to use webkit-box */
 				-webkit-line-clamp: 3;
 				line-clamp: 3; /* Set the desired number of lines */
-				
-
 			}
 			
 		}
 		.centresection{
-			
+			flex-grow: 0;
 			position: relative;
 			display: flex;
+			align-self: center;
 			flex-wrap: nowrap;
 			height:max-content;
-			max-width:calc(260px + 0.5em + 13em);
+			
 		
 			.img{
-				
+				margin:0.5rem;
 				width:260px;
 				height:370px;
 				position:relative;
@@ -266,10 +263,10 @@
 
 			>.data{
 				
-				//padding:0.5em;
+				margin:0.5rem;
 				//padding-left:1.5em;
-				max-width:13em;
-				height:370px;
+				width:calc(0.5rem + 13em + 0.5rem);
+				height:calc(0.5rem + 370px + 0.5rem);
 				
 				.topdata{
 					height:max-content;
@@ -343,7 +340,7 @@
 					.desc{
 						//font-weight:100;
 						font-size:0.8em;
-						margin-bottom:0.5em;
+						
 					}
 				}
 				.btmdata{
@@ -373,9 +370,9 @@
 		}
 		
 		.btmsection{
-			
+			align-self: stretch;
 			display:block;
-			height:2em;
+			min-height:2rem;
 			width:100%;
 			position:relative;
 			.tags{

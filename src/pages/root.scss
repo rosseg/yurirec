@@ -271,16 +271,19 @@
 			}
 
 			>.data{
-				
+				display:block;
 				margin:0.5rem;
 				//padding-left:1.5em;
 				width:calc(0.5rem + 15em + 0.5rem);
 				height:calc(0.5rem + 370px + 0.5rem);
 				
 				.topdata{
+					display:inline-flex;
+					flex-wrap: wrap;
 					height:max-content;
 					overflow-y: visible;
 					.pairings{
+						
 						.pairing{
 							width:2.5em;
 							text-shadow:0px 0px 5px rgb(255, 255, 255);
@@ -343,11 +346,14 @@
 						}
 					}
 					p{
-					
+						display:inline-flex;
+						flex-wrap: wrap;
 						font-weight:bold;
 					}
 					.desc{
 						//font-weight:100;
+						display:inline-flex;
+						flex-wrap: wrap;
 						font-size:0.8em;
 						
 					}

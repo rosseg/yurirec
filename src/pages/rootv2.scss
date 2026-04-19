@@ -9,9 +9,16 @@ $default-border-radius: 0.5em;
 $image-width: 250px;
 $image-height: 370px;
 $data-width: 16.5em;
+$tag-button-height:1.4em;
+$btmsection-max-height: 4 * $tag-button-height;
+$btmsection-margin:$default-margin;
 $mainsection-margin: $default-margin;
 $mainsection-width: calc($image-width + $data-width);
 $article-margin: $default-margin;
+$article-padding: $default-margin;
+$article-max-height:calc(2 * $article-padding 
+						+ 2 * $mainsection-margin + $image-height 
+						+ 2 * $btmsection-margin + $btmsection-max-height);
 $article-space-needed: calc($mainsection-width + 2 * $mainsection-margin + 2 * $article-margin);
 $aside-width: 18vw;
 $content-width: 100vw - $aside-width;
@@ -81,9 +88,9 @@ $content-width: 100vw - $aside-width;
 		margin-bottom:0.4em;
 	}*/
 	aside{
-		//flex-shrink:0;
-		//flex-basis:250px;
-		width:$aside-width;
+		flex-shrink:0;
+		flex-basis:250px;
+		//width:$aside-width;
 		height:100%;
 		padding-left:1em;
 		background-color:#bb5f5fc7;
@@ -200,7 +207,7 @@ $content-width: 100vw - $aside-width;
 	article{
 		display:flex;
 		flex-direction: column;
-		align-items: stretch;
+		//align-items:stretch;
 		align-self:stretch;
 		//flex-grow:1;
 		margin:$default-margin;
@@ -213,8 +220,10 @@ $content-width: 100vw - $aside-width;
 		//height:calc($image-height + 20px);
 		width:max-content;
 		min-height:max-content;
+		max-height:$article-max-height;
+		
 
-		scroll-margin:0em;
+		//scroll-margin:0em;
 		.new{
 			display:none;
 		}
@@ -242,7 +251,7 @@ $content-width: 100vw - $aside-width;
 			padding:0em;
 			//padding-bottom:0em;
 			position:relative;
-			//background-color:blue;
+			background-color:blue;
 			border-radius:$default-border-radius;
 			//max-width:calc(100vw - 3em);
 			height:max-content;
@@ -253,11 +262,13 @@ $content-width: 100vw - $aside-width;
 
 			.img{
 				display:block;
-				min-height:$image-height;
+				height:$image-height;
 				min-width:$image-width;
 				position:relative;
 				overflow:hidden;
-				align-self: stretch;
+				align-self:start;
+				border-radius:$default-border-radius;
+				//align-self: stretch;
 				
 				//background-color: pink;
 				img{
@@ -404,9 +415,10 @@ $content-width: 100vw - $aside-width;
 			padding:0em;
 			position:relative;
 			min-height: max-content;
+			max-height: calc(4 * $tag-button-height);
 			width:calc($mainsection-width);
 			border-radius:$default-border-radius;
-			//background-color:yellow;
+			background-color:yellow;
 
 			.tags{
 				button{
@@ -417,6 +429,7 @@ $content-width: 100vw - $aside-width;
 					border-radius:0.3em;
 					margin:0.1em;
 					padding:0.1em 0.3em;
+					height:$tag-button-height;
 					&.romance{
 						//background-image:url("../../assets/heart-svgrepo-com.svg");
 						background-size:100% 100%;
@@ -438,6 +451,7 @@ $content-width: 100vw - $aside-width;
 					border-radius:0.3em;
 					margin:0.1em;
 					padding:0.1em 0.3em;
+					height:$tag-button-height;
 				}
 			}
 		}

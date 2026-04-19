@@ -11,6 +11,7 @@ $image-height: 370px;
 $data-width: 16.5em;
 $tag-button-height:1.4em;
 $btmsection-max-height: 4 * $tag-button-height;
+$btmsection-min-height: 1 * $tag-button-height;
 $btmsection-margin:$default-margin;
 $mainsection-margin: $default-margin;
 $mainsection-width: calc($image-width + $data-width);
@@ -18,10 +19,14 @@ $article-margin: $default-margin;
 $article-padding: $default-margin;
 $article-max-height:calc(2 * $article-padding 
 						+ 2 * $mainsection-margin + $image-height 
+						+ 2 * $btmsection-margin + $btmsection-min-height);
+$article-max-height:calc(2 * $article-padding 
+						+ 2 * $mainsection-margin + $image-height 
 						+ 2 * $btmsection-margin + $btmsection-max-height);
 $article-space-needed: calc($mainsection-width + 2 * $mainsection-margin + 2 * $article-margin);
 $aside-width: 18vw;
 $content-width: 100vw - $aside-width;
+$mobile-size-multiplier:1.5;
 //$grid-num-columns: calc(math.floor(math.div($content-width, $article-space-needed))) ;
 //$article-width: calc($)
 //@debug "grid cols" + $grid-num-columns;
@@ -457,9 +462,12 @@ $content-width: 100vw - $aside-width;
 		}
 		
 	}
-	@media (max-width: 1000px) {
+	@media (max-width: 52rem) {
 		article:nth-child(2n){
-			flex-direction:row-reverse;
+			.mainsection{
+				flex-direction:row-reverse;
+			}
+			
 		}
 		aside{
 			display:block;
@@ -477,10 +485,12 @@ $content-width: 100vw - $aside-width;
 		}
 		article{
 			width:calc(100vw - 1em);
-			height:calc($image-height * 1.5 + 20px);
-			font-size:1.5em;
+			max-height:calc($article-max-height * $mobile-size-multiplier);
+			min-height:max-content;
+			align-self:flex-start;
+			font-size:$mobile-size-multiplier * 1em;
 			//margin:0px;
-			border-radius:0;
+			border-radius:0.5rem;
 			//padding:0px;
 			padding-left:$default-padding;
 			padding-right:$default-padding;
@@ -491,23 +501,44 @@ $content-width: 100vw - $aside-width;
 					font-size:0.8em;
 				}
 			}
-			>div{
-				width:100%;
-				max-width:unset;
-				padding-left:0.5em;
-				height:calc($image-height * 1.5 - 0.8em);
-			}
-			.img{
-				width:calc($image-width * 1.5);
-				max-width:calc(40vw);
-				height:calc($image-height * 1.5);
-				margin-left:$default-margin;
-				margin-right:$default-margin;
-				display:block;
-				img{
-					object-fit: cover;
+			.mainsection{
+
+				height:max-content;
+				min-height:calc($image-height * $mobile-size-multiplier);
+				width:unset;
+				//max-width:calc($image-width * $mobile-size-multiplier + $data-width);
+				align-self: stretch;
+				.img{
+					width:unset;
+					//max-width:calc(40vw);
+					max-width:calc($image-width * $mobile-size-multiplier);
+					height:calc($image-height * $mobile-size-multiplier);
+					margin-left:$default-margin;
+					margin-right:$default-margin;
+					align-self:stretch;
+					display:block;
+					
+					img{
+						width:unset;
+						object-fit: cover;
+						max-width:calc($image-width * $mobile-size-multiplier);
+						height:calc($image-height * $mobile-size-multiplier);
+					}
 				}
 			}
+			.btmsection{
+				//max-width:calc($image-width * $mobile-size-multiplier + $data-width);
+				width:unset;
+				align-self:stretch;
+			}
+		//	>div{
+		//		width:100%;
+		//		max-width:unset;
+		//		padding-left:0.5em;
+		//		height:calc($image-height * $mobile-size-multiplier - 0.8em);
+		//	}
+			
+			
 		}
 	}
 	.buttons{

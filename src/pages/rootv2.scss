@@ -17,7 +17,7 @@ $aside-width: 18vw;
 $content-width: 100vw - $aside-width;
 //$grid-num-columns: calc(math.floor(math.div($content-width, $article-space-needed))) ;
 //$article-width: calc($)
-@debug "grid cols" + $grid-num-columns;
+//@debug "grid cols" + $grid-num-columns;
 
 #root.page{
 	display:flex;  font-family: "Quicksand", sans-serif;

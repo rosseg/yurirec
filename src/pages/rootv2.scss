@@ -1,6 +1,24 @@
-
+@use 'sass:math';
 @import url('https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap');
+
+
 * { box-sizing: border-box; min-width: 0; min-height: 0; }
+$default-padding: 0.5em;
+$default-margin: 0.5em;
+$default-border-radius: 0.5em;
+$image-width: 250px;
+$image-height: 370px;
+$data-width: 16.5em;
+$mainsection-margin: $default-margin;
+$mainsection-width: calc($image-width + $data-width);
+$article-margin: $default-margin;
+$article-space-needed: calc($mainsection-width + 2 * $mainsection-margin + 2 * $article-margin);
+$aside-width: 18vw;
+$content-width: 100vw - $aside-width;
+//$grid-num-columns: calc(math.floor(math.div($content-width, $article-space-needed))) ;
+//$article-width: calc($)
+@debug "grid cols" + $grid-num-columns;
+
 #root.page{
 	display:flex;  font-family: "Quicksand", sans-serif;
 	.content{
@@ -10,6 +28,7 @@
 		flex-direction:row;
 		align-items:flex-start;
 		overflow-y:auto;
+		flex-grow:1
 	}
 	//background: linear-gradient(90deg, var(--a-colour), var(--b-colour));
 	background-image:url('../../assets/background.avif');
@@ -62,8 +81,9 @@
 		margin-bottom:0.4em;
 	}*/
 	aside{
-		flex-shrink:0;
-		flex-basis:250px;
+		//flex-shrink:0;
+		//flex-basis:250px;
+		width:$aside-width;
 		height:100%;
 		padding-left:1em;
 		background-color:#bb5f5fc7;
@@ -183,16 +203,18 @@
 		align-items: stretch;
 		align-self:stretch;
 		//flex-grow:1;
-		margin:0.5em;
-		padding:0.5em;
+		margin:$default-margin;
+		padding:$default-padding;
 		//padding-bottom:0em;
 		position:relative;
 		background-color:#bb5f5fd5;
-		border-radius:0.5em;
+		border-radius:$default-border-radius;
 		//max-width:calc(100vw - 3em);
-		//height:calc(370px + 20px);
+		//height:calc($image-height + 20px);
 		width:max-content;
 		min-height:max-content;
+
+		scroll-margin:0em;
 		.new{
 			display:none;
 		}
@@ -216,23 +238,23 @@
 		}
 		.mainsection{
 			display:inline-flex;
-			margin:0.5em;
+			margin:$default-margin;
 			padding:0em;
 			//padding-bottom:0em;
 			position:relative;
 			//background-color:blue;
-			border-radius:0.5em;
+			border-radius:$default-border-radius;
 			//max-width:calc(100vw - 3em);
 			height:max-content;
-			min-height:calc(370px);
-			width:calc(260px + 16.5em);
+			min-height:calc($image-height);
+			width:calc($mainsection-width);
 			
 			
 
 			.img{
 				display:block;
-				min-height:370px;
-				min-width:260px;
+				min-height:$image-height;
+				min-width:$image-width;
 				position:relative;
 				overflow:hidden;
 				align-self: stretch;
@@ -241,20 +263,20 @@
 				img{
 					//width:100%;
 					//height:100%;
-					width:260px;
-					height:370px;
+					width:$image-width;
+					height:$image-height;
 					object-fit: cover;
 					object-position:center center;
 				}
 			}
 
 			>.data{
-				padding:0.5em;
+				padding:$default-padding;
 				padding-left:1em;
 				padding-right:0em;
-				max-width:16.5em;
-				//min-height:calc(370px - 1em);
-				min-height:370px;
+				max-width:$data-width;
+				//min-height:calc($image-height - 1em);
+				min-height:$image-height;
 				align-self: stretch;
 				//background-color:lightseagreen;
 				display:inline-flex;
@@ -378,12 +400,12 @@
 		}
 		.btmsection{
 			flex-grow: 1;
-			margin:0.5em;
+			margin:$default-margin;
 			padding:0em;
 			position:relative;
 			min-height: max-content;
-			width:calc(260px + 16.5em);
-			border-radius:0.5em;
+			width:calc($mainsection-width);
+			border-radius:$default-border-radius;
 			//background-color:yellow;
 
 			.tags{
@@ -441,13 +463,13 @@
 		}
 		article{
 			width:calc(100vw - 1em);
-			height:calc(370px * 1.5 + 20px);
+			height:calc($image-height * 1.5 + 20px);
 			font-size:1.5em;
 			//margin:0px;
 			border-radius:0;
 			//padding:0px;
-			padding-left:0.5em;
-			padding-right:0.5em;
+			padding-left:$default-padding;
+			padding-right:$default-padding;
 			margin-left:0px;
 			margin-right:0px;
 			.pairings, .tags{
@@ -459,14 +481,14 @@
 				width:100%;
 				max-width:unset;
 				padding-left:0.5em;
-				height:calc(370px * 1.5 - 0.8em);
+				height:calc($image-height * 1.5 - 0.8em);
 			}
 			.img{
-				width:calc(260px * 1.5);
+				width:calc($image-width * 1.5);
 				max-width:calc(40vw);
-				height:calc(370px * 1.5);
-				margin-left:0.5em;
-				margin-right:0.5em;
+				height:calc($image-height * 1.5);
+				margin-left:$default-margin;
+				margin-right:$default-margin;
 				display:block;
 				img{
 					object-fit: cover;

@@ -197,14 +197,14 @@ $mobile-size-multiplier:1.5;
 	}
 	&.hideLandmines{
 		article{
-			>.data .landmines{
+			>.btmsection .landmines{
 				display:none;
 			}
 		}
 	}
 	&.hideTags{
 		article{
-			>.data .tags{
+			>.btmsection .tags{
 				display:none;
 			}
 		}
@@ -256,7 +256,7 @@ $mobile-size-multiplier:1.5;
 			padding:0em;
 			//padding-bottom:0em;
 			position:relative;
-			background-color:blue;
+			//background-color:blue;
 			border-radius:$default-border-radius;
 			//max-width:calc(100vw - 3em);
 			height:max-content;
@@ -423,7 +423,7 @@ $mobile-size-multiplier:1.5;
 			max-height: calc(4 * $tag-button-height);
 			width:calc($mainsection-width);
 			border-radius:$default-border-radius;
-			background-color:yellow;
+			//background-color:yellow;
 
 			.tags{
 				button{
@@ -508,6 +508,10 @@ $mobile-size-multiplier:1.5;
 				width:unset;
 				
 				align-self: stretch;
+				.data{
+					padding-left:$default-padding;
+					padding-right:$default-padding;
+				}
 
 				.img{
 					width:calc($image-width * $mobile-size-multiplier);

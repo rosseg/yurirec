@@ -134,6 +134,8 @@ export default class Root extends Page{
 			}
 		}
 
+		
+
 
 	}
 
@@ -370,8 +372,10 @@ export default class Root extends Page{
 		localStorage.setItem("onlyNew", this.onlyNew ? "true" : "false");
 		localStorage.setItem("hideTags", this.hideTags ? "true" : "false");
 		localStorage.setItem("hideLandmines", this.hideLandmines ? "true" : "false");
+
 		this.Element.classList.toggle("hideLandmines", this.hideLandmines);
 		this.Element.classList.toggle("hideTags", this.hideTags);
+
 	}
 
 	SetFilters(){
@@ -548,6 +552,9 @@ export default class Root extends Page{
 				tags.append(elem)
 			}
 		}
+
+		this.Element.classList.toggle("hideLandmines", this.hideLandmines);
+		this.Element.classList.toggle("hideTags", this.hideTags);
 	}
 
 	

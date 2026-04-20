@@ -12,8 +12,8 @@
 		"pairings": {
 			"lesbian" : 10
 		},
-		"short":"Unrequited Kouhai x Senpai",
-		"description":"",
+		"short":"Unrequited Senpai x Kouhai",
+		"description":"stands out among high-school yuri. Interesting dynamic and plot development",
 		"synopsis":"Kouhai fantasizes about having her own Shoujo love story, but feels nothing when confessed to by a boy. When her beautiful senpai suddenly confesses to her, will her shoujo romance begin?",
 		"length": "medium",
 		"status": "completed",
@@ -48,7 +48,7 @@
 			"lesbian" : 10
 		},
 		"short":"rival directors going at it",
-		"description":"",
+		"description":"love these characters and their dynamic",
 		"synopsis":"The whole company knew that they they were polar opposites who fought like cats and dogs. Yet during the year-end party, the wall between them shattered after they got drunk! And so the two of them went from always being close to going off on each other to feeling very strange things following the accidental mishap...",
 		"length": "medium",
 		"status": "completed",
@@ -81,7 +81,7 @@
 			"lesbian" : 10.0
 		},
 		"short":" yandere \"straight\" stalker x shy girl",
-		"description":"",
+		"description":"Yandere shenanigans and overcoming family trauma. Art is so good.",
 		"synopsis":"Bibi is obsessed with Peter, the prince of the school. When she spots Amy next to him, she starts to feel jealous. She invites Amy to her house to warn her, but instead takes a liking to the girl. They agree to be friends on the condition that Amy has to help Bibi confess.",
 		"length": "medium",
 		"status": "completed",
@@ -142,8 +142,8 @@
 		"pairings": {
 			"lesbian" : 10.0
 		},
-		"short":"girl who's 17 and 27-year-old self hasve swapped bodies tries to save sick gf",
-		"description":"",
+		"short":"girl who's 17 and 27-year-old self have swapped bodies tries to save sick gf",
+		"description":"touching and sweet. i like.",
 		"length": "medium",
 		"status": "completed",
 		"targets": [],
@@ -173,7 +173,7 @@
 			"lesbian" : 10
 		},
 		"short": "shoujo-obsessed girl x persistent girl with a crush on her",
-		"description":"2 seasons are out, guessing 1 or 2 more on the way",
+		"description":"absurdity and the juiciest, slowest burn. 2 (of probably 3-4) seasons are out",
 		"length":"long",
 		"status": "hiatus",
 		"targets": [],
@@ -204,7 +204,7 @@
 			"lesbian" : 10
 		},
 		"short": "witch x witch from rival family",
-		"description":"a witch's coming-of-age ceremony threatens to expose family secrets",
+		"description":"demon summoning. family secrets. eeeevil mother figure. lesbianism.",
 		"length":"long",
 		"status": "completed",
 		"targets": [],
@@ -218,7 +218,7 @@
 			"art": 10.0
 		},
 		"landmines":["family trauma", "abusive parental figure"],
-		"tags":["witches", "drama", "urban fantasy", "romance", "dark" ],
+		"tags":["witches", "drama", "urban fantasy", "romance", "dark", "poly" ],
 		"spoiler-y tags":["poly"]
 	},
 
@@ -234,8 +234,8 @@
 		"pairings": {
 			"gay" : 10
 		},
-		"short": "LoveBot x hacker/repairman",
-		"description":"A LoveBot (ahem, affectionate android) becomes sentient after illicit modifications and pandemonium ensues",
+		"short": "LoveBot x black market repairman",
+		"description":"Sentient android stories are my weakness. If Detroit:Become Human was good and gay",
 		"length":"long",
 		"status": "completed",
 		"targets": [],
@@ -266,7 +266,7 @@
 			"lesbian" : "TBD"
 		},
 		"short": "vampire hunter gets turned into a vampire",
-		"description":"",
+		"description":"absurd. hilarious. I sense (toxic?) yuri afoot",
 		"length":"long",
 		"status": "ongoing",
 		"targets": [],
@@ -296,8 +296,8 @@
 			"lesbian" : 10,
 			"trans": 10
 		},
-		"short": "",
-		"description":"arranged marriage escapee shelters in ominous castle with a masked butler, cold Master, and an unseen wife",
+		"short": "lesbian escaping from marriage shelters in gothic castle",
+		"description":"body horror and gothic horror in a wintry gothic castle. THE ATMOSPHERE. YUMMY.",
 		"length":"medium",
 		"status": "ongoing",
 		"targets": [],
@@ -342,8 +342,8 @@
 			"romance": 8.0,
 			"wholesome": 8.5
 		},
-		"landmines": ["test"], 
-		"tags": ["romance", "slice of life","office workers", "CEO", "sex worker", "suggestive", "test1", "test2", "test3555555555555555555555"]
+		"landmines": [], 
+		"tags": ["romance", "slice of life","office workers", "CEO", "sex worker"]
 	}
 	
 ]

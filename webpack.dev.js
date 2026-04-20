@@ -22,12 +22,14 @@ module.exports = merge(common,
 			hot: "only",
 			historyApiFallback: true,
 		// writeToDisk: true,
+			host:"localhost",
 			port:8088,
 			watchFiles:["./**/*.ts", "./**/*.html", "../Server/**/*.ts"],
 			static: { 
 				directory: path.resolve(__dirname, './assets'), 
 				publicPath: '/assets'
-			}
+			},
+			
 		},
 		plugins: [        
 			new webpack.DefinePlugin({

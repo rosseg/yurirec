@@ -57,7 +57,9 @@ export default class Root extends Page{
 		this.length = JSON.parse(localStorage.getItem("length")) ?? {};
 		this.type = JSON.parse(localStorage.getItem("type")) ?? {};
 		this.pairings = JSON.parse(localStorage.getItem("pairings")) ?? {};
-		this.preferredLanguage = localStorage.getItem("preferredLanguage") ?? "en";
+		this.preferredLanguage_jp = localStorage.getItem("preferredLanguage_jp") ?? "en";
+		this.preferredLanguage_cn = localStorage.getItem("preferredLanguage_cn") ?? "en";
+		this.preferredLanguage_kr = localStorage.getItem("preferredLanguage_kr") ?? "en";
 		this.rating = localStorage.getItem("rating") ?? "uniqueness";
 		let ratingDir = localStorage.getItem("ratingDir");
 		// up or down
@@ -185,7 +187,9 @@ export default class Root extends Page{
 	pairings : {[key:string] : "active" | "removed"} = {};
 	type : {[key:string] : "active" | "removed"} = {};
 
-	preferredLanguage : string = "en";
+	preferredLanguage_jp : string = "en";
+	preferredLanguage_cn : string = "en";
+	preferredLanguage_kr : string = "en";
 	rating : string = "uniqueness";
 	ratingDir : number = -1;
 
@@ -275,8 +279,30 @@ export default class Root extends Page{
 			
 			elem.querySelector("img").src = item.image;
 			elem.querySelector(".desc").innerHTML = convertText(item.description);
-			elem.querySelector("h2").innerText = item.names[this.preferredLanguage] ?? item.names.en;
-			elem.querySelector("h2").title = item.names[this.preferredLanguage] ?? item.names.en;
+
+			switch(item.type.toLowerCase()){
+				case "manga":
+				case "anime (jp)":
+				case "light novel (jp)":
+				case "visual novel (jp)":
+					elem.querySelector("h2").innerText = item.names[this.preferredLanguage_jp] ?? item.names.en;
+					elem.querySelector("h2").title = item.names[this.preferredLanguage_jp] ?? item.names.en;
+					break;
+				case "manhua":
+				case "visual novel (cn)":
+					elem.querySelector("h2").innerText = item.names[this.preferredLanguage_cn] ?? item.names.en;
+					elem.querySelector("h2").title = item.names[this.preferredLanguage_cn] ?? item.names.en;
+					break;
+				case "manhwa":
+					elem.querySelector("h2").innerText = item.names[this.preferredLanguage_kr] ?? item.names.en;
+					elem.querySelector("h2").title = item.names[this.preferredLanguage_kr] ?? item.names.en;
+					break;
+				default:
+					elem.querySelector("h2").innerText = item.names.en;
+					elem.querySelector("h2").title = item.names.en;
+					break;
+			}
+			
 			const pairings = elem.querySelector(".pairings");
 			
 			pairings.append(this.button(item.type, ["type", item.type]));
@@ -365,7 +391,9 @@ export default class Root extends Page{
 		localStorage.setItem("length", JSON.stringify(this.length));
 		localStorage.setItem("pairings", JSON.stringify(this.pairings));
 		localStorage.setItem("type", JSON.stringify(this.type));
-		localStorage.setItem("preferredLanguage", this.preferredLanguage);
+		localStorage.setItem("preferredLanguage_jp", this.preferredLanguage_jp);
+		localStorage.setItem("preferredLanguage_cn", this.preferredLanguage_cn);
+		localStorage.setItem("preferredLanguage_kr", this.preferredLanguage_kr);
 		localStorage.setItem("rating", this.rating);
 		localStorage.setItem("ratingDir", ""+this.ratingDir);
 
@@ -506,18 +534,70 @@ export default class Root extends Page{
 			}
 		}
 		{
-			const tags = this.Element.querySelector(".list.language");
-			const ls = Consolidator.languages;
+			const tags = this.Element.querySelector(".list.language_jp");
+			const ls = ["en", "romanized-jp", "jp"];
 			for (let i = 0; i < ls.length; i++){
 				let elem = document.createElement("div");
 				elem.innerText = ls[i];
-				elem.classList.toggle("active", ls[i] == this.preferredLanguage);
+				elem.classList.toggle("active", ls[i] == this.preferredLanguage_jp);
+				if (ls[i] == this.preferredLanguage_jp) {
+					elem.style.fontWeight = "bold";
+				}
 				elem.addEventListener("click",()=>{
-					this.preferredLanguage = ls[i];
+					this.preferredLanguage_jp = ls[i];
 					for (let x = 0; x < tags.children.length; x++){
-						tags.children[x].classList.remove("active")
+						tags.children[x].classList.remove("active");
+						(<HTMLDivElement>tags.children[x]).style.fontWeight = "normal";
+						//elem.style.fontWeight = "normal";
 					}
 					elem.classList.add("active");
+					elem.style.fontWeight = "bold";
+					this.UpdateFilters();
+				})
+				tags.append(elem)
+			}
+		}
+		{
+			const tags = this.Element.querySelector(".list.language_cn");
+			const ls = ["en", "romanized-cn", "cn"];
+			for (let i = 0; i < ls.length; i++){
+				let elem = document.createElement("div");
+				elem.innerText = ls[i];
+				elem.classList.toggle("active", ls[i] == this.preferredLanguage_cn);
+				if (ls[i] == this.preferredLanguage_cn) {
+					elem.style.fontWeight = "bold";
+				}
+				elem.addEventListener("click",()=>{
+					this.preferredLanguage_cn = ls[i];
+					for (let x = 0; x < tags.children.length; x++){
+						tags.children[x].classList.remove("active");
+						(<HTMLDivElement>tags.children[x]).style.fontWeight = "normal";
+					}
+					elem.classList.add("active");
+					elem.style.fontWeight = "bold";
+					this.UpdateFilters();
+				})
+				tags.append(elem)
+			}
+		}
+		{
+			const tags = this.Element.querySelector(".list.language_kr");
+			const ls = ["en", "romanized-kr", "kr"];
+			for (let i = 0; i < ls.length; i++){
+				let elem = document.createElement("div");
+				elem.innerText = ls[i];
+				elem.classList.toggle("active", ls[i] == this.preferredLanguage_kr);
+				if (ls[i] == this.preferredLanguage_kr) {
+					elem.style.fontWeight = "bold";
+				}
+				elem.addEventListener("click",()=>{
+					this.preferredLanguage_kr = ls[i];
+					for (let x = 0; x < tags.children.length; x++){
+						tags.children[x].classList.remove("active");
+						(<HTMLDivElement>tags.children[x]).style.fontWeight = "normal";
+					}
+					elem.classList.add("active");
+					elem.style.fontWeight = "bold";
 					this.UpdateFilters();
 				})
 				tags.append(elem)

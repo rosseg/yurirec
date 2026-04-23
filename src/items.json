@@ -22,7 +22,7 @@
 		"recommendations":{
 			"priestess' reverence": 9.0,
 			"uniqueness": 6.0,
-			"intensity": 9.0,
+			"intensity": 8.5,
 			"story": 8.5,
 			"romance": 8.5,
 			"wholesome": 8.0,
@@ -90,7 +90,7 @@
 		"recommendations":{
 			"priestess' reverence": 8.5,
 			"uniqueness": 9.0,
-			"intensity": 8.5,
+			"intensity": 8.0,
 			"story": 8.5,
 			"romance": 8.0,
 			"art": 9.5
@@ -123,7 +123,7 @@
 		"recommendations":{
 			"priestess' reverence": 7.5,
 			"uniqueness": 7.0,
-			"intensity": 8.5,
+			"intensity": 8.0,
 			"romance": 7.0,
 			"toxic": 5.0
 		},
@@ -151,7 +151,7 @@
 		"recommendations":{
 			"priestess' reverence": 8.4,
 			"uniqueness": 8.0,
-			"intensity": 8.5,
+			"intensity": 8.0,
 			"story":8.0,
 			"romance": 8.5,
 			"wholesome": 9.0
@@ -212,7 +212,7 @@
 		"recommendations":{
 			"priestess' reverence": 8.2,
 			"uniqueness": 7.0,
-			"intensity": 9.0,
+			"intensity": 8.5,
 			"story":8.5,
 			"romance": 7.5,
 			"art": 10.0
@@ -305,7 +305,7 @@
 		"recommendations":{
 			"priestess' reverence": 9.5,
 			"uniqueness": 10.0,
-			"intensity": 9.5,
+			"intensity": 9.0,
 			"story": 9.0,
 			"romance":8.0,
 			"toxic": "TBD",
@@ -344,6 +344,36 @@
 		},
 		"landmines": [], 
 		"tags": ["romance", "slice of life","office workers", "CEO", "sex worker"]
+	},
+	{
+		"names":{
+			"en": "Black and White: Tough Love at the Office",
+			"romanized":"Shiro to Kuro",
+			"jp":"白と黒～Black & White～"
+		},
+		"added": "31-03-2026",
+		"type":"manga",
+		"author":"Sal Jiang",
+		"pairings": {
+			"lesbian" : 10.0
+		},
+		"short":"employee x senior",
+		"description":"these two go at each other's throats!!",
+		"length": "short",
+		"status": "completed",
+		"targets": [],
+		"image":"./assets/black_and_white_cover.jpg",
+		"recommendations":{
+			"priestess' reverence":8.7,
+			"uniqueness": 9.0,
+			"intensity": 9.0,
+			"story": 8.5,
+			"romance": 7.0,
+			"kinky": 7.0,
+			"toxic": 10.0
+		},
+		"landmines": ["sexual violence", "abuse"], 
+		"tags": ["romance", "sex", "toxic", "drama", "comedy"]
 	}
 	
 ]

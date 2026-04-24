@@ -421,7 +421,7 @@
 			"lesbian" : 10.0
 		},
 		"short":"Gentle, tenacious honor student X cold domineering girl",
-		"description":"Their slow burn dynamic is wonderful. Great story",
+		"description":"Their slow burn dynamic is wonderful. Sweet story",
 		"length": "long",
 		"status": "completed",
 		"targets": [],
@@ -438,5 +438,34 @@
 		"landmines": ["abusive parental figure", "violence", "blood"], 
 		"tags": ["romance", "drama", "slice of life",  "school life", "full colour", "adaptation" ]
 	}
-	
+	,
+	{
+		"names":{
+			"jp":"毎月庭つき大家つき",
+			"romanized-jp":"Maitsuki, Niwatsuki, Ooyatsuki",
+			"en":"Monthly in the Garden with My Landlord"
+		},
+		"authors":["Yodokawa"],
+		"artists":["Yodokawa"],
+		"added": "31-03-2026",
+		"type":"manga",
+		"pairings": {
+			"lesbian" : 10
+		},
+		"short":"Ex-idol landlord x tenant",
+		"description":"",
+		"length": "medium",
+		"status": "completed",
+		"targets": [],
+		"image":"./assets/maitsuki_cover.jpg",
+		"recommendations":{
+			"priestess' reverence": 8.0,
+			"uniqueness": 6.0,
+			"intensity": 8.0,
+			"story": 7.5,
+			"romance": 9.0,
+			"wholesome": 8.5
+		},
+		"tags":["romance", "comedy", "slice of life", "idol", "landlord"]
+	}
 ]

@@ -247,12 +247,9 @@ export default class Root extends Page{
 		const content = this.Element.querySelector(".content");
 		content.innerHTML = "";
 		let cap = items.length;
-		for (let i = 0; i < 32; i++){
-			//items.push(items[Math.floor(Math.random()*cap)]);
-		}
 
 		//take the list of yuri
-		let cloned = items.toSorted((a, b)=>{return ((b.recommendations[this.rating] ?? 1.0) - (a.recommendations[this.rating] ?? 1.0)) * this.ratingDir; });
+		let cloned = items.toSorted((a, b)=>{return ((b.recommendations[this.rating] ?? 0.0) - (a.recommendations[this.rating] ?? 0.0)) * this.ratingDir; });
 		
 		// filter out all the irrelevant tags, blocked landmines, etc. etc. etc.
 		cloned = this.Filter(cloned, "landmines");

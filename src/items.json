@@ -266,7 +266,7 @@
 			"lesbian" : "TBD"
 		},
 		"short": "vampire hunter gets turned into a vampire",
-		"description":"absurd. hilarious. I sense (toxic?) yuri afoot",
+		"description":"absurd. hilarious. The artist is amazing at expressions. I sense (toxic?) yuri afoot",
 		"length":"long",
 		"status": "ongoing",
 		"targets": [],
@@ -308,7 +308,7 @@
 			"intensity": 9.0,
 			"story": 9.0,
 			"romance":8.0,
-			"toxic": "TBD",
+			
 			"art": 10.0
 		},
 		"landmines":["blood", "gore", "transphobia", "homophobia", "abuse"],
@@ -374,6 +374,69 @@
 		},
 		"landmines": ["sexual violence", "abuse"], 
 		"tags": ["romance", "sex", "toxic", "drama", "comedy"]
+	},
+	{
+		"names":{
+			"jp":"気になってる人が男じゃなかった",
+			"romanized-jp":"Ki ni Natteru Hito ga Otoko ja Nakatta",
+			"en":"The Guy She Was Interested in Wasn't a Guy at All"
+		},
+		"authors":["ARAI Sumiko (新井すみこ)"],
+		"artists":["ARAI Sumiko (新井すみこ)"],
+		"added": "31-03-2026",
+		"type":"manga",
+		"pairings": {
+			"lesbian" : 10
+		},
+		"short":"Gyaru x Music Shop Masc",
+		"description":"A really well done, sweet, fun, and GREEN yuri. Plus really cool art.",
+		"length": "medium",
+		"status": "ongoing",
+		"targets": [],
+		"image":"./assets/green_yuri_cover.jpg",
+		"recommendations":{
+			"priestess' reverence": 8.8,
+			"uniqueness": 7.0,
+			"intensity": 8.0,
+			"story": 8.0,
+			"romance": 9.0,
+			"wholesome": 9.0,
+			"art": 9.0
+			
+			
+		},
+		"tags":["romance", "school life", "slice of life", "music", "gyaru", "masc"]
+	},
+	{
+		"names":{
+			"en": "Her Mountain, Her Ocean",
+			"romanized-cn":"Tā De Shān, Tā De Hǎi",
+			"cn":"她的山，她的海"
+		},
+		"added": "31-03-2026",
+		"type":"manhua",
+		"authors":["扶华"],
+		"artists":["Huo Hezi (火禾子)", "Jing Yuan Studio (鲸元社)", "悠作文化"],
+		"pairings": {
+			"lesbian" : 10.0
+		},
+		"short":"Gentle, tenacious honor student X cold domineering girl",
+		"description":"Their slow burn dynamic is wonderful. Great story",
+		"length": "long",
+		"status": "completed",
+		"targets": [],
+		"image":"./assets/her_mountain_cover.jpg",
+		"recommendations":{
+			"priestess' reverence": 9.0,
+			"uniqueness": 6.0,
+			"intensity": 8.5,
+			"story":8.0,
+			"romance": 9.5,
+			"wholesome": 8.0,
+			"art": 9.0
+		},
+		"landmines": ["abusive parental figure", "violence", "blood"], 
+		"tags": ["romance", "drama", "slice of life",  "school life", "full colour", "adaptation" ]
 	}
 	
 ]

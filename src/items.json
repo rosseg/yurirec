@@ -122,9 +122,9 @@
 		"image":"./assets/lying_bride_cover.jpg",
 		"recommendations":{
 			"priestess' reverence": 7.5,
-			"uniqueness": 7.0,
+			"uniqueness": 6.5,
 			"intensity": 8.0,
-			"romance": 7.0,
+			"romance": 7.5,
 			"toxic": 5.0
 		},
 		"landmines": [], 
@@ -452,7 +452,7 @@
 		"pairings": {
 			"lesbian" : 10
 		},
-		"short":"Ex-idol landlord x tenant",
+		"short":"Ex-idol live-in landlord x tenant",
 		"description":"",
 		"length": "medium",
 		"status": "completed",
@@ -467,5 +467,34 @@
 			"wholesome": 8.5
 		},
 		"tags":["romance", "comedy", "slice of life", "idol", "landlord"]
+	},
+	{
+		"names":{
+			"jp":"＃ギャルとギャルの百合",
+			"romanized-jp":"#Gyaru to Gyaru no Yuri",
+			"en":"#Gal x Gal Yuri"
+		},
+		"authors":["Inoue (イノウエ)"],
+		"artists":["Inoue (イノウエ)"],
+		"added": "31-03-2026",
+		"type":"manga",
+		"pairings": {
+			"lesbian" : 10
+		},
+		"short":"GAL X GAL WOOOOOO",
+		"description":"Very funny and sweet low-stakes yuri. On a writing hiatus (April 2025)",
+		"length": "short",
+		"status": "hiatus",
+		"targets": [],
+		"image":"./assets/gal_yuri_cover.jpg",
+		"recommendations":{
+			"priestess' reverence": 8.5,
+			"uniqueness": 7.5,
+			"intensity": 7.0,
+			"romance": 9.0,
+			"comedy": 7.5,
+			"wholesome": 10.0
+		},
+		"tags":["romance", "comedy", "slice of life", "comedy", "school life", "gyaru"]
 	}
 ]

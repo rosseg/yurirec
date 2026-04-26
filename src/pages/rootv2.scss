@@ -8,21 +8,21 @@ $default-margin: 0.5em;
 $default-border-radius: 0.5em;
 $image-width: 250px;
 $image-height: 370px;
-$data-width: 16.5em;
+$data-section-width: 16.5em;
 $tag-button-height:1.4em;
-$tagsection-max-height: 4 * $tag-button-height;
-$tagsection-min-height: 1 * $tag-button-height;
-$tagsection-margin:$default-margin;
+$tag-section-max-height: 4 * $tag-button-height;
+$tag-section-min-height: 1 * $tag-button-height;
+$tag-section-margin:$default-margin;
 $mainsection-margin: $default-margin;
-$mainsection-width: calc($image-width + $data-width);
+$mainsection-width: calc($image-width + $data-section-width);
 $article-margin: $default-margin;
 $article-padding: $default-margin;
 $article-max-height:calc(2 * $article-padding 
 						+ 2 * $mainsection-margin + $image-height 
-						+ 2 * $tagsection-margin + $tagsection-min-height);
+						+ 2 * $tag-section-margin + $tag-section-min-height);
 $article-max-height:calc(2 * $article-padding 
 						+ 2 * $mainsection-margin + $image-height 
-						+ 2 * $tagsection-margin + $tagsection-max-height);
+						+ 2 * $tag-section-margin + $tag-section-max-height);
 $article-space-needed: calc($mainsection-width + 2 * $mainsection-margin + 2 * $article-margin);
 $aside-width: 18vw;
 $content-width: 100vw - $aside-width;
@@ -197,14 +197,14 @@ $mobile-size-multiplier:1.5;
 	}
 	&.hideLandmines{
 		article{
-			>.tagsection .landmines{
+			>.tag-section .landmines{
 				display:none;
 			}
 		}
 	}
 	&.hideTags{
 		article{
-			>.tagsection .tags{
+			>.tag-section .tags{
 				display:none;
 			}
 		}
@@ -216,6 +216,9 @@ $mobile-size-multiplier:1.5;
 
 		display: grid;
 		grid-template-rows: max-content max-content;
+		grid-template-columns: $image-width $data-section-width;
+		grid-template-areas: "cover-image data-section"
+							 "tag-section data-section";
 		
 		margin:$default-margin;
 		padding:$default-padding;
@@ -252,7 +255,7 @@ $mobile-size-multiplier:1.5;
 				transform:rotate(-45deg);
 			}
 		}
-		.mainsection{
+		/*.mainsection{
 			grid-row:1;
 			display:inline-flex;
 			margin:$default-margin;
@@ -264,30 +267,31 @@ $mobile-size-multiplier:1.5;
 			//max-width:calc(100vw - 3em);
 			height:max-content;
 			min-height:calc($image-height);
-			width:calc($mainsection-width);
+			width:calc($mainsection-width);*/
 			
 			
 
-			.cover-image{
-				display:block;
+		.cover-image{
+			grid-area: cover-image;
+			display:block;
+			height:$image-height;
+			min-width:$image-width;
+			position:relative;
+			overflow:hidden;
+			align-self:start;
+			border-radius:$default-border-radius;
+			//align-self: stretch;
+			
+			//background-color: pink;
+			img{
+				//width:100%;
+				//height:100%;
+				width:$image-width;
 				height:$image-height;
-				min-width:$image-width;
-				position:relative;
-				overflow:hidden;
-				align-self:start;
-				border-radius:$default-border-radius;
-				//align-self: stretch;
-				
-				//background-color: pink;
-				img{
-					//width:100%;
-					//height:100%;
-					width:$image-width;
-					height:$image-height;
-					object-fit: cover;
-					object-position:center center;
-				}
+				object-fit: cover;
+				object-position:center center;
 			}
+		}
 
 		.data-section{
 			grid-area: data-section;
@@ -312,113 +316,114 @@ $mobile-size-multiplier:1.5;
 					display: -webkit-box; /* Specify that we want to use webkit-box */
 				-webkit-line-clamp: 3; /* Set the desired number of lines */
 
+			}
+			.pairings{
+				.pairing{
+					width:2.5em;
+					text-shadow:0px 0px 5px rgb(255, 255, 255);
 				}
-				.pairings{
-					.pairing{
-						width:2.5em;
-						text-shadow:0px 0px 5px rgb(255, 255, 255);
+				.lesbian{
+					background-image:url('../../assets/Lesbian_pride_flag_2018.svg.png');
+					background-size:auto 100%;
+					color:rgb(98, 43, 100);
+					//color:#ffffff00;
+				}
+				.gay{
+					background-image:url('../../assets/gay.png');
+					background-size:auto 100%;
+					color:rgb(98, 43, 100);
+					//color:#ffffff00;
+				}
+				.trans{
+					background-image:url('../../assets/trans.png');
+					background-size:auto 100%;
+					color:rgb(98, 43, 100);
+					//color:#ffffff00;
+				}
+				.open{
+					background-image:url('../../assets/Open_relationship.png');
+					background-size:auto 100%;
+					color:rgb(255, 255, 255);
+					text-shadow:0px 0px 5px rgb(0, 0, 0);
+					//color:#ffffff00;
+				}
+				button{
+					appearance:unset;
+					background-color: #f7736e;
+					color:rgb(114, 57, 57);
+					border:unset;
+					border-radius:0.3em;
+					margin:0.1em;
+					padding:0.1em 0.3em;
+				}
+				.status{
+					&.in-progress{
+						background-color:rgb(247, 172, 61);
 					}
-					.lesbian{
-						background-image:url('../../assets/Lesbian_pride_flag_2018.svg.png');
-						background-size:auto 100%;
-						color:rgb(98, 43, 100);
-						//color:#ffffff00;
+					&.completed{
+						background-color:rgb(121, 219, 97);
 					}
-					.gay{
-						background-image:url('../../assets/gay.png');
-						background-size:auto 100%;
-						color:rgb(98, 43, 100);
-						//color:#ffffff00;
-					}
-					.trans{
-						background-image:url('../../assets/trans.png');
-						background-size:auto 100%;
-						color:rgb(98, 43, 100);
-						//color:#ffffff00;
-					}
-					.open{
-						background-image:url('../../assets/Open_relationship.png');
-						background-size:auto 100%;
-						color:rgb(255, 255, 255);
-						text-shadow:0px 0px 5px rgb(0, 0, 0);
-						//color:#ffffff00;
-					}
-					button{
-						appearance:unset;
-						background-color: #f7736e;
-						color:rgb(114, 57, 57);
-						border:unset;
-						border-radius:0.3em;
-						margin:0.1em;
-						padding:0.1em 0.3em;
-					}
-					.status{
-						&.in-progress{
-							background-color:rgb(247, 172, 61);
-						}
-						&.completed{
-							background-color:rgb(121, 219, 97);
-						}
-						&.cancelled{
-							background-color: #fd0800c7;
-						}
-					}
-					.length{
-						&.medium{
-							background-color:rgb(247, 172, 61);
-						}
-						&.long{
-							background-color:rgb(121, 219, 97);
-						}
-						&.short{
-							background-color: #ec524d;
-						}
+					&.cancelled{
+						background-color: #fd0800c7;
 					}
 				}
-				.desc{
-					//font-weight:100;
-					font-size:0.8em;
-					margin-bottom:0.5em;
+				.length{
+					&.medium{
+						background-color:rgb(247, 172, 61);
+					}
+					&.long{
+						background-color:rgb(121, 219, 97);
+					}
+					&.short{
+						background-color: #ec524d;
+					}
 				}
-				
-				.top{
-					//background-color:purple;
-					min-height:max-content;
-				}
-				.centre{
-					//background-color:orangered;
-					flex-grow:1;
-				}
-				.bottom{
-					
-					//background-color:magenta;
-					min-height:max-content;
-					
-				}
+			}
+			.desc{
+				//font-weight:100;
+				font-size:0.8em;
+				margin-bottom:0.5em;
+			}
 			
-				.ratings{
-					margin-bottom:0.5em;
-				}
-				p{
-					
-					font-weight:bold;
-				}
-				span{
-					&.spoiler{
-						//background-color:black;
-						border-radius:0.2em;
-						padding-left:0.2em;
-						padding-right:0.2em;
-						filter: blur(0.35em);
-							transition:all 0.3s;
-						&:hover{
-							filter: blur(0px);
-						}
+			.top{
+				//background-color:purple;
+				min-height:max-content;
+			}
+			.centre{
+				//background-color:orangered;
+				flex-grow:1;
+			}
+			.bottom{
+				
+				//background-color:magenta;
+				min-height:max-content;
+				
+			}
+		
+			.ratings{
+				margin-bottom:0.5em;
+			}
+			p{
+				
+				font-weight:bold;
+			}
+			span{
+				&.spoiler{
+					//background-color:black;
+					border-radius:0.2em;
+					padding-left:0.2em;
+					padding-right:0.2em;
+					filter: blur(0.35em);
+						transition:all 0.3s;
+					&:hover{
+						filter: blur(0px);
 					}
 				}
 			}
 		}
-		.tagsection{
+		
+		.tag-section{
+			grid-area: tag-section;
 			grid-row:2;
 
 			flex-grow: 1;
@@ -470,9 +475,9 @@ $mobile-size-multiplier:1.5;
 	}
 	@media (max-width: 52rem) {
 		article:nth-child(2n){
-			.mainsection{
-				flex-direction:row-reverse;
-			}
+		//	.mainsection{
+		//		flex-direction:row-reverse;
+		//	}
 			
 		}
 		aside{
@@ -508,36 +513,36 @@ $mobile-size-multiplier:1.5;
 				}
 			}
 			
-			.mainsection{
+			/*.mainsection{
 
 				height:max-content;
 				min-height:calc($image-height * $mobile-size-multiplier);
 				width:unset;
 				
-				align-self: stretch;
-				.data{
-					padding-left:$default-padding;
-					padding-right:$default-padding;
-				}
-
-				.cover-image{
-					width:calc($image-width * $mobile-size-multiplier);
-					max-width:calc(40vw);
-					min-width:unset;
-					height:calc($image-height * $mobile-size-multiplier);
-					margin-left:$default-margin;
-					margin-right:$default-margin;
-					img{
-						width:100%;
-						height:100%;
-						object-fit: cover;
-						object-position:center center;
-					}
-				}
-
+				align-self: stretch;*/
+			.data-section{
+				padding-left:$default-padding;
+				padding-right:$default-padding;
 			}
-			.tagsection{
-				//max-width:calc($image-width * $mobile-size-multiplier + $data-width);
+
+			.cover-image{
+				width:calc($image-width * $mobile-size-multiplier);
+				max-width:calc(40vw);
+				min-width:unset;
+				height:calc($image-height * $mobile-size-multiplier);
+				margin-left:$default-margin;
+				margin-right:$default-margin;
+				img{
+					width:100%;
+					height:100%;
+					object-fit: cover;
+					object-position:center center;
+				}
+			}
+
+			
+			.tag-section{
+				//max-width:calc($image-width * $mobile-size-multiplier + $data-section-width);
 				width:unset;
 				min-width:min-content;
 				max-width:fit-content;

@@ -71,6 +71,13 @@ export default class Root extends Page{
 		// how far am I adding my list
 		this.Element.querySelector<HTMLDivElement>(".progress").innerText = "progress: "+items.length + " / "+(test.match(new RegExp("\n","g")).length + 1 + Math.max(0, items.length - test.match(new RegExp("--","g")).length));
 
+		//populate the text of extras > new
+		let cloned = items.toSorted((a, b)=>{return ((b.recommendations[this.rating] ?? 0.0) - (a.recommendations[this.rating] ?? 0.0)) * this.ratingDir; });
+		var newCount = cloned.filter((a)=>a.added == Consolidator.latestDate).length;
+		var extrasNew = document.getElementById("extrasNew");
+		var newText = document.createTextNode("New ("+newCount+", "+Consolidator.latestDate+")");
+		extrasNew.appendChild(newText);		
+
 		// mobile only
 		this.OnSwipe(()=>{
 			this.Element.querySelector("aside").classList.remove("show");
@@ -633,39 +640,4 @@ export default class Root extends Page{
 		this.Element.classList.toggle("hideLandmines", this.hideLandmines);
 		this.Element.classList.toggle("hideTags", this.hideTags);
 	}
-
-	
-
-	// IsNew(i) : Newness {
-		
-	// 	let mrDate : string = Consolidator.latestDate;
-	
-	// 	let itemYear : number = +mrDate.substring(8);
-	// 	let itemMonth : number = +mrDate.substring(3, 2);
-	// 	let itemDay : number = +mrDate.substring(0, 2);
-
-	// 	let mostRecentDay : number = (itemYear - 1) * 360 + (itemMonth - 1) * 30 + itemDay;
-
-	
-	// 	let iYear : number = +i.added.substring(8);
-	// 	let iMonth : number = +i.added.substring(3, 2);
-	// 	let iDay : number = +i.added.substring(0, 2);
-
-	// 	let iTotal = (iYear - 1) * 360 + (iMonth - 1) * 30 + iDay;
-
-	// 	let diff : number = mostRecentDay - iTotal;
-
-	// 	if (diff == 0) return Newness.MOST_RECENT;
-	// 	if (diff <= 14) return Newness.LT_TW0_WEEKS_OLDER;
-	// 	if (diff <= 31) return Newness.LT_ONE_MONTH_OLDER;
-	// 	return Newness.NOT_NEW;
-	// }
-
-	
-}
-enum Newness {
-	MOST_RECENT,
-	LT_TW0_WEEKS_OLDER,
-	LT_ONE_MONTH_OLDER,
-	NOT_NEW
 }

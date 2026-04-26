@@ -307,9 +307,9 @@ $mobile-size-multiplier:1.5;
 			flex-direction:column;
 			h2{
 				margin:0px;
-				display:block;
+				margin-bottom: 0.5 * $default-margin;
 				font-size:1.5em;
-				max-height:4em;
+				//max-height:4em;
 				text-overflow:ellipsis;
 				overflow:hidden;   
 					-webkit-box-orient: vertical; /* Indicate the text direction */

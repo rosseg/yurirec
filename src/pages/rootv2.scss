@@ -3,9 +3,9 @@
 
 
 * { box-sizing: border-box; min-width: 0; min-height: 0; }
-$default-padding: 0.5em;
-$default-margin: 0.5em;
-$default-border-radius: 0.5em;
+$default-padding: 0.5rem;
+$default-margin: 0.5rem;
+$default-border-radius: 0.5rem;
 $image-width: 250px;
 $image-height: 370px;
 $data-section-width: 16.5em;
@@ -296,10 +296,10 @@ $mobile-size-multiplier:1.5;
 		.data-section{
 			grid-area: data-section;
 			padding:$default-padding;
-			padding-left:1em;
-			padding-right:0em;
+			padding-left:1rem;
+			padding-right:0rem;
 			max-width:$data-section-width;
-			//min-height:calc($image-height - 1em);
+			//min-height:calc($image-height - 1rem);
 			min-height:$image-height;
 			align-self: stretch;
 			//background-color:lightseagreen;
@@ -382,7 +382,7 @@ $mobile-size-multiplier:1.5;
 			.desc{
 				//font-weight:100;
 				font-size:0.8em;
-				margin-bottom:0.5em;
+				margin-bottom:0.5rem;
 			}
 			
 			.top{
@@ -401,7 +401,7 @@ $mobile-size-multiplier:1.5;
 			}
 		
 			.ratings{
-				margin-bottom:0.5em;
+				margin-bottom:0.5rem;
 			}
 			p{
 				
@@ -428,7 +428,7 @@ $mobile-size-multiplier:1.5;
 
 			flex-grow: 1;
 			margin:$default-margin;
-			padding:0em;
+			padding:0rem;
 			position:relative;
 			min-height: max-content;
 			max-height: calc(4 * $tag-button-height);

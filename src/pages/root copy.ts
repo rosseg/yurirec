@@ -270,6 +270,7 @@ export default class Root extends Page{
 			cloned = cloned.filter((a)=>a.added == Consolidator.latestDate);
 			
 		}
+
 		for (let i = 0; i < cloned.length; i++){
 			const item = cloned[i];
 
@@ -278,19 +279,13 @@ export default class Root extends Page{
 			
 			elem.classList.add("medium")
 			elem.id = "article-"+(i+1);
-			(<HTMLInputElement>elem.querySelector("#tabradio1")).name="tab radio btns-"+(i+1);
-			(<HTMLInputElement>elem.querySelector("#tabradio2")).name="tab radio btns-"+(i+1);
-			elem.querySelector("#tabradio1").id="tabradio1-"+(i+1);
-			elem.querySelector("#tabradio2").id="tabradio2-"+(i+1);
-			
-			elem.querySelector("#tabcontent1").id="tabcontent1-"+(i+1);
-			elem.querySelector("#tabcontent2").id="tabcontent2-"+(i+1);
-			
-			(<HTMLLabelElement>elem.querySelector("#label1")).htmlFor="tabradio1-"+(i+1);
-			(<HTMLLabelElement>elem.querySelector("#label2")).htmlFor="tabradio2-"+(i+1);
+			elem.querySelector("#tab1").id="tab1-"+(i+1);
+			elem.querySelector("#tab2").id="tab2-"+(i+1);
+			elem.querySelector("#tab-content1").id="tab-content1-"+(i+1);
+			elem.querySelector("#tab-content2").id="tab-content2-"+(i+1);
 			elem.querySelector("#label1").id="label1-"+(i+1);
 			elem.querySelector("#label2").id="label2-"+(i+1);
-			
+
 
 			elem.classList.toggle("new", item.added == Consolidator.latestDate);
 	

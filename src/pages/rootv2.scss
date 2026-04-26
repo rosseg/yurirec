@@ -477,7 +477,7 @@ $mobile-size-multiplier:1.5;
 		article:nth-child(2n){
 		//	.mainsection{
 		//		flex-direction:row-reverse;
-		//	}
+	
 			
 		}
 		aside{
@@ -495,6 +495,7 @@ $mobile-size-multiplier:1.5;
 			}
 		}
 		article{
+			grid-template-columns:minmax(min-content, $image-width * $mobile-size-multiplier) minmax(min-content, 1fr);
 			width:calc(100vw - 1em);
 			max-height:calc($article-max-height * $mobile-size-multiplier);
 			min-height:max-content;
@@ -544,7 +545,7 @@ $mobile-size-multiplier:1.5;
 			.tag-section{
 				//max-width:calc($image-width * $mobile-size-multiplier + $data-section-width);
 				width:unset;
-				min-width:min-content;
+				min-width:unset;
 				max-width:fit-content;
 				//width:calc($image-width * $mobile-size-multiplier);
 				align-self:stretch;

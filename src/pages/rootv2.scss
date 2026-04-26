@@ -289,27 +289,28 @@ $mobile-size-multiplier:1.5;
 				}
 			}
 
-			>.data{
-				padding:$default-padding;
-				padding-left:1em;
-				padding-right:0em;
-				max-width:$data-width;
-				//min-height:calc($image-height - 1em);
-				min-height:$image-height;
-				align-self: stretch;
-				//background-color:lightseagreen;
-				display:inline-flex;
-				flex-direction:column;
-				h2{
-					margin:0px;
-					display:block;
-					font-size:1.5em;
-					max-height:4em;
-					text-overflow:ellipsis;
-					overflow:hidden;   
-						-webkit-box-orient: vertical; /* Indicate the text direction */
-						display: -webkit-box; /* Specify that we want to use webkit-box */
-					-webkit-line-clamp: 3; /* Set the desired number of lines */
+		.data-section{
+			grid-area: data-section;
+			padding:$default-padding;
+			padding-left:1em;
+			padding-right:0em;
+			max-width:$data-section-width;
+			//min-height:calc($image-height - 1em);
+			min-height:$image-height;
+			align-self: stretch;
+			//background-color:lightseagreen;
+			display:inline-flex;
+			flex-direction:column;
+			h2{
+				margin:0px;
+				display:block;
+				font-size:1.5em;
+				max-height:4em;
+				text-overflow:ellipsis;
+				overflow:hidden;   
+					-webkit-box-orient: vertical; /* Indicate the text direction */
+					display: -webkit-box; /* Specify that we want to use webkit-box */
+				-webkit-line-clamp: 3; /* Set the desired number of lines */
 
 				}
 				.pairings{

@@ -12,6 +12,8 @@ export default class Consolidator{
 	static length : string[] = [];
 	static pairings : string[] = [];
 	static type : string[] = [];
+	static authors : string[] = [];
+	static artists : string[] = [];
 
 	static latestDate : string = "31-12-2025";
 
@@ -25,6 +27,8 @@ export default class Consolidator{
 		let length = new Set<string>();
 		let pairings = new Set<string>();
 		let type = new Set<string>();
+		let authors = new Set<string>();
+		let artists = new Set<string>();
 
 		for (let item of items){
 			item.tags.forEach((a)=>tags.add(a));
@@ -33,6 +37,8 @@ export default class Consolidator{
 			completion.add(item.status);
 			length.add(item.length);
 			type.add(item.type);
+			item.authors?.forEach((a)=>authors.add(a));
+			item.artists?.forEach((a)=>artists.add(a));
 			for (let name in item.names){
 				languages.add(name);
 			}
@@ -54,6 +60,8 @@ export default class Consolidator{
 		this.length = Array.from(length);
 		this.pairings = Array.from(pairings);
 		this.type = Array.from(type);
+		this.authors = Array.from(authors);
+		this.artists = Array.from(artists);
 
 		this.tags.sort();
 		this.ratings.sort();
@@ -64,5 +72,10 @@ export default class Consolidator{
 		this.length.sort();
 		this.pairings.sort();
 		this.type.sort();
+		this.authors.sort();
+		this.artists.sort();
+
+
+
 	}
 }

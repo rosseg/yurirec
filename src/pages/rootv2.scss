@@ -83,15 +83,6 @@ $mobile-size-multiplier:1.5;
 			overflow-y:auto;
 		}
 	}
-	/*h2{
-		border-bottom:0.05em solid white;
-		text-align:center;
-		margin-top:0em;
-		padding-top:0.8em;
-		padding-bottom:0.2em;
-		background-color:#3b3b3b;
-		margin-bottom:0.4em;
-	}*/
 	aside{
 		flex-shrink:0;
 		flex-basis:250px;
@@ -255,21 +246,6 @@ $mobile-size-multiplier:1.5;
 				transform:rotate(-45deg);
 			}
 		}
-		/*.mainsection{
-			grid-row:1;
-			display:inline-flex;
-			margin:$default-margin;
-			padding:0em;
-			//padding-bottom:0em;
-			position:relative;
-			//background-color:blue;
-			border-radius:$default-border-radius;
-			//max-width:calc(100vw - 3em);
-			height:max-content;
-			min-height:calc($image-height);
-			width:calc($mainsection-width);*/
-			
-			
 
 		.cover-image{
 			grid-area: cover-image;
@@ -304,7 +280,8 @@ $mobile-size-multiplier:1.5;
 			align-self: stretch;
 			//background-color:lightseagreen;
 			display:inline-flex;
-			flex-direction:column;
+			//flex-direction:column;
+			flex-wrap:wrap;
 			h2{
 				margin:0px;
 				margin-bottom: 0.5 * $default-margin;
@@ -315,6 +292,29 @@ $mobile-size-multiplier:1.5;
 					-webkit-box-orient: vertical; /* Indicate the text direction */
 					display: -webkit-box; /* Specify that we want to use webkit-box */
 				-webkit-line-clamp: 3; /* Set the desired number of lines */
+
+			}
+			.tabs-content{
+				order:1;
+				display:none;
+				width:100%;
+			}
+			.tabs-label{
+				order:2;
+				padding:0.5em 1em;
+				cursor:pointer;
+			}
+			.tabs-radio{
+				order:3;
+				display:none;
+			}
+			.tabs-radio:checked + .tabs-label{
+				font-weight:bold;
+				background-color: red;
+			}
+			.tabs-radio:checked + .tabs-label  + .tabs-content{
+				display:inline-flex;
+				flex-direction:column;
 
 			}
 			.pairings{

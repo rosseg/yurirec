@@ -381,6 +381,26 @@ export default class Root extends Page{
 					authors?.append(button);
 				}
 			}
+			const dateAddedDiv = elem.querySelector(".date-added-div");
+			const btnAdded = document.createElement("button");
+			btnAdded.innerText = item.added;
+			dateAddedDiv?.append(btnAdded);
+			const linkDiv = elem.querySelector(".info-links-div");
+			if (item.infoLinkLabels && item.infoLinks){
+				for (let i = 0; i < item.infoLinkLabels.length; i++){
+					const button = document.createElement("button");
+					button.innerText = item.infoLinkLabels[i];
+					button.style.color = "blue";
+					button.style.textDecoration = "underline"
+					button.onclick = function (){
+						window.open(item.infoLinks[i], '_blank');
+						button.style.color = "purple";
+					}
+					linkDiv?.append(button);
+				}
+			}
+			
+
 			content?.append(elem);
 		}
 	}

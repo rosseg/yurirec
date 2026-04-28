@@ -14,6 +14,7 @@ export default class Consolidator{
 	static type : string[] = [];
 	static authors : string[] = [];
 	static artists : string[] = [];
+	//static dateAdded : string[] = [];
 
 	static latestDate : string = "31-12-2025";
 
@@ -29,6 +30,7 @@ export default class Consolidator{
 		let type = new Set<string>();
 		let authors = new Set<string>();
 		let artists = new Set<string>();
+		//let dateAdded = new Set<string>();
 
 		for (let item of items){
 			item.tags.forEach((a)=>tags.add(a));
@@ -48,6 +50,7 @@ export default class Consolidator{
 			for (let rating in item.pairings){
 				pairings.add(rating);
 			}
+			//dateAdded.add(item.added);
 			this.latestDate = item.added;
 		}
 		

@@ -7,6 +7,8 @@
 		},
 		"authors":["NAKATANI Nio (仲谷鳰)"],
 		"artists":["NAKATANI Nio (仲谷鳰)"],
+		"infoLinkLabels":["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/wmjgub7/yagate-kimi-ni-naru"],
 		"added": "20-01-2026",
 		"type":"manga",
 		"pairings": {
@@ -27,8 +29,6 @@
 			"romance": 8.5,
 			"wholesome": 8.0,
 			"toxic": 6.0
-			
-			
 		},
 		"tags":["romance", "school life", "slice of life", "drama"]
 	},
@@ -39,9 +39,9 @@
 			"en":"My Dearest Nemesis"
 		},
 		"authors":["Xian Jun (闲君)"],
-
 		"artists":["Xian Jun (闲君)"],
-		
+		"infoLinkLabels":["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/36cbcp3/qin-ai-de-siduitou"],
 		"added": "12-02-2026",
 		"type":"manhua",
 		"pairings": {
@@ -76,7 +76,8 @@
 		"type":"manhwa",
 		"authors":["UNNI (언니)"],
 		"artists":["UNNI (언니)"],
-		
+		"infoLinkLabels":["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/6xqdlt7/i-love-amy"],
 		"pairings": {
 			"lesbian" : 10.0
 		},
@@ -107,10 +108,12 @@
 			"romanized-jp":"Usotsuki Hanayome to Dousei Kekkon-ron",
 			"jp": "嘘つき花嫁と同性結婚論"
 		},
-		"added": "18-03-2026",
-		"type":"manga",
 		"authors":["Kodama Naoko"],
 		"artists":["Kodama Naoko"],
+		"infoLinkLabels":["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/7plvifq/usotsuki-hanayome-to-dousei-kekkon-ron"],
+		"added": "18-03-2026",
+		"type":"manga",
 		"pairings": {
 			"lesbian" : 10.0
 		},
@@ -133,12 +136,13 @@
 	{
 		"names":{
 			"en": "Soulmate"
-			
 		},
 		"added": "19-03-2026",
 		"type":"manhua",
 		"authors":["Ke Ran Bing (可燃冰)", "Wenzhi Lizi (文枝栗子)"],
 		"artists":["Wenzhi Lizi (文枝栗子)"],
+		"infoLinkLabels":["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/5ehz74d/soulmate"],
 		"pairings": {
 			"lesbian" : 10.0
 		},
@@ -167,7 +171,8 @@
 		"added": "31-03-2026",
 		"authors": ["Curryuku"],
 		"artists": ["Curryuku"],
-		
+		"infoLinkLabels":["WEBTOON"],
+		"infoLinks":["https://www.webtoons.com/en/comedy/not-so-shoujo-love-story/list?title_no=2189"],
 		"type":"webtoon",
 		"pairings": {
 			"lesbian" : 10
@@ -198,7 +203,8 @@
 		"added": "31-03-2026",
 		"authors": ["Miranda Mundt"],
 		"artists": ["Miranda Mundt"],
-		
+		"infoLinkLabels":["WEBTOON"],
+		"infoLinks":["https://www.webtoons.com/en/supernatural/muted/list?title_no=1566"],
 		"type":"webtoon",
 		"pairings": {
 			"lesbian" : 10
@@ -218,7 +224,7 @@
 			"art": 10.0
 		},
 		"landmines":["family trauma", "abusive parental figure"],
-		"tags":["witches", "drama", "urban fantasy", "romance", "dark", "poly" ],
+		"tags":["witches", "supernatutal", "drama", "urban fantasy", "romance", "dark", "poly" ],
 		"spoiler-y tags":["poly"]
 	},
 
@@ -229,7 +235,8 @@
 		"added": "31-03-2026",
 		"authors": ["Chase Keels","Miranda Mundt"],
 		"artists": ["Miranda Mundt"],
-		
+		"infoLinkLabels":["WEBTOON"],
+		"infoLinks":["https://www.webtoons.com/en/sf/lovebot/list?title_no=2324"],
 		"type":"webtoon",
 		"pairings": {
 			"gay" : 10
@@ -260,7 +267,8 @@
 		"added": "31-03-2026",
 		"authors": ["Wulvert"],
 		"artists": ["Wulvert"],
-		
+		"infoLinkLabels":["WEBTOON"],
+		"infoLinks":["https://www.webtoons.com/en/comedy/paperteeth/list?title_no=5969"],
 		"type":"webtoon",
 		"pairings": {
 			"lesbian" : "TBD"
@@ -290,7 +298,8 @@
 		"added": "31-03-2026",
 		"authors": ["Wulvert"],
 		"artists": ["Wulvert"],
-		
+		"infoLinkLabels":["Masonry of the Body"],
+		"infoLinks":["https://masonryofthebody.thecomicseries.com/about/"],
 		"type":"webcomic",
 		"pairings": {
 			"lesbian" : 10,
@@ -325,6 +334,8 @@
 		"type":"manga",
 		"authors":["6th Manager"],
 		"artists": ["MISAKI Tenmu (みさき天夢)"],
+		"infoLinkLabels":["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/5bk8qqz/sabishi-sugiru-onna-shachou-ga-lesbian-fuuzokujou-ni-byou-de-ochiru-hanashi"],
 		"pairings": {
 			"lesbian" : 10.0
 		},
@@ -353,7 +364,10 @@
 		},
 		"added": "31-03-2026",
 		"type":"manga",
-		"author":"Sal Jiang",
+		"authors":["Sal Jiang"],
+		"artists":["Sal Jiang"],
+		"infoLinkLabels":["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/davi6id/shiro-to-kuro-sal-jiang"],
 		"pairings": {
 			"lesbian" : 10.0
 		},
@@ -383,6 +397,8 @@
 		},
 		"authors":["ARAI Sumiko (新井すみこ)"],
 		"artists":["ARAI Sumiko (新井すみこ)"],
+		"infoLinkLabels":["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/d86l207/ki-ni-natteru-hito-ga-otoko-ja-nakatta"],
 		"added": "31-03-2026",
 		"type":"manga",
 		"pairings": {
@@ -415,8 +431,10 @@
 		},
 		"added": "31-03-2026",
 		"type":"manhua",
-		"authors":["扶华"],
+		"authors":["Fu Hua (扶华)"],
 		"artists":["Huo Hezi (火禾子)", "Jing Yuan Studio (鲸元社)", "悠作文化"],
+		"infoLinkLabels":["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/5yiwn6b/ta-de-shan-ta-de-hai"],
 		"pairings": {
 			"lesbian" : 10.0
 		},
@@ -447,6 +465,8 @@
 		},
 		"authors":["Yodokawa"],
 		"artists":["Yodokawa"],
+		"infoLinkLabels":["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/d6zpmbj/maitsuki-niwa-tsuki-ooya-tsuki"],
 		"added": "31-03-2026",
 		"type":"manga",
 		"pairings": {
@@ -476,6 +496,8 @@
 		},
 		"authors":["Inoue (イノウエ)"],
 		"artists":["Inoue (イノウエ)"],
+		"infoLinkLabels":["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/0vw676l/gyaru-to-gyaru-no-yuri"],
 		"added": "31-03-2026",
 		"type":"manga",
 		"pairings": {

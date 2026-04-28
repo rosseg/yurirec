@@ -110,9 +110,6 @@ export default class Root extends Page{
 		});
 		this.Element.querySelector(".qna .close").addEventListener("click",close);
 
-
-
-
 		//console.log(test, test.match(new RegExp("--","g")).length);
 		let lines = test.replaceAll("\r","").split("\n").map((a)=>a.trim());
 		for (let line of lines){
@@ -365,10 +362,26 @@ export default class Root extends Page{
 				for (let tag of item.landmines){
 					const button = document.createElement("button");
 					button.innerText = tag;
-					landmines.append(button);
+					landmines?.append(button);
 				}
 			}
-			content.append(elem);
+			const artists = elem.querySelector("#artists");
+			if (item.artists){
+				for (let artist of item.artists){
+					const button = document.createElement("button");
+					button.innerText = artist;
+					artists?.append(button);
+				}
+			}
+			const authors = elem.querySelector("#authors");
+			if (item.authors){
+				for (let author of item.authors){
+					const button = document.createElement("button");
+					button.innerText = author;
+					authors?.append(button);
+				}
+			}
+			content?.append(elem);
 		}
 	}
 

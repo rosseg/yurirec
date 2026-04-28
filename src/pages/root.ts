@@ -198,7 +198,7 @@ export default class Root extends Page{
 	ratingDir : number = -1;
 
 	
-	Filter(source : any[], rkey : keyof this, inclusive : boolean = false){
+	Filter(source : any[], rkey : keyof this, inclusive : boolean = true){
 		if (Object.keys(this[rkey]).length > 0){
 			return source.filter((a)=>{
 				let list = [];
@@ -250,7 +250,6 @@ export default class Root extends Page{
 		ratings.classList.toggle("down", this.ratingDir == 1);
 		const content = this.Element.querySelector(".content");
 		content.innerHTML = "";
-		let cap = items.length;
 
 		//take the list of yuri
 		let cloned = items.toSorted((a, b)=>{return ((b.recommendations[this.rating] ?? 0.0) - (a.recommendations[this.rating] ?? 0.0)) * this.ratingDir; });
@@ -262,7 +261,7 @@ export default class Root extends Page{
 		cloned = this.Filter(cloned, "status");
 		cloned = this.Filter(cloned, "length");
 		cloned = this.Filter(cloned, "pairings");
-		cloned = this.Filter(cloned, "type", true);
+		cloned = this.Filter(cloned, "type");
 		if (this.onlyNew){
 			cloned = cloned.filter((a)=>a.added == Consolidator.latestDate);
 			
@@ -469,9 +468,9 @@ export default class Root extends Page{
 		}
 		{
 			const elem = this.Element.querySelector(".extras .hidelandmines");
-			elem.querySelector(".multi-checkbox").classList.toggle("active", this.hideLandmines);
-			elem.addEventListener("click",()=>{
-				elem.querySelector(".multi-checkbox").classList.toggle("active");
+			elem?.querySelector(".multi-checkbox")?.classList.toggle("active", this.hideLandmines);
+			elem?.addEventListener("click",()=>{
+				elem?.querySelector(".multi-checkbox")?.classList.toggle("active");
 				this.hideLandmines = (elem.querySelector(".multi-checkbox").classList.contains("active"));
 				this.UpdateFilters();
 			});
@@ -546,13 +545,14 @@ export default class Root extends Page{
 			const tags = this.Element.querySelector(".list.length");
 			const ls = Consolidator.length;
 			for (let i = 0; i < ls.length; i++){
-				tags.append(this.AddFilter(ls[i], this.length[ls[i]] ?? undefined, (r, t)=>{
-					if (t == ""){
-						delete this.length[r];
-					}else{
-						this.length[r] = t;
-					}
-					this.UpdateFilters();
+				tags.append(this.AddFilter(ls[i], this.length[ls[i]] ?? undefined, 
+					(r, t)=>{
+						if (t == ""){
+							delete this.length[r];
+						}else{
+							this.length[r] = t;
+						}
+						this.UpdateFilters();
 				}))
 			}
 		}
@@ -686,5 +686,15 @@ export default class Root extends Page{
 
 		this.Element.classList.toggle("hideLandmines", this.hideLandmines);
 		this.Element.classList.toggle("hideTags", this.hideTags);
+	}
+
+	ClearFilters(section : string){
+		this.SetElements();
+		if (section == "hideLandmines" || section == "hideTags"){
+			this.Element.classList.toggle(section, false);
+		} else {
+			localStorage.setItem(section, "");
+		}
+		
 	}
 }

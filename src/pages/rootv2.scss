@@ -481,6 +481,7 @@ $mobile-size-multiplier:1.5;
 		}
 		
 		.tag-section{
+
 			grid-area: tag-section;
 			grid-row:2;
 
@@ -529,6 +530,18 @@ $mobile-size-multiplier:1.5;
 					height:$tag-button-height;
 				}
 			}
+			.spoiler{
+					//background-color:black;
+					//border-radius:0.2em;
+					//padding-left:0.2em;
+					//padding-right:0.2em;
+					filter: blur(0.35em);
+						transition:all 0.3s;
+					&:hover{
+						filter: blur(0px);
+					}
+			}
+			
 		}
 		
 	}

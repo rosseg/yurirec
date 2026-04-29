@@ -476,9 +476,9 @@ export default class Root extends Page{
 		localStorage.setItem("hideTags", this.hideTags ? "true" : "false");
 		localStorage.setItem("hideLandmines", this.hideLandmines ? "true" : "false");
 
-		this.Element.classList.toggle("hideLandmines", this.hideLandmines);
-		this.Element.classList.toggle("hideTags", this.hideTags);
-
+		//this.Element.classList.toggle("hideLandmines", this.hideLandmines);
+		//this.Element.classList.toggle("hideTags", this.hideTags);
+		this.UpdateHideTagsLandmines();
 	}
 
 	SetFilters(){
@@ -709,8 +709,36 @@ export default class Root extends Page{
 			}
 		}
 
-		this.Element.classList.toggle("hideLandmines", this.hideLandmines);
-		this.Element.classList.toggle("hideTags", this.hideTags);
+		//this.Element.classList.toggle("hideLandmines", this.hideLandmines);
+		//this.Element.classList.toggle("hideTags", this.hideTags)
+		this.UpdateHideTagsLandmines();
+		
+	}
+
+	UpdateHideTagsLandmines(){
+		for (var j = 0; j < items.length; j++){
+			let elem = document.getElementById("article-"+j);
+			let tagBtns = elem?.querySelector(".tags")?.children;
+			if (tagBtns){
+				for (var i = 0; i < tagBtns.length; i++){
+					if (this.hideTags && !tagBtns[i].classList.contains("spoiler"))
+						tagBtns[i].classList.add("spoiler");
+					else if (tagBtns[i].classList.contains("spoiler")) 
+						tagBtns[i].classList.remove("spoiler");
+				}
+			}
+
+			let landmineBtns = elem?.querySelector(".landmines")?.children;
+			if (landmineBtns){
+				for (var i = 0; i < landmineBtns.length; i++){
+					if (this.hideLandmines && !landmineBtns[i].classList.contains("spoiler"))
+						landmineBtns[i].classList.add("spoiler");
+					else if (landmineBtns[i].classList.contains("spoiler")) 
+						landmineBtns[i].classList.remove("spoiler");
+				}
+			}
+		}
+		
 	}
 
 	ClearFilters(section : string){

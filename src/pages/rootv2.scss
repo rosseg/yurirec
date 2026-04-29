@@ -10,7 +10,7 @@ $image-width: 250px;
 $image-height: 370px;
 $data-section-width: 16.5em;
 $tag-button-height:1.4em;
-$tag-section-max-height: 4 * $tag-button-height;
+$tag-section-max-height: 5 * $tag-button-height;
 $tag-section-min-height: 1 * $tag-button-height;
 $tag-section-margin:$default-margin;
 $mainsection-margin: $default-margin;
@@ -186,7 +186,7 @@ $mobile-size-multiplier:1.5;
 			}
 		}
 	}
-	&.hideLandmines{
+	/*&.hideLandmines{
 		article{
 			>.tag-section .landmines{
 				display:none;
@@ -199,7 +199,7 @@ $mobile-size-multiplier:1.5;
 				display:none;
 			}
 		}
-	}
+	}*/
 	article{
 		//display:flex;
 		//flex-direction: column;
@@ -526,6 +526,24 @@ $mobile-size-multiplier:1.5;
 					border:unset;
 					border-radius:0.3em;
 					margin:0.1em;
+					padding:0.1em 0.3em;
+					height:$tag-button-height;
+				}
+			}
+			.spoiler-tags{
+				button{
+					appearance:unset;
+					background-color: #f7736ec7;
+					color:rgb(114, 57, 57);
+					border:unset;
+					border-radius:0.3em;
+					margin:0.1em;
+					padding:0.1em 0.3em;
+					height:$tag-button-height;
+				}
+				.spoiler-label{
+					font-size: 0.8em;
+					display: none;
 					padding:0.1em 0.3em;
 					height:$tag-button-height;
 				}

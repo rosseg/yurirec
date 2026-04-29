@@ -381,6 +381,20 @@ export default class Root extends Page{
 				button.classList.add(makeSafeForCSS(tag));
 				tags.append(button);
 			}
+			const spoilerTags = elem.querySelector(".spoiler-tags");
+			if (item.spoilerTags){
+				const label = <HTMLLabelElement>elem.querySelector(".spoiler-label");
+				label.style.display = "inline";
+				for (let tag of item.spoilerTags){
+					const button = document.createElement("button");
+					button.classList.add("spoiler");
+					button.innerText = tag;
+					
+					button.classList.add(makeSafeForCSS(tag));
+					spoilerTags?.append(button);
+				}
+			}
+			
 			const landmines = elem.querySelector(".landmines");
 			if (item.landmines){
 				for (let tag of item.landmines){

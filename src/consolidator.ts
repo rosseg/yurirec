@@ -34,6 +34,7 @@ export default class Consolidator{
 
 		for (let item of items){
 			item.tags.forEach((a)=>tags.add(a));
+			item.spoilerTags?.forEach((a)=>tags.add(a));
 			item.landmines?.forEach((a)=>landmines.add(a));
 			item.targets?.forEach((a)=>recomms.add(a));
 			completion.add(item.status);

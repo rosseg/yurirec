@@ -99,7 +99,7 @@
 		},
 		"landmines": ["family trauma"],
 		"tags":["romance", "slice of life", "stalker", "yandere", "school life", "full colour"],
-		"spoiler tags":["friends to lovers"]
+		"spoilerTags":["friends to lovers"]
 	},
 
 	{
@@ -225,7 +225,7 @@
 		},
 		"landmines":["family trauma", "abusive parental figure"],
 		"tags":["witches", "supernatutal", "drama", "urban fantasy", "romance", "dark", "poly" ],
-		"spoiler-y tags":["poly"]
+		"spoilerTags":["poly"]
 	},
 
 	{
@@ -257,7 +257,7 @@
 		},
 		"landmines":["abuse", "sexual violence"],
 		"tags":["sci-fi", "androids", "drama", "romance", "Boy's Love", "Not Yuri", "dark", "intersex", "disability"],
-		"spoiler-y tags":["poly"]
+		"spoilerTags":["poly"]
 	},
 
 	{
@@ -289,7 +289,7 @@
 		},
 		"landmines":["blood"],
 		"tags":["comedy", "vampires", "drama", "Yuri TBD"],
-		"spoiler-y tags":[]
+		"spoilerTags":[]
 	},
 	{
 		"names":{
@@ -322,7 +322,7 @@
 		},
 		"landmines":["blood", "gore", "transphobia", "homophobia", "abuse"],
 		"tags":["gothic", "body horror", "drama"],
-		"spoiler-y tags":[]
+		"spoilerTags":[]
 	},
 	{
 		"names":{

@@ -533,12 +533,12 @@ $mobile-size-multiplier:1.5;
 		
 	}
 	@media (max-width: 52rem) {
-		article:nth-child(2n){
-		//	.mainsection{
-		//		flex-direction:row-reverse;
-	
-			
+		article:nth-child(even){
+			grid-template-areas: "data-section cover-image"
+								"tab-labels-section tag-section";
 		}
+		
+
 		aside{
 			display:block;
 			position:fixed;

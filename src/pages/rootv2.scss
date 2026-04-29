@@ -400,8 +400,6 @@ $mobile-size-multiplier:1.5;
 			.tabs-content2{
 				border-radius:$default-border-radius $default-border-radius 0 $default-border-radius;
 			}
-			
-			
 
 			// had to do this in typescript root.ts because 
 			// to align things tabs-content had to be in different grid, 
@@ -454,15 +452,10 @@ $mobile-size-multiplier:1.5;
 			overflow:hidden;
 			display:grid;
 			grid-template-columns: 1fr max-content;
+
 			.tabs-label{
-				
-				
-				
 				align-self:auto;
 				justify-self: flex-end;
-				
-				//align-items: flex-end;
-				
 				padding:0.5em 1em;
 				height: max-content;
 				cursor:pointer;
@@ -562,6 +555,8 @@ $mobile-size-multiplier:1.5;
 		}
 		article{
 			grid-template-columns:minmax(0, 1fr) minmax(0, 1fr);
+			grid-template-rows: ($image-height * $mobile-size-multiplier) max-content;
+			//grid-template-columns: $image-width $data-section-width;
 			width:calc(100vw - 1em);
 			max-height:calc($article-max-height * $mobile-size-multiplier);
 			min-height:max-content;
@@ -590,6 +585,7 @@ $mobile-size-multiplier:1.5;
 			.data-section{
 				padding-left:$default-padding;
 				padding-right:$default-padding;
+				height:($image-height * $mobile-size-multiplier)
 			}
 
 			.cover-image{

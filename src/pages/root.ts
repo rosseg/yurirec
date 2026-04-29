@@ -287,6 +287,31 @@ export default class Root extends Page{
 			elem.querySelector("#label1").id="label1-"+(i+1);
 			elem.querySelector("#label2").id="label2-"+(i+1);
 			
+			let tabContent1 = (<HTMLDivElement>elem.querySelector("#tabcontent1-"+(i+1)));
+			let tabContent2 = (<HTMLDivElement>elem.querySelector("#tabcontent2-"+(i+1)));
+			tabContent2.style.display="none";
+			tabContent1.style.background="red";
+			tabContent1.style.display="flex";
+			tabContent1.style.flexDirection="column";
+
+			(<HTMLInputElement>elem.querySelector("#tabradio1-"+(i+1))).onclick = 
+				function(){
+					let tabContent1 = (<HTMLDivElement>elem.querySelector("#tabcontent1-"+(i+1)));
+					let tabContent2 = (<HTMLDivElement>elem.querySelector("#tabcontent2-"+(i+1)));
+					tabContent2.style.display="none";
+					
+					tabContent1.style.display="flex";
+					tabContent1.style.flexDirection="column";
+				};
+			(<HTMLInputElement>elem.querySelector("#tabradio2-"+(i+1))).onclick = 
+				function(){
+					let tabContent1 = (<HTMLDivElement>elem.querySelector("#tabcontent1-"+(i+1)));
+					let tabContent2 = (<HTMLDivElement>elem.querySelector("#tabcontent2-"+(i+1)));
+					tabContent1.style.display="none";
+					
+					tabContent2.style.display="grid";
+					tabContent2.style.gridTemplateRows = "repeat(4, minmax(max-content, 1fr))";
+				};
 
 			elem.classList.toggle("new", item.added == Consolidator.latestDate);
 	

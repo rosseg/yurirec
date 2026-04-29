@@ -206,15 +206,15 @@ $mobile-size-multiplier:1.5;
 		align-self:stretch;
 
 		display: grid;
-		grid-template-rows: max-content max-content;
+		grid-template-rows: $image-height max-content;
 		grid-template-columns: $image-width $data-section-width;
 		grid-template-areas: "cover-image data-section"
-							 "tag-section data-section";
+							 "tag-section tab-labels-section";
 		
 		margin:$default-margin;
 		padding:$default-padding;
 		
-		position:relative;
+		
 		background-color:#bb5f5fd5;
 		border-radius:$default-border-radius;
 		//max-width:calc(100vw - 3em);
@@ -222,6 +222,7 @@ $mobile-size-multiplier:1.5;
 		width:max-content;
 		min-height:max-content;
 		max-height:$article-max-height;
+		
 		
 
 		//scroll-margin:0em;
@@ -270,20 +271,23 @@ $mobile-size-multiplier:1.5;
 		}
 
 		.data-section{
+			overflow:hidden;
 			grid-area: data-section;
-			padding:$default-padding;
+			padding-top:$default-padding;
 			padding-left:1rem;
 			padding-right:0rem;
+
 			max-width:$data-section-width;
 			//min-height:calc($image-height - 1rem);
-			min-height:$image-height;
+			height:$image-height;
 			align-self: stretch;
 			//background-color:lightseagreen;
-			display:inline-flex;
-			//flex-direction:column;
-			flex-wrap:wrap;
+			display:grid;
+			grid-template-columns: 100%;
+			grid-template-rows: max-content max-content 1fr;
 			.title{
-				
+				grid-column: 1;
+				grid-row:1;
 				margin:0px;
 				margin-bottom: 0.5 * $default-margin;
 				font-size:1.5em;
@@ -295,31 +299,11 @@ $mobile-size-multiplier:1.5;
 				-webkit-line-clamp: 3; /* Set the desired number of lines */
 
 			}
-			.tabs-content{
-				order:1;
-				display:none;
-				width:100%;
-			}
-			.tabs-label{
-				order:2;
-				padding:0.5em 1em;
-				cursor:pointer;
-			}
-			.tabs-radio{
-				order:3;
-				display:none;
-			}
-			.tabs-radio:checked + .tabs-label{
-				font-weight:bold;
-				background-color: red;
-			}
-			.tabs-radio:checked + .tabs-label  + .tabs-content{
-				display:inline-flex;
-				flex-direction:column;
-
-			}
 			.pairings{
-				
+				margin-top: 0.5 * $default-margin;
+				margin-bottom: 2 * $default-margin;
+				grid-column: 1 / 3;
+				grid-row:2;
 				.pairing{
 					width:2.5em;
 					text-shadow:0px 0px 5px rgb(255, 255, 255);
@@ -381,6 +365,54 @@ $mobile-size-multiplier:1.5;
 					}
 				}
 			}
+			
+			.tabs-content{
+				grid-column: 1;
+				grid-row: 3;
+				//margin-top: $default-margin;
+				//margin-bottom: $default-margin;
+				padding: $default-padding;
+				padding-bottom: 0;
+				background-color: red;
+				display: none;
+				width: 100%;
+				align-self: stretch;
+
+				.creator-button-div{
+
+				}
+				#authors{
+					grid-row: 1;
+				}
+				#artists{
+					grid-row: 2;
+				}
+				.date-added-div{
+					grid-row: 3;
+				}
+				.info-links-div{
+					grid-row: 4;
+				}
+			}
+			.tabs-content1{
+				border-radius: $default-border-radius;
+			}
+			.tabs-content2{
+				border-radius:$default-border-radius $default-border-radius 0 $default-border-radius;
+			}
+			
+			
+
+			// had to do this in typescript root.ts because 
+			// to align things tabs-content had to be in different grid, 
+			// so they no longer were siblings
+
+			//.tabs-radio:checked + .tabs-label  + .tabs-content{
+			//	display:inline-flex;
+			//	flex-direction:column;
+			//	background-color: red;
+			//}
+		
 			.desc{
 				//font-weight:100;
 				font-size:0.8em;
@@ -395,10 +427,11 @@ $mobile-size-multiplier:1.5;
 			
 		
 			.ratings{
-				margin-bottom:0.5rem;
+				margin-bottom:$default-margin;
 			}
 			.short-desc{
-				
+				margin-top:0;
+				margin-bottom: 2 * $default-margin;
 				font-weight:bold;
 			}
 			span{
@@ -415,6 +448,44 @@ $mobile-size-multiplier:1.5;
 				}
 			}
 		}
+
+		.tab-labels-section{
+			grid-area:tab-labels-section;
+			overflow:hidden;
+			display:grid;
+			grid-template-columns: 1fr max-content;
+			.tabs-label{
+				
+				
+				
+				align-self:auto;
+				justify-self: flex-end;
+				
+				//align-items: flex-end;
+				
+				padding:0.5em 1em;
+				height: max-content;
+				cursor:pointer;
+				border-radius:0 0 $default-border-radius $default-border-radius;
+
+			}
+			.tabs-label1{
+				grid-column:1;
+				
+			}
+			.tabs-label2{
+				grid-column: 2;
+				
+			}
+			.tabs-radio{
+				
+				display:none;
+			}
+			.tabs-radio:checked + .tabs-label{
+				font-weight:bold;
+				background-color: red;
+			}
+		}
 		
 		.tag-section{
 			grid-area: tag-section;
@@ -429,6 +500,7 @@ $mobile-size-multiplier:1.5;
 			width:$image-width;
 			border-radius:$default-border-radius;
 			//background-color:yellow;
+			anchor-name: --tag-anchor;
 
 			.tags{
 				button{

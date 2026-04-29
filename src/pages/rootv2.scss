@@ -603,7 +603,10 @@ $mobile-size-multiplier:1.5;
 					object-position:center center;
 				}
 			}
-
+			.tab-labels-section{
+				padding-right:$default-padding;
+				padding-left: $default-padding;
+			}
 			
 			.tag-section{
 				width:unset;

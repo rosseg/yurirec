@@ -10,26 +10,23 @@ $image-width: 250px;
 $image-height: 370px;
 $data-section-width: 16.5em;
 $tag-button-height:1.4em;
-$tag-section-max-height: 5 * $tag-button-height;
+$tag-section-max-height: 6 * $tag-button-height;
 $tag-section-min-height: 1 * $tag-button-height;
-$tag-section-margin:$default-margin;
-$mainsection-margin: $default-margin;
+
 $mainsection-width: calc($image-width + $data-section-width);
 $article-margin: $default-margin;
 $article-padding: $default-margin;
 $article-max-height:calc(2 * $article-padding 
-						+ 2 * $mainsection-margin + $image-height 
-						+ 2 * $tag-section-margin + $tag-section-min-height);
-$article-max-height:calc(2 * $article-padding 
-						+ 2 * $mainsection-margin + $image-height 
-						+ 2 * $tag-section-margin + $tag-section-max-height);
-$article-space-needed: calc($mainsection-width + 2 * $mainsection-margin + 2 * $article-margin);
+						+  $image-height 
+						+ $tag-section-max-height);
+//$article-space-needed: calc($mainsection-width + 2 * $mainsection-margin + 2 * $article-margin);
 $aside-width: 18vw;
 $content-width: 100vw - $aside-width;
 $mobile-size-multiplier:1.5;
 //$grid-num-columns: calc(math.floor(math.div($content-width, $article-space-needed))) ;
 //$article-width: calc($)
 //@debug "grid cols" + $grid-num-columns;
+$default-background-colour:#8D73B2;
 
 #root.page{
 	display:flex;  font-family: "Quicksand", sans-serif;
@@ -43,11 +40,12 @@ $mobile-size-multiplier:1.5;
 		flex-grow:1
 	}
 	//background: linear-gradient(90deg, var(--a-colour), var(--b-colour));
-	background-image:url('../../assets/background.avif');
+	//background-image:url('../../assets/background.avif');
 	background-size:cover;
-	background-color:#744747;
+	//background-color:#744747;
 	//background-color:#eb8c88;
 	background-blend-mode:multiply;
+	background-image:url('../../assets/blue_fabric_background_70.webp');
 	
 
 	.qna{
@@ -76,7 +74,7 @@ $mobile-size-multiplier:1.5;
 				right:0.5em;
 				user-select:none;
 			}
-			background-color:#744747;
+			background-color:$default-background-colour;
 			max-width:min(100vw, 50em);
 			padding:2em;
 			max-height:100vh;
@@ -89,7 +87,7 @@ $mobile-size-multiplier:1.5;
 		//width:$aside-width;
 		height:100%;
 		padding-left:1em;
-		background-color:#bb5f5fc7;
+		background-color:#8D73B2;
 		overflow-y:auto;
 		h2{
 			position:relative;
@@ -215,7 +213,7 @@ $mobile-size-multiplier:1.5;
 		padding:$default-padding;
 		
 		
-		background-color:#bb5f5fd5;
+		background-color:$default-background-colour;
 		border-radius:$default-border-radius;
 		//max-width:calc(100vw - 3em);
 		//height:calc($image-height + 20px);
@@ -452,6 +450,8 @@ $mobile-size-multiplier:1.5;
 			overflow:hidden;
 			display:grid;
 			grid-template-columns: 1fr max-content;
+			min-height: max-content;
+			max-height: $tag-section-max-height;
 
 			.tabs-label{
 				align-self:auto;
@@ -490,7 +490,7 @@ $mobile-size-multiplier:1.5;
 			padding:0rem;
 			position:relative;
 			min-height: max-content;
-			max-height: calc(4 * $tag-button-height);
+			max-height: $tag-section-max-height;
 			width:$image-width;
 			border-radius:$default-border-radius;
 			//background-color:yellow;
@@ -589,8 +589,8 @@ $mobile-size-multiplier:1.5;
 			grid-template-rows: ($image-height * $mobile-size-multiplier) max-content;
 			//grid-template-columns: $image-width $data-section-width;
 			width:calc(100vw - 1em);
-			max-height:calc($article-max-height * $mobile-size-multiplier);
-			min-height:max-content;
+			//max-height:calc($article-max-height * $mobile-size-multiplier);
+			height:max-content;
 			align-self:flex-start;
 			font-size:$mobile-size-multiplier * 1em;
 			//margin:0px;
@@ -643,6 +643,7 @@ $mobile-size-multiplier:1.5;
 				width:unset;
 				min-width:unset;
 				max-width:fit-content;
+				max-height: max-content;
 			}
 			
 		//	>div{

@@ -26,7 +26,7 @@ $mobile-size-multiplier:1.5;
 //$grid-num-columns: calc(math.floor(math.div($content-width, $article-space-needed))) ;
 //$article-width: calc($)
 //@debug "grid cols" + $grid-num-columns;
-$default-background-colour:#8D73B2;
+$default-background-colour:#8d73b2eb;
 
 #root.page{
 	display:flex;  font-family: "Quicksand", sans-serif;
@@ -87,7 +87,7 @@ $default-background-colour:#8D73B2;
 		//width:$aside-width;
 		height:100%;
 		padding-left:1em;
-		background-color:#8D73B2;
+		background-color:$default-background-colour;
 		overflow-y:auto;
 		h2{
 			position:relative;

@@ -26,7 +26,27 @@ $mobile-size-multiplier:1.5;
 //$grid-num-columns: calc(math.floor(math.div($content-width, $article-space-needed))) ;
 //$article-width: calc($)
 //@debug "grid cols" + $grid-num-columns;
-$default-background-colour:#8d73b2eb;
+//$default-background-colour:#8d73b2eb;
+$ml1: #560087;
+$ml1-trans:#560087ea;
+
+$ml2: #e8b9ee;
+$ml2-80t: #faf1fc;
+
+$ml3: #c354b3;
+$ml4: #a7007e;
+$ml5: #340060;
+$ml5-b10: #2f0056;
+$ml5-b20: #2a004d;
+
+$default-background-colour:$ml1-trans;
+$tab-active-colour:$ml4;
+$tab-inactive-colour:$ml5;
+$tag-button-colour: $ml3;
+$tag-text-colour:$ml5-b20;
+$warning-colour:#d62e02;
+$hiatus-colour: #ff22ff;
+$long-colour: #00a729;
 
 #root.page{
 	display:flex;  font-family: "Quicksand", sans-serif;
@@ -42,8 +62,7 @@ $default-background-colour:#8d73b2eb;
 	//background: linear-gradient(90deg, var(--a-colour), var(--b-colour));
 	//background-image:url('../../assets/background.avif');
 	background-size:cover;
-	//background-color:#744747;
-	//background-color:#eb8c88;
+	
 	background-blend-mode:multiply;
 	background-image:url('../../assets/blue_fabric_background_70.webp');
 	
@@ -257,7 +276,7 @@ $default-background-colour:#8d73b2eb;
 			border-radius:$default-border-radius;
 			//align-self: stretch;
 			
-			//background-color: pink;
+			
 			img{
 				//width:100%;
 				//height:100%;
@@ -279,7 +298,7 @@ $default-background-colour:#8d73b2eb;
 			//min-height:calc($image-height - 1rem);
 			height:$image-height;
 			align-self: stretch;
-			//background-color:lightseagreen;
+			
 			display:grid;
 			grid-template-columns: 100%;
 			grid-template-rows: max-content max-content 1fr;
@@ -302,6 +321,15 @@ $default-background-colour:#8d73b2eb;
 				margin-bottom: 2 * $default-margin;
 				grid-column: 1 / 3;
 				grid-row:2;
+				button{
+					appearance:unset;
+					
+					color:$tag-text-colour;
+					border:unset;
+					border-radius:0.3em;
+					margin:0.1em;
+					padding:0.1em 0.3em;
+				}
 				.pairing{
 					width:2.5em;
 					text-shadow:0px 0px 5px rgb(255, 255, 255);
@@ -309,37 +337,26 @@ $default-background-colour:#8d73b2eb;
 				.lesbian{
 					background-image:url('../../assets/Lesbian_pride_flag_2018.svg.png');
 					background-size:auto 100%;
-					color:rgb(98, 43, 100);
-					//color:#ffffff00;
+					
 				}
 				.gay{
 					background-image:url('../../assets/gay.png');
 					background-size:auto 100%;
-					color:rgb(98, 43, 100);
-					//color:#ffffff00;
+					
 				}
 				.trans{
 					background-image:url('../../assets/trans.png');
 					background-size:auto 100%;
-					color:rgb(98, 43, 100);
-					//color:#ffffff00;
+					
 				}
 				.open{
 					background-image:url('../../assets/Open_relationship.png');
 					background-size:auto 100%;
-					color:rgb(255, 255, 255);
+					color:$ml2-80t;
 					text-shadow:0px 0px 5px rgb(0, 0, 0);
-					//color:#ffffff00;
+					
 				}
-				button{
-					appearance:unset;
-					background-color: #f7736e;
-					color:rgb(114, 57, 57);
-					border:unset;
-					border-radius:0.3em;
-					margin:0.1em;
-					padding:0.1em 0.3em;
-				}
+				
 				.status{
 					&.in-progress{
 						background-color:rgb(247, 172, 61);
@@ -348,7 +365,10 @@ $default-background-colour:#8d73b2eb;
 						background-color:rgb(121, 219, 97);
 					}
 					&.cancelled{
-						background-color: #fd0800c7;
+						background-color: $warning-colour;
+					}
+					&.hiatus{
+						background-color: $hiatus-colour;
 					}
 				}
 				.length{
@@ -356,7 +376,7 @@ $default-background-colour:#8d73b2eb;
 						background-color:rgb(247, 172, 61);
 					}
 					&.long{
-						background-color:rgb(121, 219, 97);
+						background-color: $long-colour;
 					}
 					&.short{
 						background-color: #ec524d;
@@ -371,7 +391,7 @@ $default-background-colour:#8d73b2eb;
 				//margin-bottom: $default-margin;
 				padding: $default-padding;
 				padding-bottom: 0;
-				background-color: red;
+				background-color: $tab-active-colour;
 				display: none;
 				width: 100%;
 				align-self: stretch;
@@ -417,7 +437,6 @@ $default-background-colour:#8d73b2eb;
 			
 			
 			.centre{
-				//background-color:orangered;
 				flex-grow:1;
 			}
 			
@@ -432,7 +451,6 @@ $default-background-colour:#8d73b2eb;
 			}
 			span{
 				&.spoiler{
-					//background-color:black;
 					border-radius:0.2em;
 					padding-left:0.2em;
 					padding-right:0.2em;
@@ -460,7 +478,7 @@ $default-background-colour:#8d73b2eb;
 				height: max-content;
 				cursor:pointer;
 				border-radius:0 0 $default-border-radius $default-border-radius;
-
+				background-color: $tab-inactive-colour;
 			}
 			.tabs-label1{
 				grid-column:1;
@@ -476,7 +494,7 @@ $default-background-colour:#8d73b2eb;
 			}
 			.tabs-radio:checked + .tabs-label{
 				font-weight:bold;
-				background-color: red;
+				background-color: $tab-active-colour;
 			}
 		}
 		
@@ -493,14 +511,13 @@ $default-background-colour:#8d73b2eb;
 			max-height: $tag-section-max-height;
 			width:$image-width;
 			border-radius:$default-border-radius;
-			//background-color:yellow;
-			anchor-name: --tag-anchor;
+			
 
 			.tags{
 				button{
 					appearance:unset;
-					background-color: #f7736ec7;
-					color:rgb(114, 57, 57);
+					background-color: $tag-button-colour;
+					color: $tag-text-colour;
 					border:unset;
 					border-radius:0.3em;
 					margin:0.1em;
@@ -521,8 +538,8 @@ $default-background-colour:#8d73b2eb;
 			.landmines{
 				button{
 					appearance:unset;
-					background-color: #fd0800c7;
-					color:rgb(114, 57, 57);
+					background-color: $warning-colour;
+					color:$tag-text-colour;
 					border:unset;
 					border-radius:0.3em;
 					margin:0.1em;

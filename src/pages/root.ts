@@ -290,7 +290,7 @@ export default class Root extends Page{
 			let tabContent1 = (<HTMLDivElement>elem.querySelector("#tabcontent1-"+(i+1)));
 			let tabContent2 = (<HTMLDivElement>elem.querySelector("#tabcontent2-"+(i+1)));
 			tabContent2.style.display="none";
-			tabContent1.style.background="red";
+			tabContent1.style.background="$tab-active-colour";
 			tabContent1.style.display="flex";
 			tabContent1.style.flexDirection="column";
 
@@ -382,7 +382,7 @@ export default class Root extends Page{
 				tags.append(button);
 			}
 			const spoilerTags = elem.querySelector(".spoiler-tags");
-			if (item.spoilerTags){
+			if (item.spoilerTags && item.spoilerTags.length > 0){
 				const label = <HTMLLabelElement>elem.querySelector(".spoiler-label");
 				label.style.display = "inline";
 				for (let tag of item.spoilerTags){

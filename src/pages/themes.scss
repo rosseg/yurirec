@@ -42,23 +42,23 @@
 .moon-lesbian{
     --ml1: #560087;
     --ml1-trans:#560087d0;
-    --ml1-t20-trans:#78339fcc;
+    --ml1-t20-trans:#78339fa0;
     --ml2: #e8b9ee;
     --ml2-t80: #faf1fc;
     --ml3: #c354b3;
     --ml4: #a7007e;
     --ml5: #340060;
     --ml5-t10:#481a70;
-    
     --ml5-s10: #2f0056;
     --ml5-s20: #2a004d;
+    --ml5-s20-trans: #2a004d40;
 
-    --background-image:url('../../assets/background.avif');
+    --background-image:url('../../assets/mooning5x3.png');
     --default-background-colour:var(--ml1-t20-trans);
     --default-text-color: var(--ml2-t80);
     --default-button-hover-active-colour:rgb(41, 41, 41);
-    --page-background-colour:var(--ml5-t10);
-    --qna-background-colour:#00000088;
+    --page-background-colour:var(--ml5-s20-trans);
+    --qna-background-colour:#000000cc;
     --aside-background-colour:var(--default-background-colour);
     --article-background-color:var(--default-background-colour);
     --new-background-color:red;

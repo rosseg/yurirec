@@ -1,4 +1,5 @@
 @use 'sass:math';
+@use 'themes' as *;
 @import url('https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap');
 
 
@@ -27,26 +28,16 @@ $mobile-size-multiplier:1.5;
 //$article-width: calc($)
 //@debug "grid cols" + $grid-num-columns;
 //$default-background-colour:#8d73b2eb;
-$ml1: #560087;
-$ml1-trans:#560087ea;
 
-$ml2: #e8b9ee;
-$ml2-80t: #faf1fc;
 
-$ml3: #c354b3;
-$ml4: #a7007e;
-$ml5: #340060;
-$ml5-b10: #2f0056;
-$ml5-b20: #2a004d;
-
-$default-background-colour:$ml1-trans;
+/*$default-background-colour:$ml1-trans;
 $tab-active-colour:$ml4;
 $tab-inactive-colour:$ml5;
 $tag-button-colour: $ml3;
 $tag-text-colour:$ml5-b20;
 $warning-colour:#d62e02;
-$hiatus-colour: #ff22ff;
-$long-colour: #00a729;
+$hiatus-button-colour: #ff22ff;
+$long-button-colour: #00a729;*/
 
 #root.page{
 	display:flex;  font-family: "Quicksand", sans-serif;
@@ -64,7 +55,7 @@ $long-colour: #00a729;
 	background-size:cover;
 	
 	background-blend-mode:multiply;
-	background-image:url('../../assets/blue_fabric_background_70.webp');
+	background-image:var(--background-image);
 	
 
 	.qna{
@@ -73,7 +64,7 @@ $long-colour: #00a729;
 		height:100vh;
 		left:0px;
 		top:0px;
-		background-color:#00000088;
+		background-color:var(--qna-background-colour);
 		justify-content:center;
 		align-items:center;
 		display:none;
@@ -93,7 +84,7 @@ $long-colour: #00a729;
 				right:0.5em;
 				user-select:none;
 			}
-			background-color:$default-background-colour;
+			background-color:var(--qna-background-colour);
 			max-width:min(100vw, 50em);
 			padding:2em;
 			max-height:100vh;
@@ -106,7 +97,7 @@ $long-colour: #00a729;
 		//width:$aside-width;
 		height:100%;
 		padding-left:1em;
-		background-color:$default-background-colour;
+		background-color:var(--aside-background-colour);
 		overflow-y:auto;
 		h2{
 			position:relative;
@@ -232,24 +223,22 @@ $long-colour: #00a729;
 		padding:$default-padding;
 		
 		
-		background-color:$default-background-colour;
+		background-color:var(--article-background-color);
 		border-radius:$default-border-radius;
 		//max-width:calc(100vw - 3em);
 		//height:calc($image-height + 20px);
 		width:max-content;
 		min-height:max-content;
 		max-height:$article-max-height;
-		
-		
 
-		//scroll-margin:0em;
 		.new{
 			display:none;
 		}
 		&.new{
 			.new{
 				position:absolute;
-				background-color:red;
+				background-color:var(--new-background-color);
+				color:var(--new-text-color);
 				
 				display:block;
 				bottom:1em;
@@ -324,7 +313,7 @@ $long-colour: #00a729;
 				button{
 					appearance:unset;
 					
-					color:$tag-text-colour;
+					color:var(--tag-text-colour);
 					border:unset;
 					border-radius:0.3em;
 					margin:0.1em;
@@ -352,34 +341,34 @@ $long-colour: #00a729;
 				.open{
 					background-image:url('../../assets/Open_relationship.png');
 					background-size:auto 100%;
-					color:$ml2-80t;
+					color:var(--open-text-colour);
 					text-shadow:0px 0px 5px rgb(0, 0, 0);
 					
 				}
 				
 				.status{
 					&.in-progress{
-						background-color:rgb(247, 172, 61);
+						background-color:var(--in-progress-button-colour);
 					}
 					&.completed{
-						background-color:rgb(121, 219, 97);
+						background-color:var(--completed-button-colour);
 					}
 					&.cancelled{
-						background-color: $warning-colour;
+						background-color: var(--cancelled-button-colour)
 					}
 					&.hiatus{
-						background-color: $hiatus-colour;
+						background-color: var(--hiatus-button-colour)
 					}
 				}
 				.length{
 					&.medium{
-						background-color:rgb(247, 172, 61);
+						background-color:var(--medium-button-colour)
 					}
 					&.long{
-						background-color: $long-colour;
+						background-color: var(--long-button-colour)
 					}
 					&.short{
-						background-color: #ec524d;
+						background-color: var(--short-button-colour);
 					}
 				}
 			}
@@ -391,7 +380,7 @@ $long-colour: #00a729;
 				//margin-bottom: $default-margin;
 				padding: $default-padding;
 				padding-bottom: 0;
-				background-color: $tab-active-colour;
+				background-color: var(--tab-active-colour);
 				display: none;
 				width: 100%;
 				align-self: stretch;
@@ -478,7 +467,7 @@ $long-colour: #00a729;
 				height: max-content;
 				cursor:pointer;
 				border-radius:0 0 $default-border-radius $default-border-radius;
-				background-color: $tab-inactive-colour;
+				background-color: var(--tab-inactive-colour);
 			}
 			.tabs-label1{
 				grid-column:1;
@@ -494,7 +483,7 @@ $long-colour: #00a729;
 			}
 			.tabs-radio:checked + .tabs-label{
 				font-weight:bold;
-				background-color: $tab-active-colour;
+				background-color: var(--tab-active-colour);
 			}
 		}
 		
@@ -516,8 +505,8 @@ $long-colour: #00a729;
 			.tags{
 				button{
 					appearance:unset;
-					background-color: $tag-button-colour;
-					color: $tag-text-colour;
+					background-color: var(--tag-button-colour);
+					color: var(--tag-text-colour);
 					border:unset;
 					border-radius:0.3em;
 					margin:0.1em;
@@ -538,8 +527,8 @@ $long-colour: #00a729;
 			.landmines{
 				button{
 					appearance:unset;
-					background-color: $warning-colour;
-					color:$tag-text-colour;
+					background-color: var(--warning-colour);
+					color:var(--tag-text-colour);
 					border:unset;
 					border-radius:0.3em;
 					margin:0.1em;
@@ -550,8 +539,8 @@ $long-colour: #00a729;
 			.spoiler-tags{
 				button{
 					appearance:unset;
-					background-color: #f7736ec7;
-					color:rgb(114, 57, 57);
+					background-color: var(--spoiler-tag-button-colour);
+					color:var(--spoiler-tag-text-colour);
 					border:unset;
 					border-radius:0.3em;
 					margin:0.1em;
@@ -566,7 +555,7 @@ $long-colour: #00a729;
 				}
 			}
 			.spoiler{
-					//background-color:black;
+					
 					//border-radius:0.2em;
 					//padding-left:0.2em;
 					//padding-right:0.2em;
@@ -598,7 +587,7 @@ $long-colour: #00a729;
 			&.show{
 				display:block;
 				left:0%;
-				background-color:#f7736e;
+				background-color:var(--aside-background-colour);
 			}
 		}
 		article{
@@ -683,7 +672,7 @@ $long-colour: #00a729;
 			flex-wrap:wrap;
 			button{
 				appearance:unset;
-				color:white;
+				color:var(--default-text-colour);
 				display:block;
 				margin:0.3em;
 				font-size:0.8em;
@@ -691,13 +680,13 @@ $long-colour: #00a729;
 				outline:0px;
 				flex-shrink:1;
 				flex-grow:0;
-				background-color:#505050;
+				background-color:var(--default-button-colour);
 				width:4em;
 				border-radius:0.3em;
 				filter:drop-shadow(0.0em 0.0em 0.3em rgba(0, 0, 0, 0.685));
 				height:4em;
 				&:hover, &:active{
-					background-color:rgb(41, 41, 41);
+					background-color:var(--default-button-hover-active-colour);
 				}
 			}
 		}

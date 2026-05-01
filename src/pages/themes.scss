@@ -1,0 +1,64 @@
+
+
+:root {
+    --background-image:url('../../assets/background.avif');
+    --default-background-colour:white;
+    --default-text-color: black;
+    --default-button-colour: white;
+    --default-button-hover-active-colour:rgb(41, 41, 41);
+    --qna-background-colour:#00000088;
+    --aside-background-colour:var(--default-background-colour);
+    --article-background-color:var(--default-background-colour);
+    --new-background-color:red;
+    --new-text-color:white;
+    --tab-active-colour:red;
+    --tab-inactive-colour:white;
+    --tag-button-colour: green;
+    --tag-text-colour:var(--text-color);
+    --warning-colour:red;
+    --in-progress-button-colour:rgb(247, 172, 61);;
+    --cancelled-button-colour:var(--warning-colour);
+    --hiatus-button-colour: var(--tag-button-colour);
+    --completed-button-colour:rgb(121, 219, 97);
+    --short-button-colour:#ec524d;
+    --medium-button-colour:rgb(247, 172, 61);
+    --long-button-colour: var(--tag-button-colour);
+    --open-text-colour: white;
+    --spoiler-tag-button-colour:#f7736ec7;
+    --spoiler-tag-text-colour:rgb(114, 57, 57);
+}
+
+.theme-dark {
+    --background-color: black;
+    --text-color: white;
+}
+
+.moon-lesbian{
+    --ml1: #560087;
+    --ml1-trans:#560087ea;
+
+    --ml2: #e8b9ee;
+    --ml2-80t: #faf1fc;
+
+    --ml3: #c354b3;
+    --ml4: #a7007e;
+    --ml5: #340060;
+    --ml5-b10: #2f0056;
+    --ml5-b20: #2a004d;
+    --background-image:url('../../assets/blue_fabric_background_70.webp');
+    --default-background-colour:var(--ml1-trans);
+    --default-text-color: var(--ml2-80t);
+    --qna-background-colour:#00000088;
+    --aside-background-colour:var(--default-background-colour);
+    --article-background-color:var(--default-background-colour);
+    --new-background-color:red;
+    --new-text-color:var(--default-text-color);
+    --tab-active-colour:var(--ml4);
+    --tab-inactive-colour:var(--ml5);
+    --tag-button-colour: var(--ml3);
+    --tag-text-colour:var(--ml5-b20);
+    --warning-colour:#d62e02;
+    --hiatus-button-colour: #ff22ff;
+    --long-button-colour: #00a729;
+    --open-text-colour: var(--ml2-80t);
+}

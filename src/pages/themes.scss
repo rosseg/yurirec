@@ -6,6 +6,7 @@
     --default-text-color: black;
     --default-button-colour: white;
     --default-button-hover-active-colour:rgb(41, 41, 41);
+    --page-background-colour:var(--default-background-colour);
     --qna-background-colour:#00000088;
     --aside-background-colour:var(--default-background-colour);
     --article-background-color:var(--default-background-colour);
@@ -16,7 +17,12 @@
     --tag-button-colour: green;
     --tag-text-colour:var(--text-color);
     --warning-colour:red;
-    --in-progress-button-colour:rgb(247, 172, 61);;
+    --manga-button-colour:#ff2c2d;
+    --manhua-button-colour:#ffff00;
+    --manhwa-button-colour:#4d7dbd;
+    --webcomic-button-colour:#cc6bb5;
+    --webtoon-button-colour:#00d464;
+    --ongoing-button-colour:rgb(247, 172, 61);
     --cancelled-button-colour:var(--warning-colour);
     --hiatus-button-colour: var(--tag-button-colour);
     --completed-button-colour:rgb(121, 219, 97);
@@ -35,19 +41,23 @@
 
 .moon-lesbian{
     --ml1: #560087;
-    --ml1-trans:#560087ea;
-
+    --ml1-trans:#560087d0;
+    --ml1-t20-trans:#78339fcc;
     --ml2: #e8b9ee;
-    --ml2-80t: #faf1fc;
-
+    --ml2-t80: #faf1fc;
     --ml3: #c354b3;
     --ml4: #a7007e;
     --ml5: #340060;
-    --ml5-b10: #2f0056;
-    --ml5-b20: #2a004d;
-    --background-image:url('../../assets/blue_fabric_background_70.webp');
-    --default-background-colour:var(--ml1-trans);
-    --default-text-color: var(--ml2-80t);
+    --ml5-t10:#481a70;
+    
+    --ml5-s10: #2f0056;
+    --ml5-s20: #2a004d;
+
+    --background-image:url('../../assets/background.avif');
+    --default-background-colour:var(--ml1-t20-trans);
+    --default-text-color: var(--ml2-t80);
+    --default-button-hover-active-colour:rgb(41, 41, 41);
+    --page-background-colour:var(--ml5-t10);
     --qna-background-colour:#00000088;
     --aside-background-colour:var(--default-background-colour);
     --article-background-color:var(--default-background-colour);
@@ -56,9 +66,18 @@
     --tab-active-colour:var(--ml4);
     --tab-inactive-colour:var(--ml5);
     --tag-button-colour: var(--ml3);
-    --tag-text-colour:var(--ml5-b20);
+    --tag-text-colour:var(--ml5-s20);
     --warning-colour:#d62e02;
+    
+    --ongoing-button-colour:#f8d99f;
+    --cancelled-button-colour:var(--warning-colour);
     --hiatus-button-colour: #ff22ff;
-    --long-button-colour: #00a729;
-    --open-text-colour: var(--ml2-80t);
+    --completed-button-colour:#00e6e6;
+    --oneshot-button-colour: var(--warning-colour);
+    --short-button-colour:#ff6038;
+    --medium-button-colour:#acf87f;
+    --long-button-colour: #46bf62;
+    --open-text-colour: var(--ml2-t80);
+    --spoiler-tag-button-colour:#ff4eff;
+    --spoiler-tag-text-colour:var(--tag-text-colour);
 }

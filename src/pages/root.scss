@@ -56,6 +56,7 @@ $long-button-colour: #00a729;*/
 	
 	background-blend-mode:multiply;
 	background-image:var(--background-image);
+	background-color: var(--page-background-colour);
 	
 
 	.qna{
@@ -321,7 +322,8 @@ $long-button-colour: #00a729;*/
 				}
 				.pairing{
 					width:2.5em;
-					text-shadow:0px 0px 5px rgb(255, 255, 255);
+					text-shadow:0px 0px 3px rgb(255, 255, 255);
+					
 				}
 				.lesbian{
 					background-image:url('../../assets/Lesbian_pride_flag_2018.svg.png');
@@ -347,8 +349,8 @@ $long-button-colour: #00a729;*/
 				}
 				
 				.status{
-					&.in-progress{
-						background-color:var(--in-progress-button-colour);
+					&.ongoing{
+						background-color:var(--ongoing-button-colour);
 					}
 					&.completed{
 						background-color:var(--completed-button-colour);
@@ -369,6 +371,26 @@ $long-button-colour: #00a729;*/
 					}
 					&.short{
 						background-color: var(--short-button-colour);
+					}
+					&.oneshot{
+						background-color:var(--oneshot-button-colour);
+					}
+				}
+				.type{
+					&.manga{
+						background-color: var(--manga-button-colour);
+					}
+					&.manhua{
+						background-color: var(--manhua-button-colour);
+					}
+					&.manhwa{
+						background-color: var(--manhwa-button-colour);
+					}
+					&.webtoon{
+						background-color: var(--webtoon-button-colour);
+					}
+					&.webcomic{
+						background-color: var(--webcomic-button-colour);
 					}
 				}
 			}

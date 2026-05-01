@@ -2,7 +2,7 @@ import Page from "../page";
 
 import RootHTML from "./root.html";
 //import "./root.scss";
-import "./rootv2.scss";
+import "./root.scss";
 import test from "../../test.txt";
 
 import items from "../items.json";

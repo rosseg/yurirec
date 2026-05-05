@@ -1943,6 +1943,37 @@
 		},
 		"landmines": [], 
 		"tags": ["romance", "drama", "school life", "college", "slice of life"]
+	},
+		{
+		"names":{
+			"en":"LoveBot"
+		},
+		"added": "31-03-2026",
+		"authors": ["Chase Keels","Miranda Mundt"],
+		"artists": ["Miranda Mundt"],
+		"infoLinkLabels":["WEBTOON"],
+		"infoLinks":["https://www.webtoons.com/en/sf/lovebot/list?title_no=2324"],
+		"type":"webtoon",
+		"pairings": {
+			"gay" : 10
+		},
+		"short": "LoveBot x black market repairman",
+		"description":"Sentient android stories are my weakness. If Detroit:Become Human was good and gay",
+		"length":"long",
+		"status": "completed",
+		"targets": [],
+		"image":"./assets/lovebot_cover.jpg",
+		"recommendations":{
+			"priestess' reverence": 9.5,
+			"uniqueness": 7.0,
+			"intensity": 9.5,
+			"story": 9,
+			"romance": 9,
+			"art": 10.0
+		},
+		"landmines":["abuse", "sexual violence"],
+		"tags":["romance", "sci-fi", "androids", "drama", "boy's love", "non-yuri", "dark", "intersex", "disability"],
+		"spoilerTags":["poly"]
 	}
 	
 ]

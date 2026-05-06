@@ -10,12 +10,14 @@
     --qna-background-colour:#00000088;
     --aside-background-colour:var(--default-background-colour);
     --article-background-color:var(--default-background-colour);
+    --title-text-color: var(--default-text-color);
     --new-background-color:red;
     --new-text-color:white;
     --tab-active-colour:red;
     --tab-inactive-colour:white;
+    --tab-text-color: var(--default-text-color);
     --tag-button-colour: green;
-    --tag-text-colour:var(--text-color);
+    --tag-text-colour:var(--default-text-color);
     --warning-colour:red;
     --manga-button-colour:#ff2c2d;
     --manhua-button-colour:#ffff00;
@@ -32,11 +34,6 @@
     --open-text-colour: white;
     --spoiler-tag-button-colour:#f7736ec7;
     --spoiler-tag-text-colour:rgb(114, 57, 57);
-}
-
-.theme-dark {
-    --background-color: black;
-    --text-color: white;
 }
 
 .moon-lesbian{
@@ -57,6 +54,7 @@
     --default-background-colour:var(--ml1-t20-trans);
     --default-text-color: var(--ml2-t80);
     --default-button-hover-active-colour:rgb(41, 41, 41);
+     --title-text-color: var(--default-text-color);
     --page-background-colour:var(--ml5-s20-trans);
     --qna-background-colour:#000000cc;
     --aside-background-colour:var(--default-background-colour);
@@ -65,6 +63,7 @@
     --new-text-color:var(--default-text-color);
     --tab-active-colour:var(--ml4);
     --tab-inactive-colour:var(--ml5);
+    --tab-text-color: var(--default-text-color);
     --tag-button-colour: var(--ml3);
     --tag-text-colour:var(--ml5-s20);
     --warning-colour:#d62e02;
@@ -80,4 +79,65 @@
     --open-text-colour: var(--ml2-t80);
     --spoiler-tag-button-colour:#ff4eff;
     --spoiler-tag-text-colour:var(--tag-text-colour);
+}
+.sun-lesbian{
+    --sl1: #ff5e28;
+    --sl2: #ff9c03;
+    --sl3: #f0e6bf;
+    --sl4: #fdb200;
+    --sl5: #e75a0d;
+
+    --sunsetl1: #c62200;
+    --sunsetl4: #ffdc87;
+
+    --srss1: #5b2c6f;
+    --srss1-s50: #2e1638;
+    
+    --bl1: #d52c00;
+    --bl2: #f07528;
+    --bl3: #fffcee;
+    --bl4: #ffad09;
+    --bl5: #a06e00;
+    --bl5-s50: #503700;
+
+    --os1: #ffcf93;
+    --os2: #e89a82;
+    --os3: #ca5d7c;
+    --os4: #615985;
+    --os5: #68a3a2;
+
+    --background-image:url('../../assets/background.avif');
+    --default-background-colour:var(--sl3);
+    --default-text-color: var(--srss1-s50);
+    --default-button-colour: var(--bl5);
+    --default-button-hover-active-colour:var(--bl5-s50);
+    --title-text-color: var(--default-text-color);
+    --page-background-colour:var(--default-background-colour);
+    --qna-background-colour:var(--sunsetl4);
+    --aside-background-colour:var(--default-background-colour);
+    --article-background-color:var(--default-background-colour);
+    --new-background-color:red;
+    --new-text-color:white;
+    --tab-active-colour:red;
+    --tab-inactive-colour:white;
+    --tab-text-color: var(--default-text-color);
+    --tag-button-colour: green;
+    --tag-text-colour:var(--default-text-color);
+    --warning-colour:red;
+    --manga-button-colour:#ff2c2d;
+    --manhua-button-colour:#ffff00;
+    --manhwa-button-colour:#4d7dbd;
+    --webcomic-button-colour:#cc6bb5;
+    --webtoon-button-colour:#00d464;
+    --ongoing-button-colour:rgb(247, 172, 61);
+    --cancelled-button-colour:var(--warning-colour);
+    --hiatus-button-colour: var(--tag-button-colour);
+    --completed-button-colour:rgb(121, 219, 97);
+    --short-button-colour:#ec524d;
+    --medium-button-colour:rgb(247, 172, 61);
+    --long-button-colour: var(--tag-button-colour);
+    --open-text-colour: white;
+    --spoiler-tag-button-colour:#f7736ec7;
+    --spoiler-tag-text-colour:rgb(114, 57, 57);
+
 }

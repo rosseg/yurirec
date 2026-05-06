@@ -293,6 +293,7 @@ $long-button-colour: #00a729;*/
 			grid-template-columns: 100%;
 			grid-template-rows: max-content max-content 1fr;
 			.title{
+				color: var(--title-text-color);
 				grid-column: 1;
 				grid-row:1;
 				margin:0px;
@@ -403,6 +404,7 @@ $long-button-colour: #00a729;*/
 				padding: $default-padding;
 				padding-bottom: 0;
 				background-color: var(--tab-active-colour);
+				color: var(--tab-text-color);
 				display: none;
 				width: 100%;
 				align-self: stretch;

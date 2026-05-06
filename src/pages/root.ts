@@ -41,7 +41,7 @@ function makeSafeForCSS(name) {
 export default class Root extends Page{
 	onlyNew : boolean = false;
 	hideTags : boolean = false;
-	hideLandmines : boolean = false;
+	hideLandmines : boolean = true;
 	
 	constructor(){
 		super(RootHTML);
@@ -436,6 +436,10 @@ export default class Root extends Page{
 					}
 					linkDiv?.append(button);
 				}
+			}
+			const notes = elem.querySelector(".notes");
+			if (notes && item.notes){
+				notes.textContent = item.notes;
 			}
 			
 

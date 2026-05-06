@@ -618,6 +618,7 @@ $long-button-colour: #00a729;*/
 			//grid-template-columns: $image-width $data-section-width;
 			width:calc(100vw - 1em);
 			//max-height:calc($article-max-height * $mobile-size-multiplier);
+			max-height:unset;
 			height:max-content;
 			align-self:flex-start;
 			font-size:$mobile-size-multiplier * 1em;

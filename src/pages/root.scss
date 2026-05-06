@@ -599,6 +599,7 @@ $long-button-colour: #00a729;*/
 		
 
 		aside{
+			background-color: var(--aside-background-colour-mobile);
 			display:block;
 			position:fixed;
 			left:calc(-100% - 2em);

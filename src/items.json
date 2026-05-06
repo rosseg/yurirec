@@ -227,9 +227,6 @@
 		"tags":["romance", "witches", "supernatural", "drama", "urban fantasy", "dark", "poly" ],
 		"spoilerTags":["poly"]
 	},
-
-
-
 	{
 		"names":{
 			"en":"PaperTeeth!"
@@ -520,5 +517,40 @@
 			"toxic": 4.0
 		},
 		"tags":["romance", "drama", "slice of life", "office worker(s)", "adult mains", "mangaka"]
+	},
+	{
+		"names":{
+			"jp":"コンカフェ嬢は恋を着る",
+			"romanized-jp":"Con Cafe Jou wa Koi o Kiru",
+			"en":"The Concept Cafe Girl Wears Love"
+		},
+		"authors":["Uhana Ririka (卯花りりか)"],
+		"artists":["Uhana Ririka (卯花りりか)"],
+		"infoLinkLabels":["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/nsk6eha"],
+		"added": "31-03-2026",
+		"type":"manga",
+		"pairings": {
+			"lesbian" : 8,
+			"trans" : 8
+		},
+		"short":"Fashion student joins concept cafe to regain her spark",
+		"description":"Held a lot of promise and then had to rush the ending. Though it has interesting characters and trans rep!",
+		"length": "short",
+		"status": "cancelled",
+		"targets": [],
+		"image":"./assets/con_cafe_cover.jpg",
+		"recommendations":{
+			"priestess' reverence": 8.6,
+			"uniqueness": 9.0,
+			"intensity": 8.0,
+			"story": 7.5,
+			"comedy": 7.5,
+			"toxic": 5.0,
+			"art": 9.0
+		},
+		"tags":["drama", "comedy", "fashion", "concept cafe", "slice of life", "trans rep"],
+		"landmines":["rushed ending"]
+		"notes":
 	}
 ]

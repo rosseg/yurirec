@@ -266,8 +266,8 @@
 			"en":"Masonry of the Body"
 		},
 		"added": "06-05-2026",
-		"authors": ["Wulvert"],
-		"artists": ["Wulvert"],
+		"authors": ["Harper Crane"],
+		"artists": ["Harper Crane"],
 		"infoLinkLabels":["Masonry of the Body"],
 		"infoLinks":["https://masonryofthebody.thecomicseries.com/about/"],
 		"type":"webcomic",
@@ -474,7 +474,7 @@
 			"lesbian" : 10
 		},
 		"short":"GAL X GAL WOOOOOO",
-		"description":"Very funny and sweet low-stakes yuri. On a writing hiatus (April 2025)",
+		"description":"Very funny and sweet low-stakes yuri",
 		"length": "short",
 		"status": "hiatus",
 		"targets": [],
@@ -487,7 +487,8 @@
 			"comedy": 7.5,
 			"wholesome": 10.0
 		},
-		"tags":["romance", "comedy", "slice of life", "school life", "gyaru"]
+		"tags":["romance", "comedy", "slice of life", "school life", "gyaru"],
+		"notes":"On a writing hiatus"
 	},
 	{
 		"names":{

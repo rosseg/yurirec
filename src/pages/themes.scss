@@ -33,6 +33,7 @@
     --open-text-colour: white;
     --spoiler-tag-button-colour:#f7736ec7;
     --spoiler-tag-text-colour:rgb(114, 57, 57);
+    --desc-ratings-border-colour: black;
 }
 
 .theme-dark {
@@ -49,6 +50,7 @@
     --ml2-t80: #faf1fc;
     --ml3: #c354b3;
     --ml4: #a7007e;
+    --ml4-s40: #64004c;
     --ml5: #340060;
     --ml5-t10:#481a70;
     --ml5-s10: #2f0056;
@@ -83,4 +85,5 @@
     --open-text-colour: var(--ml2-t80);
     --spoiler-tag-button-colour:#ff4eff;
     --spoiler-tag-text-colour:var(--tag-text-colour);
+    --desc-ratings-border-colour: var(--ml4-s40);
 }

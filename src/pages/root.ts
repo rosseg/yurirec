@@ -441,6 +441,9 @@ export default class Root extends Page{
 			const notes = elem.querySelector(".notes");
 			if (notes && item.notes){
 				notes.textContent = item.notes;
+				if (item.spoilerNotes){
+					notes.classList.add("spoiler");
+				}
 			}
 			
 

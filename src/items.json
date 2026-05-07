@@ -554,5 +554,37 @@
 		"tags":["drama", "comedy", "fashion", "concept cafe", "slice of life", "trans rep"],
 		"landmines":["rushed ending"],
 		"notes":"Author was given 1 chapter to finish, creating a rushed ending"
+		
+	},{
+		"names":{
+			"jp": "僕らのアイは気持ち悪い",
+			"romanized":"Bokura no Ai wa Kimochi Warui",
+			"en":"Our \"Love\" is Disgusting"
+		},
+		"added": "10-05-2026",
+		"type":"manga",
+		"author":"Usui Shio",
+		"pairings": {
+			"lesbian" : 10.0
+		},
+		"short":"love square of freaky girls",
+		"description":"these four are nightmares and I love them (mostly)",
+		"length": "medium",
+		"status": "in progress",
+		
+		"image":"./assets/our_love_is_disgusting_cover.jpg",
+		"recommendations":{
+			"priestess' reverence": 8.8,
+			"uniqueness": 9.0,
+			"intensity": 8.5,
+			"romance": 7.0,
+			"horny": 9.0,
+			"kinky": 8.0,
+			"toxic": 8.0
+		},
+		"landmines": ["adult-minor age gap"],
+		"tags":["romance", "love triangle", "love square","drama", "sexual", "fetish", "age gap", "school life", "co-workers"],
+		"notes": "23-yr-old and 17-yr-old have sexual interactions",
+		"spoilerNotes": true
 	}
 ]

@@ -587,5 +587,33 @@
 		"tags":["romance", "love triangle", "love square","drama", "sexual", "fetish", "age gap", "school life", "co-workers"],
 		"notes": "23-yr-old and 17-yr-old have sexual interactions",
 		"spoilerNotes": true
+	},
+	{
+		"names":{
+			"jp":"君と綴るうたかた",
+			"romanized":"Kimi to Tsuzuru Utakata",
+			"en":"The Summer You Were There"
+		},
+		"added": "10-05-2026",
+		"type":"manga",
+		"short":"Oh god oh fuck no please",
+		"description":"It's a tragedy. Read it blind if you can",
+		"image":"./assets/tsywt_cover.png",
+		"pairings": {
+			"lesbian" : 10
+		},
+		"status": "completed",
+		"length": "medium",
+		"recommendations":{
+			"priestess' reverence":9.0,
+			"uniqueness": 7.0,
+			"intensity": 10.0,
+			"story": 9.0,
+			"romance": 10.0, 
+			"tragedy": 10.0
+		},
+		"targets":["blind reads"],
+		"landmines":["suicide"],
+		"tags":["romance", "school life", "slice of life", "drama", "tragedy"]
 	}
 ]

@@ -613,8 +613,9 @@ $long-button-colour: #00a729;*/
 			}
 		
 	}
-	@media (max-width: 60rem) {
+	@media (max-width: 65rem) {
 		article:nth-child(even){
+			grid-template-columns:minmax(0, 1.2fr) minmax(0, 1fr);
 			grid-template-areas: "data-section cover-image"
 								"tab-labels-section tag-section";
 		}
@@ -657,14 +658,7 @@ $long-button-colour: #00a729;*/
 					font-size:0.8em;
 				}
 			}
-			
-			/*.mainsection{
 
-				height:max-content;
-				min-height:calc($image-height * $mobile-size-multiplier);
-				width:unset;
-				
-				align-self: stretch;*/
 			.data-section{
 				padding-left:$default-padding;
 				padding-right:$default-padding;

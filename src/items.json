@@ -195,7 +195,7 @@
 			"art": 9.5
 		},
 		"landmines":[],
-		"tags":["romance", "comedy", "school life", "slice of life"],
+		"tags":["romance", "comedy", "school life", "slice of life", "slow burn", "long strip", "full colour"],
 		"notes":"On a writing/publishing hiatus. 2 (of I'm guessing 3-4) seasons are out"
 	},
 	
@@ -424,7 +424,7 @@
 			"art": 9.0
 		},
 		"landmines": ["abusive parental figure", "violence", "blood"], 
-		"tags": ["romance", "drama", "slice of life",  "school life", "full colour", "adaptation" ]
+		"tags": ["romance", "drama", "slice of life",  "school life", "full colour", "adaptation", "slow burn" ]
 	}
 	,
 	{
@@ -456,7 +456,7 @@
 			"romance": 9.0,
 			"wholesome": 8.5
 		},
-		"tags":["romance", "comedy", "slice of life", "idol", "landlord", "age gap"]
+		"tags":["romance", "comedy", "slice of life", "idol(s)", "landlord", "age gap"]
 	},
 	{
 		"names":{
@@ -563,7 +563,7 @@
 			"romanized":"Bokura no Ai wa Kimochi Warui",
 			"en":"Our \"Love\" is Disgusting"
 		},
-		"added": "08-05-2026",
+		"added": "10-05-2026",
 		"type":"manga",
 		"authors":["Usui Shio"],
 		"artists":["Usui Shio"],
@@ -598,7 +598,7 @@
 			"romanized":"Kimi to Tsuzuru Utakata",
 			"en":"The Summer You Were There"
 		},
-		"added": "08-05-2026",
+		"added": "10-05-2026",
 		"type":"manga",
 		"authors":["Yuama (ゆあま)"],
 		"artists":["Yuama (ゆあま)"],
@@ -630,7 +630,7 @@
 			"romanized":"Odoriba ni Skirt ga naru",
 			"jp":"踊り場にスカートが鳴る"
 		},
-		"added": "08-05-2026",
+		"added": "10-05-2026",
 		"type":"manga",
 		"authors":["Utatane Yuu (うたたね游)"],
 		"artists":["Utatane Yuu (うたたね游)"],
@@ -658,5 +658,38 @@
 		},
 		"landmines": [], 
 		"tags": ["romance", "love triangle", "drama", "slice of life", "school life", "dance"]
+	},
+	{
+		"names":{
+			"en": "Subtraction Tautology",
+			"romanized":"Hikizan Tautology",
+			"jp":"ひきざんトートロジー"
+		},
+		"added": "10-05-2026",
+		"type":"manga",
+		"authors":["Masatsuka Chii (柾塚ちい)"],
+		"artists":["Masatsuka Chii (柾塚ちい)"],
+		"infoLinkLabels": ["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/1efzp9s/hikizan-tautology"],
+		"pairings": {
+			"lesbian" : 10.0
+		},
+		"short":"cheerleader x loner",
+		"description":"this slow burn with a cast of complex characters and heavy themes is incredible.",
+		"length": "medium",
+		"status": "ongoing",
+		
+		"image":"./assets/hikizan_cover.webp",
+		"recommendations":{
+			"priestess' reverence": 9.2,
+			"uniqueness": 8.0,
+			"intensity": 9.0,
+			"story": 9.0,
+			"romance": 8.5,
+			"comedy": 5.0
+			
+		},
+		"landmines": ["grooming","suicide"], 
+		"tags": ["romance", "slice of life","school life",  "drama", "long strip", "full colour", "slow burn", "idol(s)"]
 	}
 ]

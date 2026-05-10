@@ -565,8 +565,8 @@
 		},
 		"added": "10-05-2026",
 		"type":"manga",
-		"authors":["Usui Shio"],
-		"artists":["Usui Shio"],
+		"authors":["Usui Shio (雨水汐)"],
+		"artists":["Usui Shio (雨水汐)"],
 		"infoLinkLabels":["MangaUpdates"],
 		"infoLinks":["https://www.mangaupdates.com/series/r5sli6d/our-love-is-disgusting"],
 		"pairings": {
@@ -691,5 +691,106 @@
 		},
 		"landmines": ["grooming","suicide"], 
 		"tags": ["romance", "slice of life","school life",  "drama", "long strip", "full colour", "slow burn", "idol(s)"]
+	}, 
+	{
+		"names":{
+			"en": "Miss Sunflower",
+			"romanized":"Himawari-san",
+			"jp":"ひまわりさん"
+		},
+		"added": "10-05-2026",
+		"type":"manga",
+		"authors":["Sugano Manami (管野マナミ)"],
+		"artists":["Sugano Manami (管野マナミ)"],
+		"infoLinkLabels": ["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/hptxwnm/himawari-san-sugano-manami"],
+		"pairings": {
+			"lesbian" : 6.0
+		},
+		"short":"high school student has a crush on a bookstore owner",
+		"description":"Beautiful yuri that exists somewhere between platonic and romantic. And stunning exploration of grief",
+		"length": "long",
+		"status": "completed",
+		
+		"image":"./assets/himawari_cover.webp",
+		"recommendations":{
+			"priestess' reverence": 9.5,
+			"uniqueness": 7.5,
+			"intensity": 9.0,
+			"story": 8.5,
+			"wholesome":10.0
+		},
+		"landmines": ["adult-minor age gap"], 
+		"tags": ["romance?", "platonic", "slice of life","school life", "grief", "slow burn", "age gap"],
+		"notes":"luckily this age gap yuri is platonic especially on the adult's end and nothing inappropriate happens",
+		"spoilerNotes":true
+	},
+	{
+		"names":{
+			"en": "Doughnuts Under a Crescent Moon",
+			"romanized":"Kaketa Tsuki to Dōnattsu",
+			"jp":"欠けた月とドーナッツ"
+		},
+		"added": "10-05-2026",
+		"type":"manga",
+		"authors":["Usui Shio (雨水汐)"],
+		"artists":["Usui Shio (雨水汐)"],
+		"infoLinkLabels": ["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/4unvjya/kaketa-tsuki-to-donuts"],
+		"pairings": {
+			"lesbian" : 10.0,
+			"aspec" : 10.0
+		},
+		"short":"ace office worker x ace office worker",
+		"description":"Lovely grown-up yuri that challenges the norms of romance and sexuality",
+		"length": "medium",
+		"status": "completed",
+		
+		"image":"./assets/doughnuts_cover.webp",
+		"recommendations":{
+			"priestess' reverence": 9.1,
+			"uniqueness": 8.0,
+			"intensity": 8.5,
+			"story": 8,
+			"romance": 8.5,
+			"wholesome":10.0
+		},
+		"landmines": [], 
+		"tags": ["romance", "slice of life","office worker(s)", "asexual rep"]
+		
+	},
+		{
+		"names":{
+			"en": "She, Her Camera and Her Seasons",
+			"romanized":"Kanojo to Camera to Kanojo no Kisetsu",
+			"jp":"彼女とカメラと彼女の季節"
+		},
+		"added": "10-05-2026",
+		"type":"manga",
+		"authors":["Tsukiko (月子)"],
+		"artists":["Tsukiko (月子)"],
+		"infoLinkLabels": ["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/2p65ur6/kanojo-to-camera-to-kanojo-no-kisetsu"],
+		"pairings": {
+			"lesbian" : 10.0
+		},
+		"short":"girl x flighty photographer girl x boy",
+		"description":"Juicy and toxic. Boy in triangle but its yuri.",
+		"length": "medium",
+		"status": "completed",
+		
+		"image":"./assets/her_camera_cover.webp",
+		"recommendations":{
+			"priestess' reverence": 8.7,
+			"uniqueness": 9.0,
+			"intensity": 9.0,
+			"story": 8.5,
+			"toxic": 9.0,
+			"romance": 7.5
+		},
+		"landmines": [], 
+		"tags": ["romance", "drama", "slice of life", "school life","love triangle", "photography"],
+		"notes": "The main girl's focus is on the photographer, therefore yuri.",
+		"spoilerNotes":true
 	}
 ]

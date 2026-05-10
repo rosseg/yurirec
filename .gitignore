@@ -1,4 +1,4 @@
 node_modules
 *.eps
 dist/
-.prod.js
+*.prod.js

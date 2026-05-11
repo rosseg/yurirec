@@ -89,7 +89,7 @@
 		"targets":[],
 		"image":"./assets/covers/i_love_amy_cover.webp",
 		"recommendations":{
-			"priestess' reverence": 8.5,
+			"priestess' reverence": 8.7,
 			"uniqueness": 9.0,
 			"intensity": 8.0,
 			"story": 8.5,
@@ -250,11 +250,10 @@
 		"targets": [],
 		"image":"./assets/covers/paperteeth_cover.webp",
 		"recommendations":{
-			"priestess' reverence": 9.0,
+			"priestess' reverence": 8.8,
 			"uniqueness": 9.0,
 			"intensity": 8.5,
-			"story": 8.0,
-			"comedy":9.0,
+			"comedy":8.5,
 			"art": 9.0
 		},
 		"landmines":["blood"],

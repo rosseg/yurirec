@@ -412,12 +412,12 @@ export default class Root extends Page{
 					artists?.append(button);
 				}
 			}
-			const authors = elem.querySelector("#authors");
-			if (item.authors){
-				for (let author of item.authors){
+			const creators = elem.querySelector("#creators");
+			if (item.creators){
+				for (let creator of item.creators){
 					const button = document.createElement("button");
-					button.innerText = author;
-					authors?.append(button);
+					button.innerText = creator;
+					creators?.append(button);
 				}
 			}
 			const dateAddedDiv = elem.querySelector(".date-added-div");

@@ -20,7 +20,7 @@
 		"length": "medium",
 		"status": "completed",
 		"targets": [],
-		"image":"./assets/bloom_into_you_cover.webp",
+		"image":"./assets/covers/bloom_into_you_cover.webp",
 		"recommendations":{
 			"priestess' reverence": 9.0,
 			"uniqueness": 6.0,
@@ -53,7 +53,7 @@
 		"length": "medium",
 		"status": "completed",
 		"targets": [],
-		"image":"./assets/my_dearest_nemesis_cover.webp",
+		"image":"./assets/covers/my_dearest_nemesis_cover.webp",
 		"recommendations":{
 			"priestess' reverence": 8.5,
 			"uniqueness": 7.0,
@@ -87,7 +87,7 @@
 		"length": "medium",
 		"status": "completed",
 		"targets":[],
-		"image":"./assets/i_love_amy_cover.webp",
+		"image":"./assets/covers/i_love_amy_cover.webp",
 		"recommendations":{
 			"priestess' reverence": 8.5,
 			"uniqueness": 9.0,
@@ -122,7 +122,7 @@
 		"length": "short",
 		"status": "completed",
 		"targets": [],
-		"image":"./assets/lying_bride_cover.webp",
+		"image":"./assets/covers/lying_bride_cover.webp",
 		"recommendations":{
 			"priestess' reverence": 7.5,
 			"uniqueness": 6.5,
@@ -151,7 +151,7 @@
 		"length": "medium",
 		"status": "completed",
 		"targets": [],
-		"image":"./assets/soulmate_cover.webp",
+		"image":"./assets/covers/soulmate_cover.webp",
 		"recommendations":{
 			"priestess' reverence": 8.4,
 			"uniqueness": 8.0,
@@ -184,7 +184,7 @@
 		"length":"long",
 		"status": "hiatus",
 		"targets": [],
-		"image":"./assets/not_so_shoujo_cover2.webp",
+		"image":"./assets/covers/not_so_shoujo_cover2.webp",
 		"recommendations":{
 			"priestess' reverence": 9.6,
 			"uniqueness": 6.0,
@@ -217,7 +217,7 @@
 		"length":"long",
 		"status": "completed",
 		"targets": [],
-		"image":"./assets/muted_cover.webp",
+		"image":"./assets/covers/muted_cover.webp",
 		"recommendations":{
 			"priestess' reverence": 8.2,
 			"uniqueness": 7.0,
@@ -248,7 +248,7 @@
 		"length":"long",
 		"status": "ongoing",
 		"targets": [],
-		"image":"./assets/paperteeth_cover.webp",
+		"image":"./assets/covers/paperteeth_cover.webp",
 		"recommendations":{
 			"priestess' reverence": 9.0,
 			"uniqueness": 9.0,
@@ -280,7 +280,7 @@
 		"length":"medium",
 		"status": "ongoing",
 		"targets": [],
-		"image":"./assets/masonry_cover.webp",
+		"image":"./assets/covers/masonry_cover.webp",
 		"recommendations":{
 			"priestess' reverence": 9.5,
 			"uniqueness": 10.0,
@@ -314,7 +314,7 @@
 		"length": "short",
 		"status": "completed",
 		"targets": [],
-		"image":"./assets/lonelyceo_cover.webp",
+		"image":"./assets/covers/lonelyceo_cover.webp",
 		"recommendations":{
 			"priestess' reverence": 7.5,
 			"uniqueness": 7.0,
@@ -346,7 +346,7 @@
 		"length": "short",
 		"status": "completed",
 		"targets": [],
-		"image":"./assets/black_and_white_cover.webp",
+		"image":"./assets/covers/black_and_white_cover.webp",
 		"recommendations":{
 			"priestess' reverence":8.7,
 			"uniqueness": 9.0,
@@ -379,7 +379,7 @@
 		"length": "medium",
 		"status": "ongoing",
 		"targets": [],
-		"image":"./assets/green_yuri_cover.webp",
+		"image":"./assets/covers/green_yuri_cover.webp",
 		"recommendations":{
 			"priestess' reverence": 8.8,
 			"uniqueness": 7.0,
@@ -413,7 +413,7 @@
 		"length": "long",
 		"status": "completed",
 		"targets": [],
-		"image":"./assets/her_mountain_cover.webp",
+		"image":"./assets/covers/her_mountain_cover.webp",
 		"recommendations":{
 			"priestess' reverence": 9.0,
 			"uniqueness": 6.0,
@@ -447,7 +447,7 @@
 		"length": "medium",
 		"status": "completed",
 		"targets": [],
-		"image":"./assets/maitsuki_cover.webp",
+		"image":"./assets/covers/maitsuki_cover.webp",
 		"recommendations":{
 			"priestess' reverence": 8.0,
 			"uniqueness": 6.0,
@@ -478,7 +478,7 @@
 		"length": "short",
 		"status": "hiatus",
 		"targets": [],
-		"image":"./assets/gal_yuri_cover.webp",
+		"image":"./assets/covers/gal_yuri_cover.webp",
 		"recommendations":{
 			"priestess' reverence": 8.5,
 			"uniqueness": 7.5,
@@ -510,7 +510,7 @@
 		"length": "medium",
 		"status": "completed",
 		"targets": [],
-		"image":"./assets/still_sick_cover.webp",
+		"image":"./assets/covers/still_sick_cover.webp",
 		"recommendations":{
 			"priestess' reverence": 8.8,
 			"uniqueness": 7.5,
@@ -543,7 +543,7 @@
 		"length": "short",
 		"status": "cancelled",
 		"targets": [],
-		"image":"./assets/con_cafe_cover.webp",
+		"image":"./assets/covers/con_cafe_cover.webp",
 		"recommendations":{
 			"priestess' reverence": 8.6,
 			"uniqueness": 9.0,
@@ -577,7 +577,7 @@
 		"length": "medium",
 		"status": "ongoing",
 		
-		"image":"./assets/our_love_is_disgusting_cover.webp",
+		"image":"./assets/covers/our_love_is_disgusting_cover.webp",
 		"recommendations":{
 			"priestess' reverence": 8.8,
 			"uniqueness": 9.0,
@@ -606,7 +606,7 @@
 		"infoLinks":["https://www.mangaupdates.com/series/0n708d7/kimi-to-tsuzuru-utakata"],
 		"short":"Oh god oh fuck no please",
 		"description":"It's a tragedy. Read it blind if you can",
-		"image":"./assets/tsywt_cover.webp",
+		"image":"./assets/covers/tsywt_cover.webp",
 		"pairings": {
 			"lesbian" : 10
 		},
@@ -645,7 +645,7 @@
 		"length": "medium",
 		"status": "completed",
 		"targets": [],
-		"image":"./assets/skirt_sings_cover.webp",
+		"image":"./assets/covers/skirt_sings_cover.webp",
 		"recommendations":{
 			"priestess' reverence": 9.2,
 			"uniqueness": 8.0,
@@ -679,7 +679,7 @@
 		"length": "medium",
 		"status": "ongoing",
 		
-		"image":"./assets/hikizan_cover.webp",
+		"image":"./assets/covers/hikizan_cover.webp",
 		"recommendations":{
 			"priestess' reverence": 9.2,
 			"uniqueness": 8.0,
@@ -712,7 +712,7 @@
 		"length": "long",
 		"status": "completed",
 		
-		"image":"./assets/himawari_cover.webp",
+		"image":"./assets/covers/himawari_cover.webp",
 		"recommendations":{
 			"priestess' reverence": 9.5,
 			"uniqueness": 7.5,
@@ -746,7 +746,7 @@
 		"length": "medium",
 		"status": "completed",
 		
-		"image":"./assets/doughnuts_cover.webp",
+		"image":"./assets/covers/doughnuts_cover.webp",
 		"recommendations":{
 			"priestess' reverence": 9.1,
 			"uniqueness": 8.0,
@@ -779,7 +779,7 @@
 		"length": "medium",
 		"status": "completed",
 		
-		"image":"./assets/her_camera_cover.webp",
+		"image":"./assets/covers/her_camera_cover.webp",
 		"recommendations":{
 			"priestess' reverence": 8.7,
 			"uniqueness": 9.0,

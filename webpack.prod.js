@@ -8,7 +8,7 @@ module.exports = merge(common, {
 	plugins: [      
 		new webpack.DefinePlugin({
 			__WEBPACK_DIRECTORY: JSON.stringify("/node_modules"),
-            __WORKING_DIRECTORY: JSON.stringify("/"),
+            __WORKING_DIRECTORY: JSON.stringify("./"),
 		})
 	],
 	optimization: {

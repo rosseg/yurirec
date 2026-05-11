@@ -7,8 +7,8 @@ module.exports = merge(common, {
 	mode: 'production',
 	plugins: [      
 		new webpack.DefinePlugin({
-			__WEBPACK_DIRECTORY: JSON.stringify("-"),
-			__WORKING_DIRECTORY: JSON.stringify("-"),
+			__WEBPACK_DIRECTORY: JSON.stringify("/node_modules"),
+            __WORKING_DIRECTORY: JSON.stringify("/"),
 		})
 	],
 	optimization: {

@@ -22,7 +22,7 @@ module.exports = {
 				use: 'raw-loader'
 			},
 			{ 
-				test: /\.(jpe?g|gif|png|svg|woff|ttf|wav|mp3)$/,
+				test: /\.(jpe?g|webp|gif|png|svg|woff|ttf|wav|mp3)$/,
 				type: 'asset/resource',
 			},    
 			{
@@ -78,7 +78,7 @@ module.exports = {
          // minify:{
          //   removeRedundantAttributes: false, // do not remove type="text"
          // },
-		      baseUrl: process.env.NODE_ENV == 'development'? '/yurirec':'/yurirec',
+		      baseUrl: process.env.NODE_ENV == 'development'? '/':'/dist',
           chunks: ['Index']
         }),
 

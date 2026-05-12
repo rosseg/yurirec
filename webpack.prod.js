@@ -15,7 +15,7 @@ module.exports = merge(common, {
       		patterns: [
         		{ 
 					from: "assets/covers", 
-					to: "assets/covers/[name].[contenthash][ext]" 
+					to: "assets/covers" 
 				},
         	]}),
 	],

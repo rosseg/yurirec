@@ -411,6 +411,10 @@ $long-button-colour: #00a729;*/
 				width: 100%;
 				align-self: stretch;
 
+				buttons{
+					padd
+				}
+
 				.creator-button-div{
 
 				}
@@ -419,6 +423,10 @@ $long-button-colour: #00a729;*/
 				}
 				#artists{
 					grid-row: 2;
+					.artist-label{
+						display:none;
+					}
+					display: none;
 				}
 				.date-added-div{
 					grid-row: 3;
@@ -427,8 +435,10 @@ $long-button-colour: #00a729;*/
 					grid-row: 4;
 				}
 				.notes-section{
+					display:none;
 					.notes{
 						font-size: 0.8em;
+						
 					}
 				}
 			}

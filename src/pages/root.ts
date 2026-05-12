@@ -309,8 +309,10 @@ export default class Root extends Page{
 					let tabContent2 = (<HTMLDivElement>elem.querySelector("#tabcontent2-"+(i+1)));
 					tabContent1.style.display="none";
 					
-					tabContent2.style.display="grid";
-					tabContent2.style.gridTemplateRows = "repeat(4, minmax(max-content, 1fr))";
+					tabContent2.style.display="flex";
+					tabContent2.style.flexWrap="wrap";
+					//tabContent2.style.display="grid";
+					//tabContent2.style.gridTemplateRows = "repeat(4, minmax(max-content, 1fr))";
 				};
 
 			elem.classList.toggle("new", item.added == Consolidator.latestDate);
@@ -404,8 +406,11 @@ export default class Root extends Page{
 					landmines?.append(button);
 				}
 			}
-			const artists = elem.querySelector("#artists");
+			const artists = <HTMLDivElement>elem.querySelector("#artists");
 			if (item.artists){
+				artists.style.display = "inline";
+				const label = <HTMLLabelElement>elem.querySelector(".artist-label");
+				label.style.display = "inline";
 				for (let artist of item.artists){
 					const button = document.createElement("button");
 					button.innerText = artist;
@@ -438,8 +443,10 @@ export default class Root extends Page{
 					linkDiv?.append(button);
 				}
 			}
+			const notesSection = <HTMLDivElement>elem.querySelector(".notes-section");
 			const notes = elem.querySelector(".notes");
 			if (notes && item.notes){
+				notesSection.style.display="inline";
 				notes.textContent = item.notes;
 				if (item.spoilerNotes){
 					notes.classList.add("spoiler");

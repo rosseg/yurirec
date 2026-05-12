@@ -1,0 +1,4 @@
+LOW - Language changer for artist names
+WISHLIST - Search function
+HIGH - Rewrite QNA
+MEDIUM - Theming

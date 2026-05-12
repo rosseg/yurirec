@@ -266,7 +266,6 @@
 		},
 		"added": "06-05-2026",
 		"creators": ["Harper Crane"],
-		"artists": ["Harper Crane"],
 		"infoLinkLabels":["Masonry of the Body"],
 		"infoLinks":["https://masonryofthebody.thecomicseries.com/about/"],
 		"type":"webcomic",
@@ -475,7 +474,7 @@
 		"short":"GAL X GAL WOOOOOO",
 		"description":"Very funny and sweet low-stakes yuri",
 		"length": "short",
-		"status": "hiatus",
+		"status": "ongoing",
 		"targets": [],
 		"image":"./assets/covers/gal_yuri_cover.webp",
 		"recommendations":{
@@ -487,7 +486,7 @@
 			"wholesome": 10.0
 		},
 		"tags":["romance", "comedy", "slice of life", "school life", "gyaru"],
-		"notes":"On a writing hiatus"
+		"notes":""
 	},
 	{
 		"names":{
@@ -784,7 +783,7 @@
 			"uniqueness": 9.0,
 			"intensity": 9.0,
 			"story": 8.5,
-			"toxic": 9.0,
+			"toxic": 8.5,
 			"romance": 7.5
 		},
 		"landmines": [], 

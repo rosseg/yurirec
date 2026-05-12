@@ -4,7 +4,6 @@ const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const fs = require("fs");
-const CopyPlugin = require("copy-webpack-plugin");
 var isDevelopment = true;
 
 module.exports = {
@@ -65,7 +64,8 @@ module.exports = {
 	},
 	output: {
 	  path: path.resolve(__dirname, 'dist'),
-	  filename: '[name].js'
+	  filename: '[name].[contenthash].js',
+	  clean: true
 	},
 	plugins: [
         new webpack.SourceMapDevToolPlugin({
@@ -84,15 +84,10 @@ module.exports = {
         }),
 
         new MiniCssExtractPlugin({
-          filename: isDevelopment ? '[name].css' : '[name].[hash].css',
-          chunkFilename: isDevelopment ? '[id].css' : '[id].[hash].css'
-        }),
+          filename: isDevelopment ? '[name].css' : '[name].[contenthash].css',
+          chunkFilename: isDevelopment ? '[id].css' : '[id].[contenthash].css'
+        })
 
-		new CopyPlugin({
-      patterns: [
-        { from: "assets/covers", to: "assets/covers" },
-        
-      ],
-    }),
+		
     ]
 };

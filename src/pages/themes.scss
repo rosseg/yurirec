@@ -1,7 +1,7 @@
 
 
 :root {
-    --background-image:url('../../assets/background.avif');
+    --background-image:url('../../assets/blue_fabric_background_70.webp');
     --default-background-colour:white;
     --default-text-color: black;
     --default-button-colour: white;
@@ -9,6 +9,7 @@
     --page-background-colour:var(--default-background-colour);
     --qna-background-colour:#00000088;
     --aside-background-colour:var(--default-background-colour);
+    --aside-background-colour-mobile:var(--default-background-colour);
     --article-background-color:var(--default-background-colour);
     --title-text-color: var(--default-text-color);
     --new-background-color:red;
@@ -34,16 +35,19 @@
     --open-text-colour: white;
     --spoiler-tag-button-colour:#f7736ec7;
     --spoiler-tag-text-colour:rgb(114, 57, 57);
+    --desc-ratings-border-colour: black;
 }
 
 .moon-lesbian{
     --ml1: #560087;
     --ml1-trans:#560087d0;
+    --ml1-t20:#78339f;
     --ml1-t20-trans:#78339fa0;
     --ml2: #e8b9ee;
     --ml2-t80: #faf1fc;
     --ml3: #c354b3;
     --ml4: #a7007e;
+    --ml4-s40: #64004c;
     --ml5: #340060;
     --ml5-t10:#481a70;
     --ml5-s10: #2f0056;
@@ -58,6 +62,7 @@
     --page-background-colour:var(--ml5-s20-trans);
     --qna-background-colour:#000000cc;
     --aside-background-colour:var(--default-background-colour);
+    --aside-background-colour-mobile:var(--ml1-t20);
     --article-background-color:var(--default-background-colour);
     --new-background-color:red;
     --new-text-color:var(--default-text-color);
@@ -79,6 +84,7 @@
     --open-text-colour: var(--ml2-t80);
     --spoiler-tag-button-colour:#ff4eff;
     --spoiler-tag-text-colour:var(--tag-text-colour);
+    --desc-ratings-border-colour: var(--ml4-s40);
 }
 .sun-lesbian{
     --sl1: #ff5e28;

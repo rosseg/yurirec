@@ -22,7 +22,7 @@ module.exports = {
 				use: 'raw-loader'
 			},
 			{ 
-				test: /\.(jpe?g|gif|png|svg|woff|ttf|wav|mp3)$/,
+				test: /\.(jpe?g|webp|gif|png|svg|woff|ttf|wav|mp3)$/,
 				type: 'asset/resource',
 			},    
 			{
@@ -64,7 +64,8 @@ module.exports = {
 	},
 	output: {
 	  path: path.resolve(__dirname, 'dist'),
-	  filename: '[name].js'
+	  filename: '[name].[contenthash].js',
+	  clean: true
 	},
 	plugins: [
         new webpack.SourceMapDevToolPlugin({
@@ -78,13 +79,15 @@ module.exports = {
          // minify:{
          //   removeRedundantAttributes: false, // do not remove type="text"
          // },
-		      baseUrl: process.env.NODE_ENV == 'development'? '/yurirec':'/yurirec',
+		      baseUrl: process.env.NODE_ENV == 'development'? '/':'/dist',
           chunks: ['Index']
         }),
 
         new MiniCssExtractPlugin({
-          filename: isDevelopment ? '[name].css' : '[name].[hash].css',
-          chunkFilename: isDevelopment ? '[id].css' : '[id].[hash].css'
+          filename: isDevelopment ? '[name].css' : '[name].[contenthash].css',
+          chunkFilename: isDevelopment ? '[id].css' : '[id].[contenthash].css'
         })
+
+		
     ]
 };

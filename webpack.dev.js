@@ -18,7 +18,7 @@ module.exports = merge(common,
 			__filename: true
 		},
 		devServer: {
-			//liveReload: true,
+			liveReload: false,
 			hot: "only",
 			historyApiFallback: true,
 		// writeToDisk: true,

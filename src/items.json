@@ -5,11 +5,11 @@
 			"romanized-jp":"Yagate Kimi ni Naru",
 			"en":"Bloom Into You"
 		},
-		"authors":["NAKATANI Nio (仲谷鳰)"],
+		"creators":["NAKATANI Nio (仲谷鳰)"],
 		"artists":["NAKATANI Nio (仲谷鳰)"],
 		"infoLinkLabels":["MangaUpdates"],
 		"infoLinks":["https://www.mangaupdates.com/series/wmjgub7/yagate-kimi-ni-naru"],
-		"added": "20-01-2026",
+		"added": "06-05-2026",
 		"type":"manga",
 		"pairings": {
 			"lesbian" : 10
@@ -20,11 +20,11 @@
 		"length": "medium",
 		"status": "completed",
 		"targets": [],
-		"image":"./assets/bloom_into_you_cover.jpg",
+		"image":"./assets/covers/bloom_into_you_cover.v1.webp",
 		"recommendations":{
 			"priestess' reverence": 9.0,
 			"uniqueness": 6.0,
-			"intensity": 8.5,
+			"intensity": 8.2,
 			"story": 8.5,
 			"romance": 8.5,
 			"wholesome": 8.0,
@@ -38,11 +38,11 @@
 			"romanized-cn":"Qīn'ài De Sǐduìtóu",
 			"en":"My Dearest Nemesis"
 		},
-		"authors":["Xian Jun (闲君)"],
+		"creators":["Xian Jun (闲君)"],
 		"artists":["Xian Jun (闲君)"],
 		"infoLinkLabels":["MangaUpdates"],
 		"infoLinks":["https://www.mangaupdates.com/series/36cbcp3/qin-ai-de-siduitou"],
-		"added": "12-02-2026",
+		"added": "06-05-2026",
 		"type":"manhua",
 		"pairings": {
 			"lesbian" : 10
@@ -53,11 +53,11 @@
 		"length": "medium",
 		"status": "completed",
 		"targets": [],
-		"image":"./assets/my_dearest_nemesis_cover.jpg",
+		"image":"./assets/covers/my_dearest_nemesis_cover.v1.webp",
 		"recommendations":{
 			"priestess' reverence": 8.5,
 			"uniqueness": 7.0,
-			"intensity": 8.0,
+			"intensity": 7.8,
 			"romance": 8.0,
 			"horny": 7.0,
 			"toxic": 5.0,
@@ -72,9 +72,9 @@
 			"romanized-kr": "Naneun Amy-reul Saranghae",
 			"kr": "나는 에이미를 사랑해"
 		},
-		"added": "24-02-2026",
+		"added": "06-05-2026",
 		"type":"manhwa",
-		"authors":["UNNI (언니)"],
+		"creators":["UNNI (언니)"],
 		"artists":["UNNI (언니)"],
 		"infoLinkLabels":["MangaUpdates"],
 		"infoLinks":["https://www.mangaupdates.com/series/6xqdlt7/i-love-amy"],
@@ -87,11 +87,11 @@
 		"length": "medium",
 		"status": "completed",
 		"targets":[],
-		"image":"./assets/i_love_amy_cover.jpg",
+		"image":"./assets/covers/i_love_amy_cover.v1.webp",
 		"recommendations":{
-			"priestess' reverence": 8.5,
+			"priestess' reverence": 8.7,
 			"uniqueness": 9.0,
-			"intensity": 8.0,
+			"intensity": 8.5,
 			"story": 8.5,
 			"romance": 8.0,
 			"art": 9.5
@@ -108,11 +108,11 @@
 			"romanized-jp":"Usotsuki Hanayome to Dousei Kekkon-ron",
 			"jp": "嘘つき花嫁と同性結婚論"
 		},
-		"authors":["Kodama Naoko"],
+		"creators":["Kodama Naoko"],
 		"artists":["Kodama Naoko"],
 		"infoLinkLabels":["MangaUpdates"],
 		"infoLinks":["https://www.mangaupdates.com/series/7plvifq/usotsuki-hanayome-to-dousei-kekkon-ron"],
-		"added": "18-03-2026",
+		"added": "06-05-2026",
 		"type":"manga",
 		"pairings": {
 			"lesbian" : 10.0
@@ -122,7 +122,7 @@
 		"length": "short",
 		"status": "completed",
 		"targets": [],
-		"image":"./assets/lying_bride_cover.jpg",
+		"image":"./assets/covers/lying_bride_cover.v1.webp",
 		"recommendations":{
 			"priestess' reverence": 7.5,
 			"uniqueness": 6.5,
@@ -137,39 +137,41 @@
 		"names":{
 			"en": "Soulmate"
 		},
-		"added": "19-03-2026",
+		"added": "06-05-2026",
 		"type":"manhua",
-		"authors":["Ke Ran Bing (可燃冰)", "Wenzhi Lizi (文枝栗子)"],
+		"creators":["Ke Ran Bing (可燃冰)", "Wenzhi Lizi (文枝栗子)"],
 		"artists":["Wenzhi Lizi (文枝栗子)"],
 		"infoLinkLabels":["MangaUpdates"],
 		"infoLinks":["https://www.mangaupdates.com/series/5ehz74d/soulmate"],
 		"pairings": {
 			"lesbian" : 10.0
 		},
-		"short":"girl who's 17 and 27-year-old self have swapped bodies tries to save sick gf",
+		"short":"girl who's 17 and 27-year-old self have swapped minds tries to save sick gf",
 		"description":"touching and sweet. i like.",
 		"length": "medium",
 		"status": "completed",
 		"targets": [],
-		"image":"./assets/soulmate_cover.jpg",
+		"image":"./assets/covers/soulmate_cover.v1.webp",
 		"recommendations":{
 			"priestess' reverence": 8.4,
 			"uniqueness": 8.0,
-			"intensity": 8.0,
+			"intensity": 7.5,
 			"story":8.0,
 			"romance": 8.5,
 			"wholesome": 9.0
 		},
 		"landmines": ["adult-minor age gap"], 
-		"tags": ["romance", "drama", "slice of life", "time travel", "school life", "full colour", "age gap" ]
+		"tags": ["romance", "drama", "slice of life", "time travel", "school life", "full colour", "age gap" ],
+		"notes": "One character's 27 vand 17 yr old self swap minds, creating a temporary adult-minor age gap that is pretty chaste",
+		"spoilerNotes": true
 	},
 	
 	{
 		"names":{
 			"en":"Not So Shoujo Love Story"
 		},
-		"added": "31-03-2026",
-		"authors": ["Curryuku"],
+		"added": "06-05-2026",
+		"creators": ["Curryuku"],
 		"artists": ["Curryuku"],
 		"infoLinkLabels":["WEBTOON"],
 		"infoLinks":["https://www.webtoons.com/en/comedy/not-so-shoujo-love-story/list?title_no=2189"],
@@ -178,30 +180,31 @@
 			"lesbian" : 10
 		},
 		"short": "shoujo-obsessed girl x persistent girl with a crush on her",
-		"description":"absurdity and the juiciest, slowest burn. 2 (of probably 3-4) seasons are out",
+		"description":"absurdity and the juiciest, slowest burn.",
 		"length":"long",
 		"status": "hiatus",
 		"targets": [],
-		"image":"./assets/not_so_shoujo_cover2.jpg",
+		"image":"./assets/covers/not_so_shoujo_cover2.v1.webp",
 		"recommendations":{
 			"priestess' reverence": 9.6,
 			"uniqueness": 6.0,
-			"intensity": 9.0,
+			"intensity": 7.0,
 			"romance": 9.5,
 			"wholesome": 9.0,
 			"comedy": 6.0,
 			"art": 9.5
 		},
 		"landmines":[],
-		"tags":["romance", "comedy", "school life", "slice of life"]
+		"tags":["romance", "comedy", "school life", "slice of life", "slow burn", "long strip", "full colour"],
+		"notes":"On a writing/publishing hiatus. 2 (of I'm guessing 3-4) seasons are out"
 	},
 	
 	{
 		"names":{
 			"en":"Muted"
 		},
-		"added": "31-03-2026",
-		"authors": ["Miranda Mundt"],
+		"added": "06-05-2026",
+		"creators": ["Miranda Mundt"],
 		"artists": ["Miranda Mundt"],
 		"infoLinkLabels":["WEBTOON"],
 		"infoLinks":["https://www.webtoons.com/en/supernatural/muted/list?title_no=1566"],
@@ -214,11 +217,11 @@
 		"length":"long",
 		"status": "completed",
 		"targets": [],
-		"image":"./assets/muted_cover.jpg",
+		"image":"./assets/covers/muted_cover.v1.webp",
 		"recommendations":{
 			"priestess' reverence": 8.2,
 			"uniqueness": 7.0,
-			"intensity": 8.5,
+			"intensity": 9.0,
 			"story":8.5,
 			"romance": 7.5,
 			"art": 10.0
@@ -231,8 +234,8 @@
 		"names":{
 			"en":"PaperTeeth!"
 		},
-		"added": "31-03-2026",
-		"authors": ["Wulvert"],
+		"added": "06-05-2026",
+		"creators": ["Wulvert"],
 		"artists": ["Wulvert"],
 		"infoLinkLabels":["WEBTOON"],
 		"infoLinks":["https://www.webtoons.com/en/comedy/paperteeth/list?title_no=5969"],
@@ -245,13 +248,12 @@
 		"length":"long",
 		"status": "ongoing",
 		"targets": [],
-		"image":"./assets/paperteeth_cover.webp",
+		"image":"./assets/covers/paperteeth_cover.v1.webp",
 		"recommendations":{
-			"priestess' reverence": 9.0,
+			"priestess' reverence": 8.8,
 			"uniqueness": 9.0,
-			"intensity": 8.5,
-			"story": 8.0,
-			"comedy":9.0,
+			"intensity": 7.5,
+			"comedy":8.5,
 			"art": 9.0
 		},
 		"landmines":["blood"],
@@ -262,9 +264,8 @@
 		"names":{
 			"en":"Masonry of the Body"
 		},
-		"added": "31-03-2026",
-		"authors": ["Wulvert"],
-		"artists": ["Wulvert"],
+		"added": "06-05-2026",
+		"creators": ["Harper Crane"],
 		"infoLinkLabels":["Masonry of the Body"],
 		"infoLinks":["https://masonryofthebody.thecomicseries.com/about/"],
 		"type":"webcomic",
@@ -277,11 +278,11 @@
 		"length":"medium",
 		"status": "ongoing",
 		"targets": [],
-		"image":"./assets/masonry_cover.png",
+		"image":"./assets/covers/masonry_cover.v1.webp",
 		"recommendations":{
 			"priestess' reverence": 9.5,
 			"uniqueness": 10.0,
-			"intensity": 9.0,
+			"intensity": 9.2,
 			"story": 9.0,
 			"romance":8.0,
 			
@@ -297,9 +298,9 @@
 			"romanized-jp":"Sabishi Sugiru Onna Shachou ga Lesbian Fuuzokujou ni Byou de Ochiru Hanashi",
 			"jp":"寂しすぎる女社長がレズ風俗嬢に秒で落ちる話"
 		},
-		"added": "31-03-2026",
+		"added": "06-05-2026",
 		"type":"manga",
-		"authors":["6th Manager"],
+		"creators":["6th Manager"],
 		"artists": ["MISAKI Tenmu (みさき天夢)"],
 		"infoLinkLabels":["MangaUpdates"],
 		"infoLinks":["https://www.mangaupdates.com/series/5bk8qqz/sabishi-sugiru-onna-shachou-ga-lesbian-fuuzokujou-ni-byou-de-ochiru-hanashi"],
@@ -311,11 +312,11 @@
 		"length": "short",
 		"status": "completed",
 		"targets": [],
-		"image":"./assets/lonelyceo_cover.jpg",
+		"image":"./assets/covers/lonelyceo_cover.v1.webp",
 		"recommendations":{
 			"priestess' reverence": 7.5,
 			"uniqueness": 7.0,
-			"intensity": 7.0,
+			"intensity": 6.0,
 			"comedy": 5.0,
 			"romance": 8.0,
 			"wholesome": 8.5
@@ -329,9 +330,9 @@
 			"romanized":"Shiro to Kuro",
 			"jp":"白と黒～Black & White～"
 		},
-		"added": "31-03-2026",
+		"added": "06-05-2026",
 		"type":"manga",
-		"authors":["Sal Jiang"],
+		"creators":["Sal Jiang"],
 		"artists":["Sal Jiang"],
 		"infoLinkLabels":["MangaUpdates"],
 		"infoLinks":["https://www.mangaupdates.com/series/davi6id/shiro-to-kuro-sal-jiang"],
@@ -343,7 +344,7 @@
 		"length": "short",
 		"status": "completed",
 		"targets": [],
-		"image":"./assets/black_and_white_cover.jpg",
+		"image":"./assets/covers/black_and_white_cover.v1.webp",
 		"recommendations":{
 			"priestess' reverence":8.7,
 			"uniqueness": 9.0,
@@ -362,11 +363,11 @@
 			"romanized-jp":"Ki ni Natteru Hito ga Otoko ja Nakatta",
 			"en":"The Guy She Was Interested in Wasn't a Guy at All"
 		},
-		"authors":["ARAI Sumiko (新井すみこ)"],
+		"creators":["ARAI Sumiko (新井すみこ)"],
 		"artists":["ARAI Sumiko (新井すみこ)"],
 		"infoLinkLabels":["MangaUpdates"],
 		"infoLinks":["https://www.mangaupdates.com/series/d86l207/ki-ni-natteru-hito-ga-otoko-ja-nakatta"],
-		"added": "31-03-2026",
+		"added": "06-05-2026",
 		"type":"manga",
 		"pairings": {
 			"lesbian" : 10
@@ -376,11 +377,11 @@
 		"length": "medium",
 		"status": "ongoing",
 		"targets": [],
-		"image":"./assets/green_yuri_cover.jpg",
+		"image":"./assets/covers/green_yuri_cover.v1.webp",
 		"recommendations":{
 			"priestess' reverence": 8.8,
 			"uniqueness": 7.0,
-			"intensity": 8.0,
+			"intensity": 6.8,
 			"story": 8.0,
 			"romance": 9.0,
 			"wholesome": 9.0,
@@ -396,9 +397,9 @@
 			"romanized-cn":"Tā De Shān, Tā De Hǎi",
 			"cn":"她的山，她的海"
 		},
-		"added": "31-03-2026",
+		"added": "06-05-2026",
 		"type":"manhua",
-		"authors":["Fu Hua (扶华)"],
+		"creators":["Fu Hua (扶华)"],
 		"artists":["Huo Hezi (火禾子)", "Jing Yuan Studio (鲸元社)", "悠作文化"],
 		"infoLinkLabels":["MangaUpdates"],
 		"infoLinks":["https://www.mangaupdates.com/series/5yiwn6b/ta-de-shan-ta-de-hai"],
@@ -410,18 +411,18 @@
 		"length": "long",
 		"status": "completed",
 		"targets": [],
-		"image":"./assets/her_mountain_cover.jpg",
+		"image":"./assets/covers/her_mountain_cover.v1.webp",
 		"recommendations":{
 			"priestess' reverence": 9.0,
 			"uniqueness": 6.0,
-			"intensity": 8.5,
+			"intensity": 8.0,
 			"story":8.0,
 			"romance": 9.5,
 			"wholesome": 8.0,
 			"art": 9.0
 		},
 		"landmines": ["abusive parental figure", "violence", "blood"], 
-		"tags": ["romance", "drama", "slice of life",  "school life", "full colour", "adaptation" ]
+		"tags": ["romance", "drama", "slice of life",  "school life", "full colour", "adaptation", "slow burn" ]
 	}
 	,
 	{
@@ -430,11 +431,11 @@
 			"romanized-jp":"Maitsuki, Niwatsuki, Ooyatsuki",
 			"en":"Monthly in the Garden with My Landlord"
 		},
-		"authors":["Yodokawa"],
+		"creators":["Yodokawa"],
 		"artists":["Yodokawa"],
 		"infoLinkLabels":["MangaUpdates"],
 		"infoLinks":["https://www.mangaupdates.com/series/d6zpmbj/maitsuki-niwa-tsuki-ooya-tsuki"],
-		"added": "31-03-2026",
+		"added": "06-05-2026",
 		"type":"manga",
 		"pairings": {
 			"lesbian" : 10
@@ -444,16 +445,16 @@
 		"length": "medium",
 		"status": "completed",
 		"targets": [],
-		"image":"./assets/maitsuki_cover.jpg",
+		"image":"./assets/covers/maitsuki_cover.v1.webp",
 		"recommendations":{
 			"priestess' reverence": 8.0,
 			"uniqueness": 6.0,
-			"intensity": 8.0,
+			"intensity": 6.5,
 			"story": 7.5,
 			"romance": 9.0,
 			"wholesome": 8.5
 		},
-		"tags":["romance", "comedy", "slice of life", "idol", "landlord", "age gap"]
+		"tags":["romance", "comedy", "slice of life", "idol(s)", "landlord", "age gap"]
 	},
 	{
 		"names":{
@@ -461,30 +462,31 @@
 			"romanized-jp":"#Gyaru to Gyaru no Yuri",
 			"en":"#Gal x Gal Yuri"
 		},
-		"authors":["Inoue (イノウエ)"],
+		"creators":["Inoue (イノウエ)"],
 		"artists":["Inoue (イノウエ)"],
 		"infoLinkLabels":["MangaUpdates"],
 		"infoLinks":["https://www.mangaupdates.com/series/0vw676l/gyaru-to-gyaru-no-yuri"],
-		"added": "31-03-2026",
+		"added": "06-05-2026",
 		"type":"manga",
 		"pairings": {
 			"lesbian" : 10
 		},
 		"short":"GAL X GAL WOOOOOO",
-		"description":"Very funny and sweet low-stakes yuri. On a writing hiatus (April 2025)",
+		"description":"Very funny and sweet low-stakes yuri",
 		"length": "short",
-		"status": "hiatus",
+		"status": "ongoing",
 		"targets": [],
-		"image":"./assets/gal_yuri_cover.jpg",
+		"image":"./assets/covers/gal_yuri_cover.v1.webp",
 		"recommendations":{
 			"priestess' reverence": 8.5,
 			"uniqueness": 7.5,
-			"intensity": 7.0,
+			"intensity": 4.0,
 			"romance": 9.0,
 			"comedy": 7.5,
 			"wholesome": 10.0
 		},
-		"tags":["romance", "comedy", "slice of life", "school life", "gyaru"]
+		"tags":["romance", "comedy", "slice of life", "school life", "gyaru"],
+		"notes":""
 	},
 	{
 		"names":{
@@ -492,11 +494,11 @@
 			"romanized-jp":"Sutirushikku",
 			"en":"Still Sick"
 		},
-		"authors":["Akashi (灯)"],
+		"creators":["Akashi (灯)"],
 		"artists":["Akashi (灯)"],
 		"infoLinkLabels":["MangaUpdates"],
 		"infoLinks":["https://www.mangaupdates.com/series/eq8dzz8/still-sick"],
-		"added": "31-03-2026",
+		"added": "06-05-2026",
 		"type":"manga",
 		"pairings": {
 			"lesbian" : 10
@@ -506,11 +508,11 @@
 		"length": "medium",
 		"status": "completed",
 		"targets": [],
-		"image":"./assets/still_sick_cover.jpg",
+		"image":"./assets/covers/still_sick_cover.v1.webp",
 		"recommendations":{
 			"priestess' reverence": 8.8,
 			"uniqueness": 7.5,
-			"intensity": 8.5,
+			"intensity": 7.5,
 			"story": 8.5,
 			"romance": 9.0,
 			"wholesome": 8.0,
@@ -524,11 +526,11 @@
 			"romanized-jp":"Con Cafe Jou wa Koi o Kiru",
 			"en":"The Concept Cafe Girl Wears Love"
 		},
-		"authors":["Uhana Ririka (卯花りりか)"],
+		"creators":["Uhana Ririka (卯花りりか)"],
 		"artists":["Uhana Ririka (卯花りりか)"],
 		"infoLinkLabels":["MangaUpdates"],
 		"infoLinks":["https://www.mangaupdates.com/series/nsk6eha"],
-		"added": "31-03-2026",
+		"added": "06-05-2026",
 		"type":"manga",
 		"pairings": {
 			"lesbian" : 8,
@@ -539,11 +541,11 @@
 		"length": "short",
 		"status": "cancelled",
 		"targets": [],
-		"image":"./assets/con_cafe_cover.jpg",
+		"image":"./assets/covers/con_cafe_cover.v1.webp",
 		"recommendations":{
 			"priestess' reverence": 8.6,
 			"uniqueness": 9.0,
-			"intensity": 8.0,
+			"intensity": 7.5,
 			"story": 7.5,
 			"comedy": 7.5,
 			"toxic": 5.0,
@@ -552,5 +554,241 @@
 		"tags":["drama", "comedy", "fashion", "concept cafe", "slice of life", "trans rep"],
 		"landmines":["rushed ending"],
 		"notes":"Author was given 1 chapter to finish, creating a rushed ending"
+		
+	},{
+		"names":{
+			"jp": "僕らのアイは気持ち悪い",
+			"romanized":"Bokura no Ai wa Kimochi Warui",
+			"en":"Our \"Love\" is Disgusting"
+		},
+		"added": "10-05-2026",
+		"type":"manga",
+		"creators":["Usui Shio (雨水汐)"],
+		"artists":["Usui Shio (雨水汐)"],
+		"infoLinkLabels":["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/r5sli6d/our-love-is-disgusting"],
+		"pairings": {
+			"lesbian" : 10.0
+		},
+		"short":"love square of freaky girls",
+		"description":"these four are nightmares and I love them (mostly)",
+		"length": "medium",
+		"status": "ongoing",
+		
+		"image":"./assets/covers/our_love_is_disgusting_cover.v1.webp",
+		"recommendations":{
+			"priestess' reverence": 8.8,
+			"uniqueness": 9.0,
+			"intensity": 8.2,
+			"romance": 7.0,
+			"horny": 9.0,
+			"kinky": 8.0,
+			"toxic": 8.0
+		},
+		"landmines": ["adult-minor age gap"],
+		"tags":["romance", "love triangle", "love square","drama", "sexual", "fetish", "age gap", "school life", "co-workers"],
+		"notes": "23-yr-old and 17-yr-old have sexual interactions",
+		"spoilerNotes": true
+	},
+	{
+		"names":{
+			"jp":"君と綴るうたかた",
+			"romanized":"Kimi to Tsuzuru Utakata",
+			"en":"The Summer You Were There"
+		},
+		"added": "10-05-2026",
+		"type":"manga",
+		"creators":["Yuama (ゆあま)"],
+		"artists":["Yuama (ゆあま)"],
+		"infoLinkLabels":["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/0n708d7/kimi-to-tsuzuru-utakata"],
+		"short":"Oh god oh fuck no please",
+		"description":"It's a tragedy. Read it blind if you can",
+		"image":"./assets/covers/tsywt_cover.v1.webp",
+		"pairings": {
+			"lesbian" : 10
+		},
+		"status": "completed",
+		"length": "medium",
+		"recommendations":{
+			"priestess' reverence":9.0,
+			"uniqueness": 7.0,
+			"intensity": 9.5,
+			"story": 9.0,
+			"romance": 10.0, 
+			"tragedy": 10.0
+		},
+		"targets":["blind reads"],
+		"landmines":["suicide"],
+		"tags":["romance", "school life", "slice of life", "drama", "tragedy"]
+	}
+	,{
+		"names":{
+			"en": "The Skirt Sings at the Landing",
+			"romanized":"Odoriba ni Skirt ga naru",
+			"jp":"踊り場にスカートが鳴る"
+		},
+		"added": "10-05-2026",
+		"type":"manga",
+		"creators":["Utatane Yuu (うたたね游)"],
+		"artists":["Utatane Yuu (うたたね游)"],
+		"infoLinkLabels":["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/rwka559/odoriba-ni-skirt-ga-naru"],
+		"pairings": {
+			"lesbian" : 10.0,
+			"trans": 1.0
+		},
+		"short":"short leading dancer x  tall following dancer",
+		"description":"This one is special. And the follower has trans-coded aspects",
+		"length": "medium",
+		"status": "completed",
+		"targets": [],
+		"image":"./assets/covers/skirt_sings_cover.v1.webp",
+		"recommendations":{
+			"priestess' reverence": 9.2,
+			"uniqueness": 8.0,
+			"intensity": 8.0,
+			"story": 8.5,
+			"romance": 9.0,
+			"wholesome": 9.0,
+			"art": 9.0
+
+		},
+		"landmines": [], 
+		"tags": ["romance", "love triangle", "drama", "slice of life", "school life", "dance"]
+	},
+	{
+		"names":{
+			"en": "Subtraction Tautology",
+			"romanized":"Hikizan Tautology",
+			"jp":"ひきざんトートロジー"
+		},
+		"added": "10-05-2026",
+		"type":"manga",
+		"creators":["Masatsuka Chii (柾塚ちい)"],
+		"artists":["Masatsuka Chii (柾塚ちい)"],
+		"infoLinkLabels": ["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/1efzp9s/hikizan-tautology"],
+		"pairings": {
+			"lesbian" : 10.0
+		},
+		"short":"cheerleader x loner",
+		"description":"this slow burn with a cast of complex characters and heavy themes is incredible.",
+		"length": "medium",
+		"status": "ongoing",
+		
+		"image":"./assets/covers/hikizan_cover.v1.webp",
+		"recommendations":{
+			"priestess' reverence": 9.2,
+			"uniqueness": 8.0,
+			"intensity": 8.2,
+			"story": 9.0,
+			"romance": 8.5,
+			"comedy": 5.0
+			
+		},
+		"landmines": ["grooming","suicide"], 
+		"tags": ["romance", "slice of life","school life",  "drama", "long strip", "full colour", "slow burn", "idol(s)"]
+	}, 
+	{
+		"names":{
+			"en": "Miss Sunflower",
+			"romanized":"Himawari-san",
+			"jp":"ひまわりさん"
+		},
+		"added": "10-05-2026",
+		"type":"manga",
+		"creators":["Sugano Manami (管野マナミ)"],
+		"artists":["Sugano Manami (管野マナミ)"],
+		"infoLinkLabels": ["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/hptxwnm/himawari-san-sugano-manami"],
+		"pairings": {
+			"lesbian" : 6.0
+		},
+		"short":"high school student has a crush on a bookstore owner",
+		"description":"Beautiful yuri that exists somewhere between platonic and romantic. And stunning exploration of grief",
+		"length": "long",
+		"status": "completed",
+		
+		"image":"./assets/covers/himawari_cover.v1.webp",
+		"recommendations":{
+			"priestess' reverence": 9.5,
+			"uniqueness": 7.5,
+			"intensity": 7.5,
+			"story": 8.5,
+			"wholesome":10.0
+		},
+		"landmines": ["adult-minor age gap"], 
+		"tags": ["romance?", "platonic", "slice of life","school life", "grief", "slow burn", "age gap"],
+		"notes":"luckily this age gap yuri is platonic especially on the adult's end and nothing inappropriate happens",
+		"spoilerNotes":true
+	},
+	{
+		"names":{
+			"en": "Doughnuts Under a Crescent Moon",
+			"romanized":"Kaketa Tsuki to Dōnattsu",
+			"jp":"欠けた月とドーナッツ"
+		},
+		"added": "10-05-2026",
+		"type":"manga",
+		"creators":["Usui Shio (雨水汐)"],
+		"artists":["Usui Shio (雨水汐)"],
+		"infoLinkLabels": ["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/4unvjya/kaketa-tsuki-to-donuts"],
+		"pairings": {
+			"lesbian" : 10.0,
+			"aspec" : 10.0
+		},
+		"short":"ace office worker x ace office worker",
+		"description":"Lovely grown-up yuri that challenges the norms of romance and sexuality",
+		"length": "medium",
+		"status": "completed",
+		
+		"image":"./assets/covers/doughnuts_cover.v1.webp",
+		"recommendations":{
+			"priestess' reverence": 9.1,
+			"uniqueness": 8.0,
+			"intensity": 7.0,
+			"story": 8,
+			"romance": 8.5,
+			"wholesome":10.0
+		},
+		"landmines": [], 
+		"tags": ["romance", "slice of life","office worker(s)", "asexual rep"]
+		
+	},
+		{
+		"names":{
+			"en": "She, Her Camera and Her Seasons",
+			"romanized":"Kanojo to Camera to Kanojo no Kisetsu",
+			"jp":"彼女とカメラと彼女の季節"
+		},
+		"added": "10-05-2026",
+		"type":"manga",
+		"creators":["Tsukiko (月子)"],
+		"artists":["Tsukiko (月子)"],
+		"infoLinkLabels": ["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/2p65ur6/kanojo-to-camera-to-kanojo-no-kisetsu"],
+		"pairings": {
+			"lesbian" : 10.0
+		},
+		"short":"girl x flighty photographer girl x boy",
+		"description":"Juicy and toxic. Boy in triangle but its yuri.",
+		"length": "medium",
+		"status": "completed",
+		
+		"image":"./assets/covers/her_camera_cover.v1.webp",
+		"recommendations":{
+			"priestess' reverence": 8.7,
+			"uniqueness": 9.0,
+			"intensity": 8.8,
+			"story": 8.5,
+			"toxic": 8.5,
+			"romance": 7.5
+		},
+		"landmines": [], 
+		"tags": ["romance", "drama", "slice of life", "school life","love triangle", "photography"],
+		"notes": "The main girl's focus is on the photographer, therefore yuri.",
+		"spoilerNotes":true
 	}
 ]

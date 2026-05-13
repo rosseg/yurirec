@@ -327,9 +327,13 @@ $long-button-colour: #00a729;*/
 					
 				}
 				.lesbian{
-					background-image:url('../../assets/Lesbian_pride_flag_2018.svg.png');
+					background-image:url('../../assets/lesbian.png');
 					background-size:auto 100%;
 					
+				}
+				.aspec{
+					background-image:url('../../assets/asexual.png');
+					background-size:auto 100%;
 				}
 				.gay{
 					background-image:url('../../assets/gay.png');
@@ -409,14 +413,20 @@ $long-button-colour: #00a729;*/
 				width: 100%;
 				align-self: stretch;
 
+				
+
 				.creator-button-div{
 
 				}
-				#authors{
+				#creators{
 					grid-row: 1;
 				}
 				#artists{
 					grid-row: 2;
+					.artist-label{
+						display:none;
+					}
+					display: none;
 				}
 				.date-added-div{
 					grid-row: 3;
@@ -424,9 +434,16 @@ $long-button-colour: #00a729;*/
 				.info-links-div{
 					grid-row: 4;
 				}
+				.notes-section{
+					display:none;
+					.notes{
+						font-size: 0.8em;
+						
+					}
+				}
 			}
 			.tabs-content1{
-				border-radius: $default-border-radius;
+				border-radius:$default-border-radius $default-border-radius 0 $default-border-radius;
 			}
 			.tabs-content2{
 				border-radius:$default-border-radius $default-border-radius 0 $default-border-radius;
@@ -445,7 +462,10 @@ $long-button-colour: #00a729;*/
 			.desc{
 				//font-weight:100;
 				font-size:0.8em;
-				margin-bottom:0.5rem;
+				padding-top:0.25rem;
+				padding-bottom:0.25rem;
+			
+				border-top: 0.1rem solid var(--desc-ratings-border-colour);
 			}
 			
 			
@@ -456,10 +476,12 @@ $long-button-colour: #00a729;*/
 		
 			.ratings{
 				margin-bottom:$default-margin;
+				padding-top:0.25rem;
+				border-top: 0.1rem solid var(--desc-ratings-border-colour);
 			}
 			.short-desc{
 				margin-top:0;
-				margin-bottom: 2 * $default-margin;
+				margin-bottom: $default-margin;
 				font-weight:bold;
 			}
 			span{
@@ -591,16 +613,30 @@ $long-button-colour: #00a729;*/
 			}
 			
 		}
+
+		.spoiler{
+					
+					//border-radius:0.2em;
+					//padding-left:0.2em;
+					//padding-right:0.2em;
+					filter: blur(0.35em);
+						transition:all 0.3s;
+					&:hover{
+						filter: blur(0px);
+					}
+			}
 		
 	}
-	@media (max-width: 52rem) {
+	@media (max-width: 65rem) {
 		article:nth-child(even){
+			grid-template-columns:minmax(0, 1.2fr) minmax(0, 1fr);
 			grid-template-areas: "data-section cover-image"
 								"tab-labels-section tag-section";
 		}
 		
 
 		aside{
+			background-color: var(--aside-background-colour-mobile);
 			display:block;
 			position:fixed;
 			left:calc(-100% - 2em);
@@ -611,11 +647,11 @@ $long-button-colour: #00a729;*/
 			&.show{
 				display:block;
 				left:0%;
-				background-color:var(--aside-background-colour);
+				background-color: var(--aside-background-colour-mobile);
 			}
 		}
 		article{
-			grid-template-columns:minmax(0, 1fr) minmax(0, 1fr);
+			grid-template-columns:minmax(0, 1fr) minmax(0, 1.2fr);
 			grid-template-rows: ($image-height * $mobile-size-multiplier) max-content;
 			//grid-template-columns: $image-width $data-section-width;
 			width:calc(100vw - 1em);
@@ -636,18 +672,12 @@ $long-button-colour: #00a729;*/
 					font-size:0.8em;
 				}
 			}
-			
-			/*.mainsection{
 
-				height:max-content;
-				min-height:calc($image-height * $mobile-size-multiplier);
-				width:unset;
-				
-				align-self: stretch;*/
 			.data-section{
 				padding-left:$default-padding;
 				padding-right:$default-padding;
-				height:($image-height * $mobile-size-multiplier)
+				height:($image-height * $mobile-size-multiplier);
+				max-width:unset;
 			}
 
 			.cover-image{

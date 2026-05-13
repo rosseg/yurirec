@@ -41,14 +41,14 @@ function makeSafeForCSS(name) {
 export default class Root extends Page{
 	onlyNew : boolean = false;
 	hideTags : boolean = false;
-	hideLandmines : boolean = true;
+	showLandmines : boolean = false;
 	
 	constructor(){
 		super(RootHTML);
 		// load all previous settings
 		this.onlyNew = localStorage.getItem("onlyNew") == "true" ? true : false;
 		this.hideTags = localStorage.getItem("hideTags") == "true" ? true : false;
-		this.hideLandmines = localStorage.getItem("hideLandmines") == "true" ? true : false;
+		this.showLandmines = localStorage.getItem("showLandmines") == "true" ? true : false;
 
 		this.landmines = JSON.parse(localStorage.getItem("landmines")) ?? {};
 		this.targets = JSON.parse(localStorage.getItem("recomms")) ?? {};
@@ -309,8 +309,10 @@ export default class Root extends Page{
 					let tabContent2 = (<HTMLDivElement>elem.querySelector("#tabcontent2-"+(i+1)));
 					tabContent1.style.display="none";
 					
-					tabContent2.style.display="grid";
-					tabContent2.style.gridTemplateRows = "repeat(4, minmax(max-content, 1fr))";
+					tabContent2.style.display="flex";
+					tabContent2.style.flexWrap="wrap";
+					//tabContent2.style.display="grid";
+					//tabContent2.style.gridTemplateRows = "repeat(4, minmax(max-content, 1fr))";
 				};
 
 			elem.classList.toggle("new", item.added == Consolidator.latestDate);
@@ -399,24 +401,28 @@ export default class Root extends Page{
 			if (item.landmines){
 				for (let tag of item.landmines){
 					const button = document.createElement("button");
+					button.classList.add("spoiler");
 					button.innerText = tag;
 					landmines?.append(button);
 				}
 			}
-			const artists = elem.querySelector("#artists");
+			const artists = <HTMLDivElement>elem.querySelector("#artists");
 			if (item.artists){
+				artists.style.display = "inline";
+				const label = <HTMLLabelElement>elem.querySelector(".artist-label");
+				label.style.display = "inline";
 				for (let artist of item.artists){
 					const button = document.createElement("button");
 					button.innerText = artist;
 					artists?.append(button);
 				}
 			}
-			const authors = elem.querySelector("#authors");
-			if (item.authors){
-				for (let author of item.authors){
+			const creators = elem.querySelector("#creators");
+			if (item.creators){
+				for (let creator of item.creators){
 					const button = document.createElement("button");
-					button.innerText = author;
-					authors?.append(button);
+					button.innerText = creator;
+					creators?.append(button);
 				}
 			}
 			const dateAddedDiv = elem.querySelector(".date-added-div");
@@ -437,9 +443,14 @@ export default class Root extends Page{
 					linkDiv?.append(button);
 				}
 			}
+			const notesSection = <HTMLDivElement>elem.querySelector(".notes-section");
 			const notes = elem.querySelector(".notes");
 			if (notes && item.notes){
+				notesSection.style.display="inline";
 				notes.textContent = item.notes;
+				if (item.spoilerNotes){
+					notes.classList.add("spoiler");
+				}
 			}
 			
 
@@ -492,7 +503,7 @@ export default class Root extends Page{
 
 		localStorage.setItem("onlyNew", this.onlyNew ? "true" : "false");
 		localStorage.setItem("hideTags", this.hideTags ? "true" : "false");
-		localStorage.setItem("hideLandmines", this.hideLandmines ? "true" : "false");
+		localStorage.setItem("showLandmines", this.showLandmines ? "true" : "false");
 
 		//this.Element.classList.toggle("hideLandmines", this.hideLandmines);
 		//this.Element.classList.toggle("hideTags", this.hideTags);
@@ -510,11 +521,11 @@ export default class Root extends Page{
 			});
 		}
 		{
-			const elem = this.Element.querySelector(".extras .hidelandmines");
-			elem?.querySelector(".multi-checkbox")?.classList.toggle("active", this.hideLandmines);
+			const elem = this.Element.querySelector(".extras .showlandmines");
+			elem?.querySelector(".multi-checkbox")?.classList.toggle("active", this.showLandmines);
 			elem?.addEventListener("click",()=>{
 				elem?.querySelector(".multi-checkbox")?.classList.toggle("active");
-				this.hideLandmines = (elem.querySelector(".multi-checkbox").classList.contains("active"));
+				this.showLandmines = (elem.querySelector(".multi-checkbox").classList.contains("active"));
 				this.UpdateFilters();
 			});
 		}
@@ -749,9 +760,9 @@ export default class Root extends Page{
 			let landmineBtns = elem?.querySelector(".landmines")?.children;
 			if (landmineBtns){
 				for (var i = 0; i < landmineBtns.length; i++){
-					if (this.hideLandmines && !landmineBtns[i].classList.contains("spoiler"))
+					if (!this.showLandmines && !landmineBtns[i].classList.contains("spoiler"))
 						landmineBtns[i].classList.add("spoiler");
-					else if (landmineBtns[i].classList.contains("spoiler")) 
+					else if (this.showLandmines && landmineBtns[i].classList.contains("spoiler")) 
 						landmineBtns[i].classList.remove("spoiler");
 				}
 			}
@@ -761,7 +772,7 @@ export default class Root extends Page{
 
 	ClearFilters(section : string){
 		this.SetElements();
-		if (section == "hideLandmines" || section == "hideTags"){
+		if (section == "showLandmines" || section == "hideTags"){
 			this.Element.classList.toggle(section, false);
 		} else {
 			localStorage.setItem(section, "");

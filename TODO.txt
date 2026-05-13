@@ -1,0 +1,7 @@
+LOW - Language changer for artist names
+LOW - refactor QNA
+WISHLIST - Search function
+--HIGH - Rewrite QNA--
+MEDIUM - Theming
+WISHLIST: HTML fallback
+HIGH: buttons filter

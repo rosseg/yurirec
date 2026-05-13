@@ -52,10 +52,11 @@ $long-button-colour: #00a729;*/
 	}
 	//background: linear-gradient(90deg, var(--a-colour), var(--b-colour));
 	//background-image:url('../../assets/background.avif');
-	background-size:cover;
+	//background-size:cover;
 	
-	background-blend-mode:multiply;
+	//background-blend-mode:multiply;
 	background-image:var(--background-image);
+	background-repeat: var(--background-repeat);
 	background-color: var(--page-background-colour);
 	
 
@@ -99,6 +100,7 @@ $long-button-colour: #00a729;*/
 		height:100%;
 		padding-left:1em;
 		background-color:var(--aside-background-colour);
+		color:var(--aside-text-colour);
 		overflow-y:auto;
 		h2{
 			position:relative;
@@ -224,7 +226,7 @@ $long-button-colour: #00a729;*/
 		padding:$default-padding;
 		
 		
-		background-color:var(--article-background-color);
+		background-color:var(--article-background-colour);
 		border-radius:$default-border-radius;
 		//max-width:calc(100vw - 3em);
 		//height:calc($image-height + 20px);
@@ -238,8 +240,8 @@ $long-button-colour: #00a729;*/
 		&.new{
 			.new{
 				position:absolute;
-				background-color:var(--new-background-color);
-				color:var(--new-text-color);
+				background-color:var(--new-background-colour);
+				color:var(--new-text-colour);
 				
 				display:block;
 				bottom:1em;
@@ -293,7 +295,7 @@ $long-button-colour: #00a729;*/
 			grid-template-columns: 100%;
 			grid-template-rows: max-content max-content 1fr;
 			.title{
-				color: var(--title-text-color);
+				color: var(--title-text-colour);
 				grid-column: 1;
 				grid-row:1;
 				margin:0px;
@@ -408,7 +410,7 @@ $long-button-colour: #00a729;*/
 				padding: $default-padding;
 				padding-bottom: 0;
 				background-color: var(--tab-active-colour);
-				color: var(--tab-text-color);
+				color: var(--tab-text-colour);
 				display: none;
 				width: 100%;
 				align-self: stretch;

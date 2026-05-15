@@ -255,6 +255,29 @@ $long-button-colour: #00a729;*/
 			}
 		}
 
+		.updated{
+			display:none;
+		}
+		&.updated{
+			.updated{
+				position:absolute;
+				background-color:magenta;
+				color:var(--new-text-color);
+				
+				display:block;
+				bottom:1em;
+				right:-2em;
+				width:8em;
+				text-transform:none;
+				font-size:1.5em;
+				font-weight:bold;
+				padding-top:0.2em;
+				padding-bottom:0.2em;
+				text-align:center;
+				transform:rotate(-45deg);
+			}
+		}
+
 		.cover-image{
 			grid-area: cover-image;
 			display:block;

@@ -82,9 +82,9 @@ export default class Root extends Page{
 		
 		//populate the text of extras > updated
 		let clonedUp = items.toSorted((a, b)=>{return ((b.recommendations[this.rating] ?? 0.0) - (a.recommendations[this.rating] ?? 0.0)) * this.ratingDir; });
-		var updatedCount = clonedUp.filter((a)=>a.added == Consolidator.latestDateNew).length;
+		var updatedCount = clonedUp.filter((a)=>a.updated == Consolidator.latestDateUpdated).length;
 		var extrasUpdated = document.getElementById("extrasUpdated");
-		var updatedText = document.createTextNode("Updated ("+updatedCount+", "+Consolidator.latestDateNew+")");
+		var updatedText = document.createTextNode("Updated ("+updatedCount+", "+Consolidator.latestDateUpdated+")");
 		extrasUpdated.appendChild(updatedText);		
 
 		// mobile only
@@ -273,13 +273,13 @@ export default class Root extends Page{
 		cloned = this.Filter(cloned, "type");
 		if (this.onlyNew && this.onlyUpdated){
 			cloned = cloned.filter((a)=>a.added == Consolidator.latestDateNew
-								   || a.updated == Consolidator.latestDateNew);
+								   || a.updated == Consolidator.latestDateUpdated);
 		}
 		else if (this.onlyNew){
 			cloned = cloned.filter((a)=>a.added == Consolidator.latestDateNew);
 		}
 		else if (this.onlyUpdated){
-			cloned = cloned.filter((a)=>a.updated == Consolidator.latestDateNew);
+			cloned = cloned.filter((a)=>a.updated == Consolidator.latestDateUpdated);
 		}
 		for (let i = 0; i < cloned.length; i++){
 			const item = cloned[i];
@@ -331,7 +331,7 @@ export default class Root extends Page{
 				};
 
 			elem.classList.toggle("new", item.added == Consolidator.latestDateNew);
-			elem.classList.toggle("updated", item.updated == Consolidator.latestDateNew);
+			elem.classList.toggle("updated", item.updated == Consolidator.latestDateUpdated);
 	
 			
 			elem.querySelector("img").src = item.image;

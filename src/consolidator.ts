@@ -16,7 +16,8 @@ export default class Consolidator{
 	static artists : string[] = [];
 	//static dateAdded : string[] = [];
 
-	static latestDate : string = "31-12-2025";
+	static latestDateNew : string = "31-12-2025";
+	static latestDateUpdated : string = "31-12-2025";
 
 	static Initialise(){
 		let tags = new Set<string>();
@@ -51,8 +52,12 @@ export default class Consolidator{
 			for (let rating in item.pairings){
 				pairings.add(rating);
 			}
-			//dateAdded.add(item.added);
-			this.latestDate = item.added;
+			if (this.dateLateness(item.added) > this.dateLateness(this.latestDateNew)){
+				this.latestDateNew = item.added;
+			}
+			if (item.updated && this.dateLateness(item.updated) > this.dateLateness(this.latestDateUpdated)){
+				this.latestDateUpdated = item.updated;
+			}
 		}
 		
 		this.tags = Array.from(tags);
@@ -81,5 +86,9 @@ export default class Consolidator{
 
 
 
+	}
+	//requires format dd-mm-yyyy
+	static dateLateness (date: string): string{
+		return date.substring(6) + date.substring(3,5) + date.substring(0, 2);
 	}
 }

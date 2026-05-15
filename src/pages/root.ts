@@ -40,6 +40,7 @@ function makeSafeForCSS(name) {
 
 export default class Root extends Page{
 	onlyNew : boolean = false;
+	onlyUpdated : boolean = false;
 	hideTags : boolean = false;
 	showLandmines : boolean = false;
 	
@@ -47,6 +48,7 @@ export default class Root extends Page{
 		super(RootHTML);
 		// load all previous settings
 		this.onlyNew = localStorage.getItem("onlyNew") == "true" ? true : false;
+		this.onlyUpdated = localStorage.getItem("onlyUpdated") == "true" ? true : false;
 		this.hideTags = localStorage.getItem("hideTags") == "true" ? true : false;
 		this.showLandmines = localStorage.getItem("showLandmines") == "true" ? true : false;
 
@@ -72,11 +74,18 @@ export default class Root extends Page{
 		this.Element.querySelector<HTMLDivElement>(".progress").innerText = "progress: "+items.length + " / "+(test.match(new RegExp("\n","g")).length + 1 + Math.max(0, items.length - test.match(new RegExp("--","g")).length));
 
 		//populate the text of extras > new
-		let cloned = items.toSorted((a, b)=>{return ((b.recommendations[this.rating] ?? 0.0) - (a.recommendations[this.rating] ?? 0.0)) * this.ratingDir; });
-		var newCount = cloned.filter((a)=>a.added == Consolidator.latestDate).length;
+		let clonedNew = items.toSorted((a, b)=>{return ((b.recommendations[this.rating] ?? 0.0) - (a.recommendations[this.rating] ?? 0.0)) * this.ratingDir; });
+		var newCount = clonedNew.filter((a)=>a.added == Consolidator.latestDateNew).length;
 		var extrasNew = document.getElementById("extrasNew");
-		var newText = document.createTextNode("New ("+newCount+", "+Consolidator.latestDate+")");
-		extrasNew.appendChild(newText);		
+		var newText = document.createTextNode("New ("+newCount+", "+Consolidator.latestDateNew+")");
+		extrasNew.appendChild(newText);
+		
+		//populate the text of extras > updated
+		let clonedUp = items.toSorted((a, b)=>{return ((b.recommendations[this.rating] ?? 0.0) - (a.recommendations[this.rating] ?? 0.0)) * this.ratingDir; });
+		var updatedCount = clonedUp.filter((a)=>a.added == Consolidator.latestDateNew).length;
+		var extrasUpdated = document.getElementById("extrasUpdated");
+		var updatedText = document.createTextNode("Updated ("+updatedCount+", "+Consolidator.latestDateNew+")");
+		extrasUpdated.appendChild(updatedText);		
 
 		// mobile only
 		this.OnSwipe(()=>{
@@ -262,9 +271,15 @@ export default class Root extends Page{
 		cloned = this.Filter(cloned, "length");
 		cloned = this.Filter(cloned, "pairings");
 		cloned = this.Filter(cloned, "type");
-		if (this.onlyNew){
-			cloned = cloned.filter((a)=>a.added == Consolidator.latestDate);
-			
+		if (this.onlyNew && this.onlyUpdated){
+			cloned = cloned.filter((a)=>a.added == Consolidator.latestDateNew
+								   || a.updated == Consolidator.latestDateNew);
+		}
+		else if (this.onlyNew){
+			cloned = cloned.filter((a)=>a.added == Consolidator.latestDateNew);
+		}
+		else if (this.onlyUpdated){
+			cloned = cloned.filter((a)=>a.updated == Consolidator.latestDateNew);
 		}
 		for (let i = 0; i < cloned.length; i++){
 			const item = cloned[i];
@@ -315,7 +330,8 @@ export default class Root extends Page{
 					//tabContent2.style.gridTemplateRows = "repeat(4, minmax(max-content, 1fr))";
 				};
 
-			elem.classList.toggle("new", item.added == Consolidator.latestDate);
+			elem.classList.toggle("new", item.added == Consolidator.latestDateNew);
+			elem.classList.toggle("updated", item.updated == Consolidator.latestDateNew);
 	
 			
 			elem.querySelector("img").src = item.image;
@@ -502,6 +518,7 @@ export default class Root extends Page{
 		localStorage.setItem("ratingDir", ""+this.ratingDir);
 
 		localStorage.setItem("onlyNew", this.onlyNew ? "true" : "false");
+		localStorage.setItem("onlyUpdated", this.onlyUpdated ? "true" : "false");
 		localStorage.setItem("hideTags", this.hideTags ? "true" : "false");
 		localStorage.setItem("showLandmines", this.showLandmines ? "true" : "false");
 
@@ -517,6 +534,15 @@ export default class Root extends Page{
 			elem.addEventListener("click",()=>{
 				elem.querySelector(".multi-checkbox").classList.toggle("active");
 				this.onlyNew = (elem.querySelector(".multi-checkbox").classList.contains("active"));
+				this.UpdateFilters();
+			});
+		}
+		{
+			const elem = this.Element.querySelector(".extras .updated");
+			elem.querySelector(".multi-checkbox").classList.toggle("active", this.onlyUpdated);
+			elem.addEventListener("click",()=>{
+				elem.querySelector(".multi-checkbox").classList.toggle("active");
+				this.onlyUpdated = (elem.querySelector(".multi-checkbox").classList.contains("active"));
 				this.UpdateFilters();
 			});
 		}

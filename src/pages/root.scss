@@ -50,14 +50,12 @@ $long-button-colour: #00a729;*/
 		overflow-y:auto;
 		flex-grow:1
 	}
-	//background: linear-gradient(90deg, var(--a-colour), var(--b-colour));
-	//background-image:url('../../assets/background.avif');
-	//background-size:cover;
-	
-	//background-blend-mode:multiply;
+
 	background-image:var(--background-image);
 	background-repeat: var(--background-repeat);
 	background-color: var(--page-background-colour);
+	background-size:var(--background-size);
+	background-blend-mode:var(--background-blend-mode);
 	
 
 	.qna{

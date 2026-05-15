@@ -3,6 +3,8 @@
 :root {
     --background-image:url('../../assets/blue_fabric_background_70.webp');
     --background-repeat: repeat;
+    --background-blend-mode: multiply;
+    --background-size: auto;
     --default-background-colour:white;
     
     --light-text-colour:white;
@@ -59,7 +61,7 @@
     --ml5-s20: #2a004d;
     --ml5-s20-trans: #2a004d40;
 
-    --background-image:url('../../assets/mooning5x3.png');
+    --background-image:url('../../assets/mooning.png');
     --default-background-colour:var(--ml1-t20-trans);
     --default-text-colour: var(--ml2-t80);
     --default-button-hover-active-colour:rgb(41, 41, 41);
@@ -118,7 +120,8 @@
     --os4: #615985;
     --os5: #68a3a2;
 
-    --background-image:url('../../assets/clo065_400.jpg');
+    --background-image:url('../../assets/clo065_400_light.png');
+    
     --default-background-colour:var(--sl3);
     --default-text-colour: var(--srss1-s50);
     --default-button-colour: var(--bl5);

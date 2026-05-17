@@ -41,16 +41,159 @@ $long-button-colour: #00a729;*/
 
 #root.page{
 	display:flex;
-	flex-direction:column;
+	
 	font-family: "Quicksand", sans-serif;
 
-	
-
-	#headerArea{
-		width:100%;
-		height: max-content;
+	.qna{
+		position:fixed;
+		width:100vw;
+		height:100vh;
+		left:0px;
+		top:0px;
+		background-color:var(--qna-background-colour);
+		justify-content:center;
+		align-items:center;
+		display:none;
+		&.show{
+			display:flex;
+		}
+		.container{
+		>div{
+			padding-bottom:10em;
+		}
+			position:relative;
+			.close{
+				position:absolute;
+				font-size:3em;
+				top:0.75em;
+				cursor:pointer;
+				right:0.5em;
+				user-select:none;
+			}
+			background-color:var(--qna-background-colour);
+			max-width:min(100vw, 50em);
+			padding:2em;
+			max-height:100vh;
+			overflow-y:auto;
+		}
+		a:link{
+			background-color: white;
+		}
+	}
+	aside{
 		flex-shrink:0;
+		flex-basis:250px;
+		//width:$aside-width;
+		height:100%;
+		padding-left:1em;
+		background-color:var(--aside-background-colour);
+		overflow-y:auto;
+		h2{
+			position:relative;
+			user-select:none;
+			cursor:pointer;
+			&::after{
+				content:'>';
+				display:block;
+				position:absolute;
+				right:1em;
+				font-weight:bold;
+				font-size:1.25em;
+				top:-0.1em;
+				transform:rotate(90deg);
+			}
+			&.show{
+				&::after{
+					transform:rotate(270deg);
+				}
+			}
+		}
+		.list{
+			display:none;
+			&.show{
+				display:block;
+			}
+			div{
+				margin-bottom:0.1em;
+				cursor:pointer;
+				user-select:none;
+			}
+			
+		}
+		.multi-checkbox{
+			width:1em;
+			height:1em;
+			margin-right:0.3em;
+			border-radius:0.3em;
+			transform:translateY(0.25em);
+			display:inline-block;
+			background-color:white;
+			position:relative;
+			transition:all 0.3s;
+			&.active{
+				background-color:green;
+				&::before{
+					content:'✓';
+					position:absolute;
+					font-size:1.0em;
+					transform:translate(0.1em, -0.2em);
+				}
+			}
+			&.removed{
+				background-color:rgb(245, 72, 72);
+				&::before{
+					content:'x';
+					position:absolute;
+					font-size:1.2em;
+					transform:translate(0.15em, -0.3em);
+				}
+			}
+		}
+		div.picked.language{
+			font-weight:bold;
+		}
+		.list.language, .list.rating{
+			>div{
+				&.active{
+					font-weight:bold;
+				}
+			}
+		}
+		.list.rating{
+			>div{
+				padding-left:1em;
+				position:relative;
+			}
+			.active{
+				&::before{
+					content:'>';
+					display:block;
+					position:absolute;
+					left:-0em;
+					font-weight:bold;
+					font-size:1.25em;
+					top:-0.1em;
+					transform:rotate(270deg);
+				}
+			}
+			&.down{
+				.active::before{
+					transform:rotate(90deg);
+				}
+			}
+		}
+	}
+
+	#contentArea{
+		display:flex;  
+		flex-direction:column;
+		background-size:cover;
+		background-blend-mode:multiply;
+		background-image:var(--background-image);
+		background-color: var(--page-background-colour);
+
 		#header {
+			flex-shrink:0;
 			width: 100%;
 			background-color: #5e4e8c;
 			height: 2.5rem;
@@ -58,6 +201,7 @@ $long-button-colour: #00a729;*/
 
 		/* navigation section!! */
 		#navbar {
+			flex-shrink:0;
 			height: 2.5rem;
 			background-color: #13092D;
 			/* navbar color */
@@ -91,15 +235,6 @@ $long-button-colour: #00a729;*/
 			color: #a49cba;
 			text-decoration: underline;
 		}
-	}
-
-	#bodyArea{
-		display:flex;  
-
-		background-size:cover;
-		background-blend-mode:multiply;
-		background-image:var(--background-image);
-		background-color: var(--page-background-colour);
 
 		.content{
 			display:inline-flex;
@@ -111,145 +246,7 @@ $long-button-colour: #00a729;*/
 			flex-grow:1
 		}
 
-		.qna{
-			position:fixed;
-			width:100vw;
-			height:100vh;
-			left:0px;
-			top:0px;
-			background-color:var(--qna-background-colour);
-			justify-content:center;
-			align-items:center;
-			display:none;
-			&.show{
-				display:flex;
-			}
-			.container{
-			>div{
-				padding-bottom:10em;
-			}
-				position:relative;
-				.close{
-					position:absolute;
-					font-size:3em;
-					top:0.75em;
-					cursor:pointer;
-					right:0.5em;
-					user-select:none;
-				}
-				background-color:var(--qna-background-colour);
-				max-width:min(100vw, 50em);
-				padding:2em;
-				max-height:100vh;
-				overflow-y:auto;
-			}
-			a:link{
-				background-color: white;
-			}
-		}
-		aside{
-			flex-shrink:0;
-			flex-basis:250px;
-			//width:$aside-width;
-			height:100%;
-			padding-left:1em;
-			background-color:var(--aside-background-colour);
-			overflow-y:auto;
-			h2{
-				position:relative;
-				user-select:none;
-				cursor:pointer;
-				&::after{
-					content:'>';
-					display:block;
-					position:absolute;
-					right:1em;
-					font-weight:bold;
-					font-size:1.25em;
-					top:-0.1em;
-					transform:rotate(90deg);
-				}
-				&.show{
-					&::after{
-						transform:rotate(270deg);
-					}
-				}
-			}
-			.list{
-				display:none;
-				&.show{
-					display:block;
-				}
-				div{
-					margin-bottom:0.1em;
-					cursor:pointer;
-					user-select:none;
-				}
-				
-			}
-			.multi-checkbox{
-				width:1em;
-				height:1em;
-				margin-right:0.3em;
-				border-radius:0.3em;
-				transform:translateY(0.25em);
-				display:inline-block;
-				background-color:white;
-				position:relative;
-				transition:all 0.3s;
-				&.active{
-					background-color:green;
-					&::before{
-						content:'✓';
-						position:absolute;
-						font-size:1.0em;
-						transform:translate(0.1em, -0.2em);
-					}
-				}
-				&.removed{
-					background-color:rgb(245, 72, 72);
-					&::before{
-						content:'x';
-						position:absolute;
-						font-size:1.2em;
-						transform:translate(0.15em, -0.3em);
-					}
-				}
-			}
-			div.picked.language{
-				font-weight:bold;
-			}
-			.list.language, .list.rating{
-				>div{
-					&.active{
-						font-weight:bold;
-					}
-				}
-			}
-			.list.rating{
-				>div{
-					padding-left:1em;
-					position:relative;
-				}
-				.active{
-					&::before{
-						content:'>';
-						display:block;
-						position:absolute;
-						left:-0em;
-						font-weight:bold;
-						font-size:1.25em;
-						top:-0.1em;
-						transform:rotate(270deg);
-					}
-				}
-				&.down{
-					.active::before{
-						transform:rotate(90deg);
-					}
-				}
-			}
-		}
+		
 		
 		article{
 			//display:flex;
@@ -697,6 +694,7 @@ $long-button-colour: #00a729;*/
 				}
 			
 		}
+
 	}
 
 

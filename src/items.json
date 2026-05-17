@@ -876,7 +876,7 @@
 			"music": 9.5
 		},
 		"landmines": ["murder", "violence", "blood"], 
-		"tags": ["murder mystery", "cyberpunk", "androids"],
+		"tags": ["murder mystery", "drama", "cyberpunk", "androids", "interactive"],
 		"notes": "Episode 0 is free. Episodes 1 and 2 are out, with episode 3 set to release in late 2026. It will end on episode 5."
 	}
 	,
@@ -905,14 +905,50 @@
 			"priestess' reverence": 9.7,
 			"uniqueness": 10.0,
 			"intensity": 9.5,
-			"story": 10.0,
+			"story": 9.5,
 			"horny": 7.5,
 			"toxic": 8.0,
 			"art":9.5,
 			"music": 9.5
 		},
 		"landmines": ["murder", "violence", "blood"], 
-		"tags": ["murder mystery", "horror", "nuns", "historical", "kinetic novel"],
+		"tags": ["murder mystery", "horror", "slice of life", "drama", "nuns", "historical", "kinetic novel"],
 		"notes": "2 of 3 volumes are out. The second volume is more overtly lesbian"
+	}
+	,
+	{
+		"names":{
+			"en": "Spare Parts"
+		},
+		"added": "17-05-2026",
+		"type":"visual novel",
+		"creators":["Sophie Rose"],
+		"infoLinkLabels": ["Steam", "itch.io"],
+		"infoLinks":[
+			"https://store.steampowered.com/app/1479310/Spare_Parts_Episode_1/",
+			"https://sopy.itch.io/spare-parts-episode-1"
+			],
+		"pairings": {
+			"lesbian" : 10.0,
+			"trans": 10.0
+		},
+		"short":"secret androids and found family",
+		"description":"I love this series with my whole heart. So cute and funny and relatable and moving",
+		"length": "medium",
+		"status": "ongoing",
+		
+		"image":"./assets/covers/spare_parts_cover.v1.webp",
+		"recommendations":{
+			"priestess' reverence": 9.8,
+			"uniqueness": 10.0,
+			"intensity": 8.5,
+			"story": 9.0,
+			"comedy": 7.0,
+			"art":9.5,
+			"music": 9.5
+		},
+		"landmines": [], 
+		"tags": ["romance?","slice of life", "comedy", "drama", "androids", "found family", "kinetic novel", "trans rep"],
+		"notes": "Episode 1 is free on itch.io. 2 episodes out and the third is in development. "
 	}
 ]

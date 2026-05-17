@@ -930,7 +930,8 @@
 			],
 		"pairings": {
 			"lesbian" : 10.0,
-			"trans": 10.0
+			"trans": 10.0,
+			"nonbinary": 8.0
 		},
 		"short":"secret androids and found family",
 		"description":"I love this series with my whole heart. So cute and funny and relatable and moving",
@@ -941,14 +942,49 @@
 		"recommendations":{
 			"priestess' reverence": 9.8,
 			"uniqueness": 10.0,
-			"intensity": 8.5,
+			"intensity": 8.2,
 			"story": 9.0,
 			"comedy": 7.0,
 			"art":9.5,
 			"music": 9.5
 		},
 		"landmines": [], 
-		"tags": ["romance?","slice of life", "comedy", "drama", "androids", "found family", "kinetic novel", "trans rep"],
+		"tags": ["romance?","slice of life", "comedy", "drama", "androids", "found family", "kinetic novel", "trans rep", "nonbinary rep"],
 		"notes": "Episode 1 is free on itch.io. 2 episodes out and the third is in development. "
+	},
+	{
+		"names":{
+			"en": "Distant Sunlight, Endless Regrets"
+		},
+		"added": "17-05-2026",
+		"type":"visual novel",
+		"creators":["frgmnt"],
+		"infoLinkLabels": ["itch.io"],
+		"infoLinks":[
+			"https://frgmnt.itch.io/distant-sunlight-endless-regrets"
+			],
+		"pairings": {
+			"lesbian" : 10.0,
+			"trans": 10.0,
+			"nonbinary": 10.0
+		},
+		"short":"ex-angel x puppygirl",
+		"description":"this one hits hard!",
+		"length": "short",
+		"status": "completed",
+		
+		"image":"./assets/covers/distant_sunlight_cover.v1.webp",
+		"recommendations":{
+			"priestess' reverence": 8.0,
+			"uniqueness": 8.5,
+			"intensity": 8.5,
+			"story": 8.0,
+			"toxic": 8.5,
+			"music": 8.0
+		},
+		"landmines": ["suicide", "self-harm", "religious trauma", "abuse", "dubious consent"], 
+		"tags": ["romance","slice of life", "religion", "angel(s)", "devil(s)", "doggirl(s)", "multiple endings", "trans rep", "nonbinary rep"],
+		"spoilerTags":["cheating"],
+		"notes": "Made for the 2025 toxic yuri game jam. Two endings."
 	}
 ]

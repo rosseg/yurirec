@@ -8,6 +8,9 @@ import test from "../../test.txt";
 import items from "../items.json";
 import Template from "../util/template";
 import article from "./article.html";
+import header from "./header.html";
+import navbar from "./navbar.html";
+
 import Consolidator from "../consolidator";
 
 
@@ -258,7 +261,7 @@ export default class Root extends Page{
 		const ratings = this.Element.querySelector(".list.rating");
 		ratings.classList.toggle("down", this.ratingDir == 1);
 		const content = this.Element.querySelector(".content");
-		content.innerHTML = "";
+		content.innerHTML = header + navbar;
 
 		//take the list of yuri
 		let cloned = items.toSorted((a, b)=>{return ((b.recommendations[this.rating] ?? 0.0) - (a.recommendations[this.rating] ?? 0.0)) * this.ratingDir; });

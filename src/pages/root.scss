@@ -91,6 +91,9 @@ $long-button-colour: #00a729;*/
 			max-height:100vh;
 			overflow-y:auto;
 		}
+		a:link{
+			background-color: white;
+		}
 	}
 	aside{
 		flex-shrink:0;

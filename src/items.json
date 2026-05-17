@@ -846,5 +846,73 @@
 		},
 		"landmines": [], 
 		"tags": ["romance", "drama", "slice of life", "school life","gyaru", "otaku"]
+	},
+	{
+		"names":{
+			"en": "Of The Devil"
+		},
+		"added": "17-05-2026",
+		"type":"visual novel",
+		"creators":["nth circle studios"],
+		"infoLinkLabels": ["Steam"],
+		"infoLinks":["https://store.steampowered.com/app/2739630/of_the_Devil/"],
+		"pairings": {
+			"lesbian" : 10.0
+		},
+		"short":"evil women and murder mysteries",
+		"description":"If I had to pick one thing on this site, its OTD Every Time. Cybernoir Ace Attorney-like with evil women and toxic yuri. Straight into my veins pls",
+		"length": "long",
+		"status": "ongoing",
+		
+		"image":"./assets/covers/of_the_devil_cover.v1.webp",
+		"recommendations":{
+			"priestess' reverence": 10.0,
+			"uniqueness": 10.0,
+			"intensity": 9.5,
+			"story": 10.0,
+			"comedy":7.5,
+			"toxic": 9.0,
+			"art":10.0,
+			"music": 9.5
+		},
+		"landmines": ["murder", "violence", "blood"], 
+		"tags": ["murder mystery", "cyberpunk", "androids"],
+		"notes": "Episode 0 is free. Episodes 1 and 2 are out, with episode 3 set to release in late 2026. It will end on episode 5."
+	}
+	,
+	{
+		"names":{
+			"en": "Misericorde"
+		},
+		"added": "17-05-2026",
+		"type":"visual novel",
+		"creators":["XEECEE"],
+		"infoLinkLabels": ["Steam", "itch.io"],
+		"infoLinks":[
+			"https://store.steampowered.com/app/1708110/Misericorde_Volume_One/",
+			"https://xeecee.itch.io/misericorde"
+			],
+		"pairings": {
+			"lesbian" : 10.0
+		},
+		"short":"murder mystery in a renaissance convent",
+		"description":"I love the mystery and spooky atmosphere of this one. Also, lesbian nuns!!!!",
+		"length": "long",
+		"status": "ongoing",
+		
+		"image":"./assets/covers/misericorde_cover.v1.webp",
+		"recommendations":{
+			"priestess' reverence": 9.7,
+			"uniqueness": 10.0,
+			"intensity": 9.5,
+			"story": 10.0,
+			"horny": 7.5,
+			"toxic": 8.0,
+			"art":9.5,
+			"music": 9.5
+		},
+		"landmines": ["murder", "violence", "blood"], 
+		"tags": ["murder mystery", "horror", "nuns", "historical", "kinetic novel"],
+		"notes": "2 of 3 volumes are out. The second volume is more overtly lesbian"
 	}
 ]

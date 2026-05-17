@@ -419,6 +419,9 @@ $long-button-colour: #00a729;*/
 					&.webcomic{
 						background-color: var(--webcomic-button-colour);
 					}
+					&.visual-novel{
+						background-color: var(--vn-button-colour);
+					}
 				}
 			}
 			

@@ -184,520 +184,517 @@ $long-button-colour: #00a729;*/
 		}
 	}
 
-	#contentArea{
-		display:flex;  
-		flex-direction:column;
+	
+
+	.content{
+		display:inline-flex;
+		flex-wrap:wrap;
+		justify-content:start;
+		flex-direction:row;
+		align-items:flex-start;
+		overflow-y:auto;
+		flex-grow:1;
+
 		background-size:cover;
 		background-blend-mode:multiply;
 		background-image:var(--background-image);
 		background-color: var(--page-background-colour);
 
-		
-
-		.content{
-			display:inline-flex;
-			flex-wrap:wrap;
-			justify-content:start;
-			flex-direction:row;
-			align-items:flex-start;
-			overflow-y:auto;
-			flex-grow:1;
-
-			#header {
-				flex-shrink:0;
-				width: 100%;
-				background-color: #5e4e8c;
-				height: 2.5rem;
-			}
-
-			/* navigation section!! */
-			#navbar {
-				flex-shrink:0;
-				height: 2.5rem;
-				background-color: #13092D;
-				/* navbar color */
-				width: 100%;
-				margin-bottom: 0rem;
-			}
-
-			#navbar ul {
-				display: flex;
-				padding: 0;
-				margin: 0;
-				list-style-type: none;
-				justify-content: space-evenly;
-			}
-
-			#navbar li {
-				padding-top: 10px;
-			}
-
-			/* navigation links*/
-			#navbar li a {
-				color: #ED64F5;
-				/* navbar text color */
-				font-weight: 800;
-				text-decoration: none;
-				/* this removes the underline */
-			}
-
-			/* navigation link when a link is hovered over */
-			#navbar li a:hover {
-				color: #a49cba;
-				text-decoration: underline;
-			}
+		#header {
+			flex-shrink:0;
+			width: 100%;
+			background-color: #5e4e8c;
+			height: 2.5rem;
 		}
 
-		
-		
-		article{
-			//display:flex;
-			//flex-direction: column;
-			align-self:stretch;
-
-			display: grid;
-			grid-template-rows: $image-height max-content;
-			grid-template-columns: $image-width $data-section-width;
-			grid-template-areas: "cover-image data-section"
-								"tag-section tab-labels-section";
-			
-			margin:$default-margin;
-			padding:$default-padding;
-			
-			
-			background-color:var(--article-background-color);
-			border-radius:$default-border-radius;
-			//max-width:calc(100vw - 3em);
-			//height:calc($image-height + 20px);
-			width:max-content;
-			min-height:max-content;
-			max-height:$article-max-height;
-
-			.new{
-				display:none;
-			}
-			&.new{
-				.new{
-					position:absolute;
-					background-color:var(--new-background-color);
-					color:var(--new-text-color);
-					
-					display:block;
-					bottom:1em;
-					right:-2em;
-					width:8em;
-					text-transform:none;
-					font-size:1.5em;
-					font-weight:bold;
-					padding-top:0.2em;
-					padding-bottom:0.2em;
-					text-align:center;
-					transform:rotate(-45deg);
-				}
-			}
-
-			.updated{
-				display:none;
-			}
-			&.updated{
-				.updated{
-					position:absolute;
-					background-color:magenta;
-					color:var(--new-text-color);
-					
-					display:block;
-					bottom:1em;
-					right:-2em;
-					width:8em;
-					text-transform:none;
-					font-size:1.5em;
-					font-weight:bold;
-					padding-top:0.2em;
-					padding-bottom:0.2em;
-					text-align:center;
-					transform:rotate(-45deg);
-				}
-			}
-
-			.cover-image{
-				grid-area: cover-image;
-				display:block;
-				height:$image-height;
-				min-width:$image-width;
-				position:relative;
-				overflow:hidden;
-				align-self:start;
-				border-radius:$default-border-radius;
-				//align-self: stretch;
-				
-				
-				img{
-					//width:100%;
-					//height:100%;
-					width:$image-width;
-					height:$image-height;
-					object-fit: cover;
-					object-position:center center;
-				}
-			}
-
-			.data-section{
-				overflow:hidden;
-				grid-area: data-section;
-				padding-top:$default-padding;
-				padding-left:1rem;
-				padding-right:0rem;
-
-				max-width:$data-section-width;
-				//min-height:calc($image-height - 1rem);
-				height:$image-height;
-				align-self: stretch;
-				
-				display:grid;
-				grid-template-columns: 100%;
-				grid-template-rows: max-content max-content 1fr;
-				.title{
-					grid-column: 1;
-					grid-row:1;
-					margin:0px;
-					margin-bottom: 0.5 * $default-margin;
-					font-size:1.5em;
-					//max-height:4em;
-					text-overflow:ellipsis;
-					overflow:hidden;   
-						-webkit-box-orient: vertical; /* Indicate the text direction */
-						display: -webkit-box; /* Specify that we want to use webkit-box */
-					-webkit-line-clamp: 3; /* Set the desired number of lines */
-
-				}
-				.pairings{
-					margin-top: 0.5 * $default-margin;
-					margin-bottom: 2 * $default-margin;
-					grid-column: 1 / 3;
-					grid-row:2;
-					button{
-						appearance:unset;
-						
-						color:var(--tag-text-colour);
-						border:unset;
-						border-radius:0.3em;
-						margin:0.1em;
-						padding:0.1em 0.3em;
-					}
-					.pairing{
-						width:2.5em;
-						text-shadow:0px 0px 3px rgb(255, 255, 255);
-						
-					}
-					.lesbian{
-						background-image:url('../../assets/lesbian.png');
-						background-size:auto 100%;
-						
-					}
-					.aspec{
-						background-image:url('../../assets/asexual.png');
-						background-size:auto 100%;
-					}
-					.gay{
-						background-image:url('../../assets/gay.png');
-						background-size:auto 100%;
-						
-					}
-					.trans{
-						background-image:url('../../assets/trans.png');
-						background-size:auto 100%;
-						
-					}
-					.nonbinary{
-						background-image:url('../../assets/nonbinary.png');
-						background-size:auto 100%;
-					}
-					.open{
-						background-image:url('../../assets/Open_relationship.png');
-						background-size:auto 100%;
-						color:var(--open-text-colour);
-						text-shadow:0px 0px 5px rgb(0, 0, 0);
-						
-					}
-					
-					.status{
-						&.ongoing{
-							background-color:var(--ongoing-button-colour);
-						}
-						&.completed{
-							background-color:var(--completed-button-colour);
-						}
-						&.cancelled{
-							background-color: var(--cancelled-button-colour)
-						}
-						&.hiatus{
-							background-color: var(--hiatus-button-colour)
-						}
-					}
-					.length{
-						&.medium{
-							background-color:var(--medium-button-colour)
-						}
-						&.long{
-							background-color: var(--long-button-colour)
-						}
-						&.short{
-							background-color: var(--short-button-colour);
-						}
-						&.oneshot{
-							background-color:var(--oneshot-button-colour);
-						}
-					}
-					.type{
-						&.manga{
-							background-color: var(--manga-button-colour);
-						}
-						&.manhua{
-							background-color: var(--manhua-button-colour);
-						}
-						&.manhwa{
-							background-color: var(--manhwa-button-colour);
-						}
-						&.webtoon{
-							background-color: var(--webtoon-button-colour);
-						}
-						&.webcomic{
-							background-color: var(--webcomic-button-colour);
-						}
-						&.visual-novel{
-							background-color: var(--vn-button-colour);
-						}
-					}
-				}
-				
-				.tabs-content{
-					grid-column: 1;
-					grid-row: 3;
-					//margin-top: $default-margin;
-					//margin-bottom: $default-margin;
-					padding: $default-padding;
-					padding-bottom: 0;
-					background-color: var(--tab-active-colour);
-					display: none;
-					width: 100%;
-					align-self: stretch;
-
-					
-
-					.creator-button-div{
-
-					}
-					#creators{
-						grid-row: 1;
-					}
-					#artists{
-						grid-row: 2;
-						.artist-label{
-							display:none;
-						}
-						display: none;
-					}
-					.date-added-div{
-						grid-row: 3;
-					}
-					.info-links-div{
-						grid-row: 4;
-					}
-					.notes-section{
-						display:none;
-						.notes{
-							font-size: 0.8em;
-							
-						}
-					}
-				}
-				.tabs-content1{
-					border-radius:$default-border-radius $default-border-radius 0 $default-border-radius;
-				}
-				.tabs-content2{
-					border-radius:$default-border-radius $default-border-radius 0 $default-border-radius;
-				}
-
-				// had to do this in typescript root.ts because 
-				// to align things tabs-content had to be in different grid, 
-				// so they no longer were siblings
-
-				//.tabs-radio:checked + .tabs-label  + .tabs-content{
-				//	display:inline-flex;
-				//	flex-direction:column;
-				//	background-color: red;
-				//}
-			
-				.desc{
-					//font-weight:100;
-					font-size:0.8em;
-					padding-top:0.25rem;
-					padding-bottom:0.25rem;
-				
-					border-top: 0.1rem solid var(--desc-ratings-border-colour);
-				}
-				
-				
-				.centre{
-					flex-grow:1;
-				}
-				
-			
-				.ratings{
-					margin-bottom:$default-margin;
-					padding-top:0.25rem;
-					border-top: 0.1rem solid var(--desc-ratings-border-colour);
-				}
-				.short-desc{
-					margin-top:0;
-					margin-bottom: $default-margin;
-					font-weight:bold;
-				}
-				span{
-					&.spoiler{
-						border-radius:0.2em;
-						padding-left:0.2em;
-						padding-right:0.2em;
-						filter: blur(0.35em);
-							transition:all 0.3s;
-						&:hover{
-							filter: blur(0px);
-						}
-					}
-				}
-			}
-
-			.tab-labels-section{
-				grid-area:tab-labels-section;
-				overflow:hidden;
-				display:grid;
-				grid-template-columns: 1fr max-content;
-				min-height: max-content;
-				max-height: $tag-section-max-height;
-
-				.tabs-label{
-					align-self:auto;
-					justify-self: flex-end;
-					padding:0.5em 1em;
-					height: max-content;
-					cursor:pointer;
-					border-radius:0 0 $default-border-radius $default-border-radius;
-					background-color: var(--tab-inactive-colour);
-				}
-				.tabs-label1{
-					grid-column:1;
-					
-				}
-				.tabs-label2{
-					grid-column: 2;
-					
-				}
-				.tabs-radio{
-					
-					display:none;
-				}
-				.tabs-radio:checked + .tabs-label{
-					font-weight:bold;
-					background-color: var(--tab-active-colour);
-				}
-			}
-			
-			.tag-section{
-
-				grid-area: tag-section;
-				grid-row:2;
-
-				flex-grow: 1;
-				margin:$default-margin;
-				padding:0rem;
-				position:relative;
-				min-height: max-content;
-				max-height: $tag-section-max-height;
-				width:$image-width;
-				border-radius:$default-border-radius;
-				
-
-				.tags{
-					button{
-						appearance:unset;
-						background-color: var(--tag-button-colour);
-						color: var(--tag-text-colour);
-						border:unset;
-						border-radius:0.3em;
-						margin:0.1em;
-						padding:0.1em 0.3em;
-						height:$tag-button-height;
-						&.romance{
-							//background-image:url("../../assets/heart-svgrepo-com.svg");
-							background-size:100% 100%;
-							//height:1.35em;
-							mask:url("../../assets/heart-svgrepo-com.svg");
-							mask-size:100% 100%;
-							color:#00000000;
-							width:1.35em;
-							background-blend-mode: multiply;
-						}
-					}
-				}
-				.landmines{
-					button{
-						appearance:unset;
-						background-color: var(--warning-colour);
-						color:var(--tag-text-colour);
-						border:unset;
-						border-radius:0.3em;
-						margin:0.1em;
-						padding:0.1em 0.3em;
-						height:$tag-button-height;
-					}
-				}
-				.spoiler-tags{
-					button{
-						appearance:unset;
-						background-color: var(--spoiler-tag-button-colour);
-						color:var(--spoiler-tag-text-colour);
-						border:unset;
-						border-radius:0.3em;
-						margin:0.1em;
-						padding:0.1em 0.3em;
-						height:$tag-button-height;
-					}
-					.spoiler-label{
-						font-size: 0.8em;
-						display: none;
-						padding:0.1em 0.3em;
-						height:$tag-button-height;
-					}
-				}
-				.spoiler{
-						
-						//border-radius:0.2em;
-						//padding-left:0.2em;
-						//padding-right:0.2em;
-						filter: blur(0.35em);
-							transition:all 0.3s;
-						&:hover{
-							filter: blur(0px);
-						}
-				}
-				
-			}
-
-			.spoiler{
-						
-						//border-radius:0.2em;
-						//padding-left:0.2em;
-						//padding-right:0.2em;
-						filter: blur(0.35em);
-							transition:all 0.3s;
-						&:hover{
-							filter: blur(0px);
-						}
-				}
-			
+		/* navigation section!! */
+		#navbar {
+			flex-shrink:0;
+			height: 2.5rem;
+			background-color: #13092D;
+			/* navbar color */
+			width: 100%;
+			margin-bottom: 0rem;
 		}
 
+		#navbar ul {
+			display: flex;
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+			justify-content: space-evenly;
+		}
+
+		#navbar li {
+			padding-top: 10px;
+		}
+
+		/* navigation links*/
+		#navbar li a {
+			color: #ED64F5;
+			/* navbar text color */
+			font-weight: 800;
+			text-decoration: none;
+			/* this removes the underline */
+		}
+
+		/* navigation link when a link is hovered over */
+		#navbar li a:hover {
+			color: #a49cba;
+			text-decoration: underline;
+		}
 	}
+
+	
+	
+	article{
+		//display:flex;
+		//flex-direction: column;
+		align-self:stretch;
+
+		display: grid;
+		grid-template-rows: $image-height max-content;
+		grid-template-columns: $image-width $data-section-width;
+		grid-template-areas: "cover-image data-section"
+							"tag-section tab-labels-section";
+		
+		margin:$default-margin;
+		padding:$default-padding;
+		
+		
+		background-color:var(--article-background-color);
+		border-radius:$default-border-radius;
+		//max-width:calc(100vw - 3em);
+		//height:calc($image-height + 20px);
+		width:max-content;
+		min-height:max-content;
+		max-height:$article-max-height;
+
+		.new{
+			display:none;
+		}
+		&.new{
+			.new{
+				position:absolute;
+				background-color:var(--new-background-color);
+				color:var(--new-text-color);
+				
+				display:block;
+				bottom:1em;
+				right:-2em;
+				width:8em;
+				text-transform:none;
+				font-size:1.5em;
+				font-weight:bold;
+				padding-top:0.2em;
+				padding-bottom:0.2em;
+				text-align:center;
+				transform:rotate(-45deg);
+			}
+		}
+
+		.updated{
+			display:none;
+		}
+		&.updated{
+			.updated{
+				position:absolute;
+				background-color:magenta;
+				color:var(--new-text-color);
+				
+				display:block;
+				bottom:1em;
+				right:-2em;
+				width:8em;
+				text-transform:none;
+				font-size:1.5em;
+				font-weight:bold;
+				padding-top:0.2em;
+				padding-bottom:0.2em;
+				text-align:center;
+				transform:rotate(-45deg);
+			}
+		}
+
+		.cover-image{
+			grid-area: cover-image;
+			display:block;
+			height:$image-height;
+			min-width:$image-width;
+			position:relative;
+			overflow:hidden;
+			align-self:start;
+			border-radius:$default-border-radius;
+			//align-self: stretch;
+			
+			
+			img{
+				//width:100%;
+				//height:100%;
+				width:$image-width;
+				height:$image-height;
+				object-fit: cover;
+				object-position:center center;
+			}
+		}
+
+		.data-section{
+			overflow:hidden;
+			grid-area: data-section;
+			padding-top:$default-padding;
+			padding-left:1rem;
+			padding-right:0rem;
+
+			max-width:$data-section-width;
+			//min-height:calc($image-height - 1rem);
+			height:$image-height;
+			align-self: stretch;
+			
+			display:grid;
+			grid-template-columns: 100%;
+			grid-template-rows: max-content max-content 1fr;
+			.title{
+				grid-column: 1;
+				grid-row:1;
+				margin:0px;
+				margin-bottom: 0.5 * $default-margin;
+				font-size:1.5em;
+				//max-height:4em;
+				text-overflow:ellipsis;
+				overflow:hidden;   
+					-webkit-box-orient: vertical; /* Indicate the text direction */
+					display: -webkit-box; /* Specify that we want to use webkit-box */
+				-webkit-line-clamp: 3; /* Set the desired number of lines */
+
+			}
+			.pairings{
+				margin-top: 0.5 * $default-margin;
+				margin-bottom: 2 * $default-margin;
+				grid-column: 1 / 3;
+				grid-row:2;
+				button{
+					appearance:unset;
+					
+					color:var(--tag-text-colour);
+					border:unset;
+					border-radius:0.3em;
+					margin:0.1em;
+					padding:0.1em 0.3em;
+				}
+				.pairing{
+					width:2.5em;
+					text-shadow:0px 0px 3px rgb(255, 255, 255);
+					
+				}
+				.lesbian{
+					background-image:url('../../assets/lesbian.png');
+					background-size:auto 100%;
+					
+				}
+				.aspec{
+					background-image:url('../../assets/asexual.png');
+					background-size:auto 100%;
+				}
+				.gay{
+					background-image:url('../../assets/gay.png');
+					background-size:auto 100%;
+					
+				}
+				.trans{
+					background-image:url('../../assets/trans.png');
+					background-size:auto 100%;
+					
+				}
+				.nonbinary{
+					background-image:url('../../assets/nonbinary.png');
+					background-size:auto 100%;
+				}
+				.open{
+					background-image:url('../../assets/Open_relationship.png');
+					background-size:auto 100%;
+					color:var(--open-text-colour);
+					text-shadow:0px 0px 5px rgb(0, 0, 0);
+					
+				}
+				
+				.status{
+					&.ongoing{
+						background-color:var(--ongoing-button-colour);
+					}
+					&.completed{
+						background-color:var(--completed-button-colour);
+					}
+					&.cancelled{
+						background-color: var(--cancelled-button-colour)
+					}
+					&.hiatus{
+						background-color: var(--hiatus-button-colour)
+					}
+				}
+				.length{
+					&.medium{
+						background-color:var(--medium-button-colour)
+					}
+					&.long{
+						background-color: var(--long-button-colour)
+					}
+					&.short{
+						background-color: var(--short-button-colour);
+					}
+					&.oneshot{
+						background-color:var(--oneshot-button-colour);
+					}
+				}
+				.type{
+					&.manga{
+						background-color: var(--manga-button-colour);
+					}
+					&.manhua{
+						background-color: var(--manhua-button-colour);
+					}
+					&.manhwa{
+						background-color: var(--manhwa-button-colour);
+					}
+					&.webtoon{
+						background-color: var(--webtoon-button-colour);
+					}
+					&.webcomic{
+						background-color: var(--webcomic-button-colour);
+					}
+					&.visual-novel{
+						background-color: var(--vn-button-colour);
+					}
+				}
+			}
+			
+			.tabs-content{
+				grid-column: 1;
+				grid-row: 3;
+				//margin-top: $default-margin;
+				//margin-bottom: $default-margin;
+				padding: $default-padding;
+				padding-bottom: 0;
+				background-color: var(--tab-active-colour);
+				display: none;
+				width: 100%;
+				align-self: stretch;
+
+				
+
+				.creator-button-div{
+
+				}
+				#creators{
+					grid-row: 1;
+				}
+				#artists{
+					grid-row: 2;
+					.artist-label{
+						display:none;
+					}
+					display: none;
+				}
+				.date-added-div{
+					grid-row: 3;
+				}
+				.info-links-div{
+					grid-row: 4;
+				}
+				.notes-section{
+					display:none;
+					.notes{
+						font-size: 0.8em;
+						
+					}
+				}
+			}
+			.tabs-content1{
+				border-radius:$default-border-radius $default-border-radius 0 $default-border-radius;
+			}
+			.tabs-content2{
+				border-radius:$default-border-radius $default-border-radius 0 $default-border-radius;
+			}
+
+			// had to do this in typescript root.ts because 
+			// to align things tabs-content had to be in different grid, 
+			// so they no longer were siblings
+
+			//.tabs-radio:checked + .tabs-label  + .tabs-content{
+			//	display:inline-flex;
+			//	flex-direction:column;
+			//	background-color: red;
+			//}
+		
+			.desc{
+				//font-weight:100;
+				font-size:0.8em;
+				padding-top:0.25rem;
+				padding-bottom:0.25rem;
+			
+				border-top: 0.1rem solid var(--desc-ratings-border-colour);
+			}
+			
+			
+			.centre{
+				flex-grow:1;
+			}
+			
+		
+			.ratings{
+				margin-bottom:$default-margin;
+				padding-top:0.25rem;
+				border-top: 0.1rem solid var(--desc-ratings-border-colour);
+			}
+			.short-desc{
+				margin-top:0;
+				margin-bottom: $default-margin;
+				font-weight:bold;
+			}
+			span{
+				&.spoiler{
+					border-radius:0.2em;
+					padding-left:0.2em;
+					padding-right:0.2em;
+					filter: blur(0.35em);
+						transition:all 0.3s;
+					&:hover{
+						filter: blur(0px);
+					}
+				}
+			}
+		}
+
+		.tab-labels-section{
+			grid-area:tab-labels-section;
+			overflow:hidden;
+			display:grid;
+			grid-template-columns: 1fr max-content;
+			min-height: max-content;
+			max-height: $tag-section-max-height;
+
+			.tabs-label{
+				align-self:auto;
+				justify-self: flex-end;
+				padding:0.5em 1em;
+				height: max-content;
+				cursor:pointer;
+				border-radius:0 0 $default-border-radius $default-border-radius;
+				background-color: var(--tab-inactive-colour);
+			}
+			.tabs-label1{
+				grid-column:1;
+				
+			}
+			.tabs-label2{
+				grid-column: 2;
+				
+			}
+			.tabs-radio{
+				
+				display:none;
+			}
+			.tabs-radio:checked + .tabs-label{
+				font-weight:bold;
+				background-color: var(--tab-active-colour);
+			}
+		}
+		
+		.tag-section{
+
+			grid-area: tag-section;
+			grid-row:2;
+
+			flex-grow: 1;
+			margin:$default-margin;
+			padding:0rem;
+			position:relative;
+			min-height: max-content;
+			max-height: $tag-section-max-height;
+			width:$image-width;
+			border-radius:$default-border-radius;
+			
+
+			.tags{
+				button{
+					appearance:unset;
+					background-color: var(--tag-button-colour);
+					color: var(--tag-text-colour);
+					border:unset;
+					border-radius:0.3em;
+					margin:0.1em;
+					padding:0.1em 0.3em;
+					height:$tag-button-height;
+					&.romance{
+						//background-image:url("../../assets/heart-svgrepo-com.svg");
+						background-size:100% 100%;
+						//height:1.35em;
+						mask:url("../../assets/heart-svgrepo-com.svg");
+						mask-size:100% 100%;
+						color:#00000000;
+						width:1.35em;
+						background-blend-mode: multiply;
+					}
+				}
+			}
+			.landmines{
+				button{
+					appearance:unset;
+					background-color: var(--warning-colour);
+					color:var(--tag-text-colour);
+					border:unset;
+					border-radius:0.3em;
+					margin:0.1em;
+					padding:0.1em 0.3em;
+					height:$tag-button-height;
+				}
+			}
+			.spoiler-tags{
+				button{
+					appearance:unset;
+					background-color: var(--spoiler-tag-button-colour);
+					color:var(--spoiler-tag-text-colour);
+					border:unset;
+					border-radius:0.3em;
+					margin:0.1em;
+					padding:0.1em 0.3em;
+					height:$tag-button-height;
+				}
+				.spoiler-label{
+					font-size: 0.8em;
+					display: none;
+					padding:0.1em 0.3em;
+					height:$tag-button-height;
+				}
+			}
+			.spoiler{
+					
+					//border-radius:0.2em;
+					//padding-left:0.2em;
+					//padding-right:0.2em;
+					filter: blur(0.35em);
+						transition:all 0.3s;
+					&:hover{
+						filter: blur(0px);
+					}
+			}
+			
+		}
+
+		.spoiler{
+					
+					//border-radius:0.2em;
+					//padding-left:0.2em;
+					//padding-right:0.2em;
+					filter: blur(0.35em);
+						transition:all 0.3s;
+					&:hover{
+						filter: blur(0px);
+					}
+			}
+		
+	}
+
+	
 
 
 

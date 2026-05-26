@@ -208,13 +208,18 @@ $long-button-colour: #00a729;*/
 		}
 
 		/* navigation section!! */
+		
+
 		#navbar {
+			position:sticky;
+			top:0;
 			flex-shrink:0;
 			height: 2.5rem;
 			background-color: #13092D;
 			/* navbar color */
 			width: 100%;
 			margin-bottom: 0rem;
+			z-index: 100;
 		}
 
 		#navbar ul {

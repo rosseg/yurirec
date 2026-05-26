@@ -233,7 +233,8 @@ $long-button-colour: #00a729;*/
 		#navbar li a {
 			color: #ED64F5;
 			/* navbar text color */
-			font-weight: 800;
+			font-weight: bold;
+			font-size: 1rem;
 			text-decoration: none;
 			/* this removes the underline */
 		}
@@ -242,6 +243,27 @@ $long-button-colour: #00a729;*/
 		#navbar li a:hover {
 			color: #a49cba;
 			text-decoration: underline;
+		}
+
+		#navbar li button:hover {
+			color: #a49cba;
+			text-decoration: underline;
+		}
+
+		#navbar li .astext
+		{
+			background:none;
+			border:none;
+			margin:0;
+			padding:0;
+			cursor: pointer;
+			color: #ED64F5;
+			/* navbar text color */
+			font-weight: bold;
+			font-family: inherit;
+			font-size: 1rem;
+			text-decoration: none;
+			/* this removes the underline */
 		}
 	}
 

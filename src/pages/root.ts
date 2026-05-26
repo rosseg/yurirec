@@ -111,16 +111,16 @@ export default class Root extends Page{
 			});
 			head.classList.toggle("show", elem.classList.contains("show"));
 		}
-		let close = ()=>{
+		let toggle = ()=>{
 			this.Element.querySelector(".qna").classList.toggle("show")
 		}
-		this.Element.querySelector("aside .questions").addEventListener("click",close)
+		this.Element.querySelector(".qna-button").addEventListener("click",toggle)
 		this.Element.querySelector(".qna").addEventListener("click",(ev)=>{
 			if (ev.target == this.Element.querySelector(".qna")){
-				close();
+				toggle();
 			}
 		});
-		this.Element.querySelector(".qna .close").addEventListener("click",close);
+		this.Element.querySelector(".qna .close").addEventListener("click",toggle);
 
 		//console.log(test, test.match(new RegExp("--","g")).length);
 		let lines = test.replaceAll("\r","").split("\n").map((a)=>a.trim());

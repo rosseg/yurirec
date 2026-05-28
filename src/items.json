@@ -337,7 +337,7 @@
 	{
 		"names":{
 			"en": "Black and White: Tough Love at the Office",
-			"romanized":"Shiro to Kuro",
+			"romanized-jp":"Shiro to Kuro",
 			"jp":"白と黒～Black & White～"
 		},
 		"added": "06-05-2026",
@@ -574,7 +574,7 @@
 	},{
 		"names":{
 			"jp": "僕らのアイは気持ち悪い",
-			"romanized":"Bokura no Ai wa Kimochi Warui",
+			"romanized-jp":"Bokura no Ai wa Kimochi Warui",
 			"en":"Our \"Love\" is Disgusting"
 		},
 		"added": "10-05-2026",
@@ -610,7 +610,7 @@
 	{
 		"names":{
 			"jp":"君と綴るうたかた",
-			"romanized":"Kimi to Tsuzuru Utakata",
+			"romanized-jp":"Kimi to Tsuzuru Utakata",
 			"en":"The Summer You Were There"
 		},
 		"added": "10-05-2026",
@@ -643,7 +643,7 @@
 	,{
 		"names":{
 			"en": "The Skirt Sings at the Landing",
-			"romanized":"Odoriba ni Skirt ga naru",
+			"romanized-jp":"Odoriba ni Skirt ga naru",
 			"jp":"踊り場にスカートが鳴る"
 		},
 		"added": "10-05-2026",
@@ -679,7 +679,7 @@
 	{
 		"names":{
 			"en": "Subtraction Tautology",
-			"romanized":"Hikizan Tautology",
+			"romanized-jp":"Hikizan Tautology",
 			"jp":"ひきざんトートロジー"
 		},
 		"added": "10-05-2026",
@@ -713,7 +713,7 @@
 	{
 		"names":{
 			"en": "Miss Sunflower",
-			"romanized":"Himawari-san",
+			"romanized-jp":"Himawari-san",
 			"jp":"ひまわりさん"
 		},
 		"added": "10-05-2026",
@@ -747,7 +747,7 @@
 	{
 		"names":{
 			"en": "Doughnuts Under a Crescent Moon",
-			"romanized":"Kaketa Tsuki to Dōnattsu",
+			"romanized-jp":"Kaketa Tsuki to Dōnattsu",
 			"jp":"欠けた月とドーナッツ"
 		},
 		"added": "10-05-2026",
@@ -782,7 +782,7 @@
 	{
 		"names":{
 			"en": "She, Her Camera and Her Seasons",
-			"romanized":"Kanojo to Camera to Kanojo no Kisetsu",
+			"romanized-jp":"Kanojo to Camera to Kanojo no Kisetsu",
 			"jp":"彼女とカメラと彼女の季節"
 		},
 		"added": "10-05-2026",
@@ -817,7 +817,7 @@
 	{
 		"names":{
 			"en": "Useless Princesses",
-			"romanized":"Dekisokonai no Himegimi-tachi",
+			"romanized-jp":"Dekisokonai no Himegimi-tachi",
 			"jp":"できそこないの姫君たち"
 		},
 		"added": "17-05-2026",
@@ -986,5 +986,37 @@
 		"tags": ["romance","slice of life", "religion", "angel(s)", "devil(s)", "doggirl(s)", "multiple endings", "trans rep", "nonbinary rep"],
 		"spoilerTags":["cheating"],
 		"notes": "Made for the 2025 toxic yuri game jam. Two endings."
+	},
+	{
+		"names":{
+			"en": "Sadistic Beauty: Side Story A",
+			"romanized-kr":"Sadistic Beauty: A-jeon",
+			"kr":"새디스틱 뷰티:외전"
+		},
+		"added": "31-05-2026",
+		"type":"manhwa",
+		"creators":["Woo Yunhee (우연희)"],
+		"artists":["Lee Geumsan (이금산)"],
+		"infoLinkLabels": ["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/9rph1jt/sadistic-beauty-epilogue-1"],
+		"pairings": {
+			"lesbian" : 10.0
+		},
+		"short":"two drama club members get freaky",
+		"description":"this is a nice lil story ehehehehe",
+		"length": "short",
+		"status": "completed",
+		
+		"image":"./assets/covers/sadistic_beauty_cover.v1.webp",
+		"recommendations":{
+			"priestess' reverence": 8.2,
+			"uniqueness": 7.0,
+			"intensity": 7.0,
+			"story":  8.0,
+			"romance": 8.0,
+			"kinky": 8.0
+		},
+		"landmines": [], 
+		"tags": ["romance", "comedy", "adult mains", "bdsm", "kink", "roleplay", "sex", "erotica", "university life", "full colour"]
 	}
 ]

@@ -176,7 +176,7 @@
 			"en":"Not So Shoujo Love Story"
 		},
 		"added": "06-05-2026",
-		"updated": "17-05-2026",
+		"updated": "10-06-2026",
 		"creators": ["Curryuku"],
 		"artists": ["Curryuku"],
 		"infoLinkLabels":["WEBTOON"],
@@ -196,7 +196,7 @@
 			"uniqueness": 6.0,
 			"intensity": 7.0,
 			"romance": 9.5,
-			"wholesome": 9.0,
+			"wholesome": 9.5,
 			"comedy": 6.0,
 			"art": 9.5
 		},
@@ -337,7 +337,7 @@
 	{
 		"names":{
 			"en": "Black and White: Tough Love at the Office",
-			"romanized":"Shiro to Kuro",
+			"romanized-jp":"Shiro to Kuro",
 			"jp":"白と黒～Black & White～"
 		},
 		"added": "06-05-2026",
@@ -378,7 +378,7 @@
 		"infoLinkLabels":["MangaUpdates"],
 		"infoLinks":["https://www.mangaupdates.com/series/d86l207/ki-ni-natteru-hito-ga-otoko-ja-nakatta"],
 		"added": "06-05-2026",
-		"updated": "17-05-2026",
+		"updated": "10-06-2026",
 		"type":"manga",
 		"pairings": {
 			"lesbian" : 10
@@ -390,10 +390,10 @@
 		"targets": [],
 		"image":"./assets/covers/green_yuri_cover.v1.webp",
 		"recommendations":{
-			"priestess' reverence": 8.8,
-			"uniqueness": 7.0,
+			"priestess' reverence": 8.5,
+			"uniqueness": 6.5,
 			"intensity": 6.8,
-			"story": 8.0,
+			"story": 7.8,
 			"romance": 9.0,
 			"wholesome": 9.0,
 			"art": 9.0
@@ -448,7 +448,7 @@
 		"infoLinkLabels":["MangaUpdates"],
 		"infoLinks":["https://www.mangaupdates.com/series/d6zpmbj/maitsuki-niwa-tsuki-ooya-tsuki"],
 		"added": "06-05-2026",
-		"updated": "17-05-2026",
+		"updated": "10-06-2026",
 		"type":"manga",
 		"pairings": {
 			"lesbian" : 10
@@ -461,13 +461,13 @@
 		"image":"./assets/covers/maitsuki_cover.v1.webp",
 		"recommendations":{
 			"priestess' reverence": 8.0,
-			"uniqueness": 6.0,
+			"uniqueness": 6.5,
 			"intensity": 6.5,
 			"story": 7.5,
 			"romance": 9.0,
-			"wholesome": 8.5
+			"wholesome": 8.8
 		},
-		"tags":["romance", "comedy", "slice of life", "idol(s)", "landlord", "age gap"]
+		"tags":["romance", "comedy", "slice of life", "idol(s)", "landlord", "age gap", "adult mains", "roommates"]
 	},
 	{
 		"names":{
@@ -574,11 +574,11 @@
 	},{
 		"names":{
 			"jp": "僕らのアイは気持ち悪い",
-			"romanized":"Bokura no Ai wa Kimochi Warui",
+			"romanized-jp":"Bokura no Ai wa Kimochi Warui",
 			"en":"Our \"Love\" is Disgusting"
 		},
 		"added": "10-05-2026",
-		"updated": "17-05-2026",
+		"updated": "10-06-2026",
 		"type":"manga",
 		"creators":["Usui Shio (雨水汐)"],
 		"artists":["Usui Shio (雨水汐)"],
@@ -594,7 +594,7 @@
 		
 		"image":"./assets/covers/our_love_is_disgusting_cover.v1.webp",
 		"recommendations":{
-			"priestess' reverence": 8.8,
+			"priestess' reverence": 8.5,
 			"uniqueness": 9.0,
 			"intensity": 8.2,
 			"romance": 7.0,
@@ -610,7 +610,7 @@
 	{
 		"names":{
 			"jp":"君と綴るうたかた",
-			"romanized":"Kimi to Tsuzuru Utakata",
+			"romanized-jp":"Kimi to Tsuzuru Utakata",
 			"en":"The Summer You Were There"
 		},
 		"added": "10-05-2026",
@@ -643,7 +643,7 @@
 	,{
 		"names":{
 			"en": "The Skirt Sings at the Landing",
-			"romanized":"Odoriba ni Skirt ga naru",
+			"romanized-jp":"Odoriba ni Skirt ga naru",
 			"jp":"踊り場にスカートが鳴る"
 		},
 		"added": "10-05-2026",
@@ -679,7 +679,7 @@
 	{
 		"names":{
 			"en": "Subtraction Tautology",
-			"romanized":"Hikizan Tautology",
+			"romanized-jp":"Hikizan Tautology",
 			"jp":"ひきざんトートロジー"
 		},
 		"added": "10-05-2026",
@@ -713,7 +713,7 @@
 	{
 		"names":{
 			"en": "Miss Sunflower",
-			"romanized":"Himawari-san",
+			"romanized-jp":"Himawari-san",
 			"jp":"ひまわりさん"
 		},
 		"added": "10-05-2026",
@@ -747,11 +747,11 @@
 	{
 		"names":{
 			"en": "Doughnuts Under a Crescent Moon",
-			"romanized":"Kaketa Tsuki to Dōnattsu",
+			"romanized-jp":"Kaketa Tsuki to Dōnattsu",
 			"jp":"欠けた月とドーナッツ"
 		},
 		"added": "10-05-2026",
-		"updated": "17-05-2026",
+		"updated": "10-06-2026",
 		"type":"manga",
 		"creators":["Usui Shio (雨水汐)"],
 		"artists":["Usui Shio (雨水汐)"],
@@ -771,18 +771,18 @@
 			"priestess' reverence": 9.1,
 			"uniqueness": 8.0,
 			"intensity": 7.0,
-			"story": 8,
+			"story": 8.2,
 			"romance": 8.5,
 			"wholesome":10.0
 		},
 		"landmines": [], 
-		"tags": ["romance", "slice of life","office worker(s)", "asexual rep"]
+		"tags": ["romance", "slice of life","office worker(s)", "adult mains", "asexual rep"]
 		
 	},
 	{
 		"names":{
 			"en": "She, Her Camera and Her Seasons",
-			"romanized":"Kanojo to Camera to Kanojo no Kisetsu",
+			"romanized-jp":"Kanojo to Camera to Kanojo no Kisetsu",
 			"jp":"彼女とカメラと彼女の季節"
 		},
 		"added": "10-05-2026",
@@ -817,7 +817,7 @@
 	{
 		"names":{
 			"en": "Useless Princesses",
-			"romanized":"Dekisokonai no Himegimi-tachi",
+			"romanized-jp":"Dekisokonai no Himegimi-tachi",
 			"jp":"できそこないの姫君たち"
 		},
 		"added": "17-05-2026",
@@ -876,7 +876,7 @@
 			"music": 9.5
 		},
 		"landmines": ["murder", "violence", "blood"], 
-		"tags": ["murder mystery", "drama", "cyberpunk", "androids", "interactive"],
+		"tags": ["murder mystery", "drama", "cyberpunk", "androids", "adult mains", "interactive"],
 		"notes": "Episode 0 is free. Episodes 1 and 2 are out, with episode 3 set to release in late 2026. It will end on episode 5."
 	}
 	,
@@ -912,7 +912,7 @@
 			"music": 9.5
 		},
 		"landmines": ["murder", "violence", "blood"], 
-		"tags": ["murder mystery", "horror", "slice of life", "drama", "nuns", "historical", "kinetic novel"],
+		"tags": ["murder mystery", "horror", "slice of life", "drama", "nuns", "historical", "adult mains", "kinetic novel"],
 		"notes": "2 of 3 volumes are out. The second volume is more overtly lesbian"
 	}
 	,
@@ -949,7 +949,7 @@
 			"music": 9.5
 		},
 		"landmines": [], 
-		"tags": ["romance?","slice of life", "comedy", "drama", "androids", "found family", "kinetic novel", "trans rep", "nonbinary rep"],
+		"tags": ["romance?","slice of life", "comedy", "drama", "androids", "found family", "adult mains", "kinetic novel", "trans rep", "nonbinary rep"],
 		"notes": "Episode 1 is free on itch.io. 2 episodes out and the third is in development. "
 	},
 	{
@@ -983,8 +983,74 @@
 			"music": 8.0
 		},
 		"landmines": ["suicide", "self-harm", "religious trauma", "abuse", "dubious consent"], 
-		"tags": ["romance","slice of life", "religion", "angel(s)", "devil(s)", "doggirl(s)", "multiple endings", "trans rep", "nonbinary rep"],
+		"tags": ["romance","slice of life", "religion", "angel(s)", "devil(s)", "doggirl(s)", "multiple endings", "adult mains", "trans rep", "nonbinary rep"],
 		"spoilerTags":["cheating"],
 		"notes": "Made for the 2025 toxic yuri game jam. Two endings."
+	},
+	{
+		"names":{
+			"en": "Sadistic Beauty: Side Story A",
+			"romanized-kr":"Sadistic Beauty: A-jeon",
+			"kr":"새디스틱 뷰티:외전"
+		},
+		"added": "10-06-2026",
+		"type":"manhwa",
+		"creators":["Woo Yunhee (우연희)"],
+		"artists":["Lee Geumsan (이금산)"],
+		"infoLinkLabels": ["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/9rph1jt/sadistic-beauty-epilogue-1"],
+		"pairings": {
+			"lesbian" : 10.0
+		},
+		"short":"two drama club members get freaky",
+		"description":"this is a nice lil story ehehehehe",
+		"length": "short",
+		"status": "completed",
+		
+		"image":"./assets/covers/sadistic_beauty_cover.v1.webp",
+		"recommendations":{
+			"priestess' reverence": 8.2,
+			"uniqueness": 7.0,
+			"intensity": 7.0,
+			"story":  8.0,
+			"romance": 8.0,
+			"kinky": 8.0
+		},
+		"landmines": [], 
+		"tags": ["romance", "comedy", "adult mains", "bdsm", "kink", "roleplay", "sex", "erotica", "university life", "full colour"]
+	},
+	{
+		"names":{
+			"en": "2DK, G-pen, Alarm clock.",
+			"romanized-jp":"2DK, G Pen, Mezamashi Tokei.",
+			"jp":"2DK、Gペン、目覚まし時計。"
+		},
+		"added": "10-06-2026",
+		
+		"type":"manga",
+		"creators":["Ohsawa Yayoi (大沢やよい)"],
+		"artists":["Ohsawa Yayoi (大沢やよい)"],
+		"infoLinkLabels": ["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/qvxn23g/2dk-g-pen-mezamashi-tokei"],
+		"pairings": {
+			"lesbian" : 10.0
+		},
+		"short":"office worker x mangaka roommates",
+		"description":"And they were roommates! Very solid slow burn yuri with adult mains",
+		"length": "medium",
+		"status": "completed",
+		
+		"image":"./assets/covers/2DK_cover.v1.webp",
+		"recommendations":{
+			"priestess' reverence": 8.5,
+			"uniqueness": 7.0,
+			"intensity": 7.5,
+			"story": 8,
+			"romance": 8.5,
+			"wholesome":8.5
+		},
+		"landmines": [], 
+		"tags": ["romance", "slice of life","office worker(s)", "adult mains", "mangaka", "roommates", "slow burn"],
+		"notes": "I actually liked this a lot more than Ohsawa-sensei's \"Hello Melancholic!\", which didn't quite make the cut for me"
 	}
 ]

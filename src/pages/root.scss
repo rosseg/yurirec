@@ -658,7 +658,7 @@ $long-button-colour: #00a729;*/
 			}
 		
 	}
-	@media (max-width: 70rem) {
+	@media (max-width: 72.5rem) {
 		article:nth-child(even){
 			grid-template-columns:minmax(0, 1.2fr) minmax(0, 1fr);
 			grid-template-areas: "data-section cover-image"

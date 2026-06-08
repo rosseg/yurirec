@@ -3,20 +3,25 @@
 :root {
     --background-image:url('../../assets/blue_fabric_background_70.webp');
     --default-background-colour:white;
-    --default-text-color: black;
+    --default-text-colour: black;
     --default-button-colour: white;
     --default-button-hover-active-colour:rgb(41, 41, 41);
+    --header-background-colour:var(--default-background-colour);
+    --header-text-colour:var(--default-text-colour);
+    --navbar-background-colour:var(--default-background-colour);
+    --navbar-text-colour:#ED64F5;
+    --navbar-hover-colour:#a49cba;
     --page-background-colour:var(--default-background-colour);
     --qna-background-colour:#00000088;
     --aside-background-colour:var(--default-background-colour);
     --aside-background-colour-mobile:var(--default-background-colour);
-    --article-background-color:var(--default-background-colour);
-    --new-background-color:red;
-    --new-text-color:white;
+    --article-background-colour:var(--default-background-colour);
+    --new-background-colour:red;
+    --new-text-colour:white;
     --tab-active-colour:red;
     --tab-inactive-colour:white;
     --tag-button-colour: green;
-    --tag-text-colour:var(--text-color);
+    --tag-text-colour:var(--text-colour);
     --warning-colour:red;
     --manga-button-colour:#ff2c2d;
     --manhua-button-colour:#ffff00;
@@ -38,12 +43,14 @@
 }
 
 .theme-dark {
-    --background-color: black;
-    --text-color: white;
+    --background-colour: black;
+    --text-colour: white;
 }
 
 .moon-lesbian{
     --ml1: #560087;
+    --ml1-l50:#8c00dc;
+    --ml1-ln50:#200032;
     --ml1-trans:#560087d0;
     --ml1-t20:#78339f;
     --ml1-t20-trans:#78339fa0;
@@ -56,19 +63,25 @@
     --ml5-t10:#481a70;
     --ml5-s10: #2f0056;
     --ml5-s20: #2a004d;
+    --ml5-s50:#1a0030;
     --ml5-s20-trans: #2a004d40;
 
     --background-image:url('../../assets/mooning5x3.png');
     --default-background-colour:var(--ml1-t20-trans);
-    --default-text-color: var(--ml2-t80);
+    --default-text-colour: var(--ml2-t80);
     --default-button-hover-active-colour:rgb(41, 41, 41);
+    --header-background-colour:var(--aside-background-colour);
+    --header-text-colour:var(--default-text-colour);
+    --navbar-background-colour:var(--ml1-ln50);
+    --navbar-text-colour:#ED64F5;
+    --navbar-hover-colour: #a49cba;
     --page-background-colour:var(--ml5-s20-trans);
     --qna-background-colour:#000000cc;
     --aside-background-colour:var(--default-background-colour);
     --aside-background-colour-mobile:var(--ml1-t20);
-    --article-background-color:var(--default-background-colour);
-    --new-background-color:red;
-    --new-text-color:var(--default-text-color);
+    --article-background-colour:var(--default-background-colour);
+    --new-background-colour:red;
+    --new-text-colour:var(--default-text-colour);
     --tab-active-colour:var(--ml4);
     --tab-inactive-colour:var(--ml5);
     --tag-button-colour: var(--ml3);

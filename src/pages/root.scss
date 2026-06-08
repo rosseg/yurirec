@@ -708,18 +708,7 @@ $mobile-size-multiplier:1.5;
 			}
 		
 	}
-
-	
-
-
-
-	
-	
-	
-	
-
-
-	@media (max-width: 65rem) {
+	@media (max-width: 1000px) {
 		article:nth-child(even){
 			grid-template-columns:minmax(0, 1.2fr) minmax(0, 1fr);
 			grid-template-areas: "data-section cover-image"

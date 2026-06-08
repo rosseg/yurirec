@@ -84,8 +84,8 @@ module.exports = {
         }),
 
         new MiniCssExtractPlugin({
-          filename: isDevelopment ? '[name].css' : '[name].[contenthash].css',
-          chunkFilename: isDevelopment ? '[id].css' : '[id].[contenthash].css'
+          filename: '[name].[contenthash].css',
+          chunkFilename: '[id].[contenthash].css'
         })
 
 		

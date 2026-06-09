@@ -114,10 +114,10 @@ export default class Root extends Page{
 		let toggle = ()=>{
 			this.Element.querySelector(".qna").classList.toggle("show")
 			var navbar_z = document.getElementById('navbar').style.zIndex;
-			if (navbar_z == "1") {
-				document.getElementById('navbar').style.zIndex = "1000";
+			if (navbar_z == "0") {
+				document.getElementById('navbar').style.zIndex = "100";
 			} else {
-				document.getElementById('navbar').style.zIndex = "1";
+				document.getElementById('navbar').style.zIndex = "0";
 			}
 		}
 		this.Element.getElementsByClassName("qna-button")[0].addEventListener("click",toggle);

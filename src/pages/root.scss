@@ -38,7 +38,7 @@ $mobile-size-multiplier:1.5;
 	
 	font-family: "Quicksand", sans-serif;
 	
-	.qna{
+	.popup{
 		position:fixed;
 		width:100vw;
 		height:100vh;
@@ -83,6 +83,41 @@ $mobile-size-multiplier:1.5;
 		padding-top:1em;
 		background-color:var(--aside-background-colour);
 		overflow-y:auto;
+
+		/*
+		//display:block;
+		position:fixed;
+		left:calc(-100% - 2em);
+		transition:all 0.3s;
+		//font-size:2em;
+		z-index:100;
+		width:100%;
+		
+		&.show{
+			//display:block;
+			left:0%;
+			//background-color: var(--aside-background-colour-mobile);
+		}
+*/
+		#filters-close-div{
+			display:grid;
+			grid-template-columns: "1fr 1fr";
+			#swipe-msg{
+				grid-column: 1;
+				justify-self: start;
+			}
+			.close{
+				grid-column:2;
+				justify-self: end;
+				padding-right:1rem;
+				
+				font-size:3em;
+				
+				cursor:pointer;
+				
+				user-select:none;
+			}
+		}
 		h2{
 			position:relative;
 			user-select:none;
@@ -221,7 +256,9 @@ $mobile-size-multiplier:1.5;
 			background-color: var(--navbar-background-colour);
 			width: 100%;
 			margin-bottom: 0rem;
-			z-index: 100;
+			z-index: 3;
+
+			
 		}
 
 		#navbar ul {
@@ -745,6 +782,9 @@ $mobile-size-multiplier:1.5;
 				background-color: var(--aside-background-colour-mobile);
 			}
 		}
+		
+		
+
 		article{
 			grid-template-columns:minmax(0, 1fr) minmax(0, 1.2fr);
 			grid-template-rows: ($image-height * $mobile-size-multiplier) max-content;

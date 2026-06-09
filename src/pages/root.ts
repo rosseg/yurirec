@@ -92,10 +92,39 @@ export default class Root extends Page{
 
 		// mobile only
 		this.OnSwipe(()=>{
-			this.Element.querySelector("aside").classList.remove("show");
+			document.getElementById("filters-aside")?.classList.remove("show");
 		}, ()=>{
-			this.Element.querySelector("aside").classList.add("show");
+			document.getElementById("filters-aside")?.classList.add("show");
 		})
+
+		let toggle_filters_desktop = ()=> {
+			var display = document.getElementById("filters-aside")?.style.display;
+			if (display == "none"){
+				document.getElementById("filters-aside").style.display = "inline";
+			} else {
+				document.getElementById("filters-aside").style.display = "none";
+			}
+		}
+
+		let toggle_filters_mobile = () =>{
+			document.getElementById("filters-aside")?.classList.toggle("show");
+		}
+		
+		var toggle_filters_test = () =>{
+			if (window.innerWidth > 1000){
+				document.getElementById("filters-button").onclick=  toggle_filters_desktop;
+				document.getElementById("filters-x").onclick=toggle_filters_desktop;
+			}
+			else {
+				document.getElementById("filters-button").onclick=toggle_filters_mobile;
+				document.getElementById("filters-x").onclick= toggle_filters_mobile;
+			}
+		};
+		toggle_filters_test();
+		window.onresize = toggle_filters_test;
+		
+		
+		
 		
 		let headers = Array.from(this.Element.querySelectorAll("aside h2"));
 		for (let head of headers){
@@ -111,23 +140,26 @@ export default class Root extends Page{
 			});
 			head.classList.toggle("show", elem.classList.contains("show"));
 		}
-		let toggle = ()=>{
-			this.Element.querySelector(".qna").classList.toggle("show")
+		let toggle_qna = ()=>{
+			var id = "qna";
+			this.Element.querySelector("#"+id).classList.toggle("show")
 			var navbar_z = document.getElementById('navbar').style.zIndex;
 			if (navbar_z == "0") {
-				document.getElementById('navbar').style.zIndex = "100";
+				document.getElementById('navbar').style.zIndex = "3";
 			} else {
 				document.getElementById('navbar').style.zIndex = "0";
 			}
 		}
-		this.Element.getElementsByClassName("qna-button")[0].addEventListener("click",toggle);
-		this.Element.getElementsByClassName("qna-button")[1].addEventListener("click",toggle);
-		this.Element.querySelector(".qna").addEventListener("click",(ev)=>{
-			if (ev.target == this.Element.querySelector(".qna")){
-				toggle();
+		this.Element.getElementsByClassName("qna-button")[0].addEventListener("click",toggle_qna);
+		this.Element.getElementsByClassName("qna-button")[1].addEventListener("click",toggle_qna);
+		this.Element.querySelector("#qna").addEventListener("click",(ev)=>{
+			if (ev.target == this.Element.querySelector("#qna")){
+				toggle_qna();
 			}
 		});
-		this.Element.querySelector(".qna .close").addEventListener("click",toggle);
+		this.Element.querySelector("#qna .close").addEventListener("click",toggle_qna);
+
+
 
 		//console.log(test, test.match(new RegExp("--","g")).length);
 		let lines = test.replaceAll("\r","").split("\n").map((a)=>a.trim());

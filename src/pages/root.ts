@@ -113,8 +113,15 @@ export default class Root extends Page{
 		}
 		let toggle = ()=>{
 			this.Element.querySelector(".qna").classList.toggle("show")
+			var navbar_z = document.getElementById('navbar').style.zIndex;
+			if (navbar_z == "1") {
+				document.getElementById('navbar').style.zIndex = "1000";
+			} else {
+				document.getElementById('navbar').style.zIndex = "1";
+			}
 		}
-		this.Element.querySelector(".qna-button").addEventListener("click",toggle)
+		this.Element.getElementsByClassName("qna-button")[0].addEventListener("click",toggle);
+		this.Element.getElementsByClassName("qna-button")[1].addEventListener("click",toggle);
 		this.Element.querySelector(".qna").addEventListener("click",(ev)=>{
 			if (ev.target == this.Element.querySelector(".qna")){
 				toggle();

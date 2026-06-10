@@ -95,6 +95,7 @@ $mobile-size-multiplier:1.5;
 		justify-content:center;
 		align-items:center;
 		display:none;
+		z-index:100;
 		&.show{
 			display:flex;
 		}
@@ -121,7 +122,7 @@ $mobile-size-multiplier:1.5;
 			background-color: white;
 		}
 	}
-	#filters-aside{
+	aside{
 		grid-column:1;
 		height:100%;
 		padding-left:var(--filter-padding-left);
@@ -132,14 +133,30 @@ $mobile-size-multiplier:1.5;
 		white-space: nowrap;
 		#filters-close-div{
 			display:grid;
-			grid-template-columns: "1fr 1fr";
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr 1fr;
+			gap: 0.33em;
+			grid-template-areas: "msg X" 
+								"btn X"
+								"total X";
+
 			#swipe-msg{
-				grid-column: 1;
+				grid-area: msg;
 				justify-self: start;
+				display: none;
+			}
+			#aside-qna-button{
+				grid-area:btn;
+				justify-self: start;
+				align-self: center;
+			}
+			.total-yuri{
+				grid-area: total;
 			}
 			.close{
-				grid-column:2;
+				grid-area:X;
 				justify-self: end;
+				align-self: start;
 				padding-right:1rem;
 				
 				font-size:3em;
@@ -804,8 +821,18 @@ $mobile-size-multiplier:1.5;
 			left:calc(-100% - 2em);
 			transition:all 0.3s;
 			font-size:2em;
-			z-index:100;
+			z-index:4;
 			width:100%;
+
+			#filters-close-div{
+				#swipe-msg{
+					display: inline;
+				}
+				#aside-qna-button{
+					font-size: inherit;
+				}
+			}
+			
 			
 			&.show{
 				display:block;

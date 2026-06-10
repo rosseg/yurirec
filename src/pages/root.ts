@@ -74,7 +74,7 @@ export default class Root extends Page{
 		this.SetFilters();
 
 		// how far am I adding my list
-		this.Element.querySelector<HTMLDivElement>(".progress").innerText = "progress: "+items.length + " / "+(test.match(new RegExp("\n","g")).length + 1 + Math.max(0, items.length - test.match(new RegExp("--","g")).length));
+		this.Element.querySelector<HTMLDivElement>(".total-yuri").innerText = "total yuri: "+items.length;
 
 		//populate the text of extras > new
 		let clonedNew = items.toSorted((a, b)=>{return ((b.recommendations[this.rating] ?? 0.0) - (a.recommendations[this.rating] ?? 0.0)) * this.ratingDir; });
@@ -165,14 +165,32 @@ export default class Root extends Page{
 		}
 		this.Element.getElementsByClassName("qna-button")[0].addEventListener("click",toggle_qna);
 		this.Element.getElementsByClassName("qna-button")[1].addEventListener("click",toggle_qna);
-		this.Element.querySelector("#qna").addEventListener("click",(ev)=>{
+		this.Element.querySelector("#qna")?.addEventListener("click",(ev)=>{
 			if (ev.target == this.Element.querySelector("#qna")){
 				toggle_qna();
 			}
 		});
-		this.Element.querySelector("#qna .close").addEventListener("click",toggle_qna);
+		this.Element.querySelector("#qna .close")?.addEventListener("click",toggle_qna);
 
+		let toggle_yuri_diary = ()=>{
+			var id = "yuri-diary";
+			this.Element.querySelector("#"+id)?.classList.toggle("show")
+			var navbar_z = document.getElementById('navbar').style.zIndex;
+			if (navbar_z == "0") {
+				document.getElementById('navbar').style.zIndex = "3";
+			} else {
+				document.getElementById('navbar').style.zIndex = "0";
+			}
+		}
 
+		document.getElementById("yuri-diary-button").addEventListener("click",toggle_yuri_diary);
+		
+		this.Element.querySelector("#yuri-diary").addEventListener("click",(ev)=>{
+			if (ev.target == this.Element.querySelector("#yuri-diary")){
+				toggle_yuri_diary();
+			}
+		});
+		this.Element.querySelector("#yuri-diary .close").addEventListener("click",toggle_yuri_diary);
 
 		//console.log(test, test.match(new RegExp("--","g")).length);
 		let lines = test.replaceAll("\r","").split("\n").map((a)=>a.trim());

@@ -53,10 +53,10 @@ $mobile-size-multiplier:1.5;
 			--filter-padding-left: 0em;
 			--filter-white-space: normal;
 		}
-		5% {
-			--filter-padding-left: 1em;
-			
-		}
+		10% {--filter-padding-left: 0.25em;}
+		20% {--filter-padding-left: 0.5em;}
+		30% {--filter-padding-left: 0.75em;}
+		40% {--filter-padding-left: 1em;}
 		100% {
 			grid-template-columns: 20vw auto;
 		}
@@ -65,12 +65,19 @@ $mobile-size-multiplier:1.5;
 	@keyframes remove-filter-space {
 			0%{
 				grid-template-columns: 20vw auto;
-				-filter-white-space: nowrap;
-			}
-			
-			95%{
+				--filter-white-space: nowrap;
 				--filter-padding-left: 1em;
 			}
+
+			10% {--filter-padding-left: 0.9em;}
+			20%{--filter-padding-left: 0.8em;}
+			30%{--filter-padding-left: 0.7em;}
+			40%{--filter-padding-left: 0.6em;}
+			50%{--filter-padding-left: 0.5em;}
+			60%{--filter-padding-left: 0.4em;}
+			70%{--filter-padding-left: 0.3em;}
+			80%{--filter-padding-left: 0.2em;}
+			90%{--filter-padding-left: 0.1em;}
 
 		100% {
 			grid-template-columns: 0vw auto;

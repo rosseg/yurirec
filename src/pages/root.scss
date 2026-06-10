@@ -51,37 +51,65 @@ $mobile-size-multiplier:1.5;
 		0% {
 			grid-template-columns: 0vw auto;
 			--filter-padding-left: 0em;
-			--filter-white-space: normal;
+			--filter-white-space: nowrap;
 		}
-		10% {--filter-padding-left: 0.25em;}
-		20% {--filter-padding-left: 0.5em;}
-		30% {--filter-padding-left: 0.75em;}
-		40% {--filter-padding-left: 1em;}
+		5% {--filter-padding-left: 0.05em;--filter-white-space: nowrap;}
+		10% {--filter-padding-left: 0.1em;--filter-white-space: nowrap;}
+		15% {--filter-padding-left: 0.15em;--filter-white-space: nowrap;}
+		20%{--filter-padding-left: 0.2em;--filter-white-space: nowrap;}
+		25%{--filter-padding-left: 0.25em;--filter-white-space: nowrap;}
+		30%{--filter-padding-left: 0.3em;--filter-white-space: nowrap;}
+		35%{--filter-padding-left: 0.35em;--filter-white-space: nowrap;}
+		40%{--filter-padding-left: 0.4em;--filter-white-space: nowrap;}
+		45%{--filter-padding-left: 0.45em;--filter-white-space: nowrap;}
+		50%{--filter-padding-left: 0.5em;--filter-white-space: nowrap;}
+		55%{--filter-padding-left: 0.55em;--filter-white-space: nowrap;}
+		60%{--filter-padding-left: 0.6em;--filter-white-space: nowrap;}
+		65%{--filter-padding-left: 0.65em;--filter-white-space: nowrap;}
+		70%{--filter-padding-left: 0.7em;--filter-white-space: nowrap;}
+		75%{--filter-padding-left: 0.75em;--filter-white-space: nowrap;}
+		80%{--filter-padding-left: 0.8em;--filter-white-space: nowrap;}
+		85%{--filter-padding-left: 0.85em;--filter-white-space: nowrap;}
+		90%{--filter-padding-left: 0.9em;--filter-white-space: nowrap;}
+		95%{--filter-padding-left: 0.95em;--filter-white-space: nowrap;}
+		99%{--filter-padding-left: 0.99em;--filter-white-space: nowrap;}
 		100% {
+			--filter-padding-left: 1em;
 			grid-template-columns: 20vw auto;
+			--filter-white-space: normal;
 		}
 	}
 
 	@keyframes remove-filter-space {
-			0%{
-				grid-template-columns: 20vw auto;
-				--filter-white-space: nowrap;
-				--filter-padding-left: 1em;
-			}
+		0%{
+			grid-template-columns: 20vw auto;
+			--filter-white-space: nowrap;
+			--filter-padding-left: 1em;
+		}
 
-			10% {--filter-padding-left: 0.9em;}
-			20%{--filter-padding-left: 0.8em;}
-			30%{--filter-padding-left: 0.7em;}
-			40%{--filter-padding-left: 0.6em;}
-			50%{--filter-padding-left: 0.5em;}
-			60%{--filter-padding-left: 0.4em;}
-			70%{--filter-padding-left: 0.3em;}
-			80%{--filter-padding-left: 0.2em;}
-			90%{--filter-padding-left: 0.1em;}
-
+		5% {--filter-padding-left: 0.95em;--filter-white-space: nowrap;}
+		10%{--filter-padding-left: 0.9em;--filter-white-space: nowrap;}
+		15%{--filter-padding-left: 0.85em;--filter-white-space: nowrap;}
+		20%{--filter-padding-left: 0.8em;--filter-white-space: nowrap;}
+		25%{--filter-padding-left: 0.75em;--filter-white-space: nowrap;}
+		30%{--filter-padding-left: 0.7em;--filter-white-space: nowrap;}
+		35%{--filter-padding-left: 0.65em;--filter-white-space: nowrap;}
+		40%{--filter-padding-left: 0.6em;--filter-white-space: nowrap;}
+		45%{--filter-padding-left: 0.55em;--filter-white-space: nowrap;}
+		50%{--filter-padding-left: 0.5em;--filter-white-space: nowrap;}
+		55%{--filter-padding-left: 0.45em;--filter-white-space: nowrap;}
+		60%{--filter-padding-left: 0.4em;--filter-white-space: nowrap;}
+		65%{--filter-padding-left: 0.35em;--filter-white-space: nowrap;}
+		70%{--filter-padding-left: 0.3em;--filter-white-space: nowrap;}
+		75%{--filter-padding-left: 0.25em;--filter-white-space: nowrap;}
+		80%{--filter-padding-left: 0.2em;--filter-white-space: nowrap;}
+		85%{--filter-padding-left: 0.15em;--filter-white-space: nowrap;}
+		90%{--filter-padding-left: 0.1em;--filter-white-space: nowrap;}
+		95%{--filter-padding-left: 0.05em;--filter-white-space: nowrap;}
 		100% {
 			grid-template-columns: 0vw auto;
 			--filter-padding-left: 0em;
+			--filter-white-space: nowrap;
 		}
 	}
 	
@@ -130,7 +158,7 @@ $mobile-size-multiplier:1.5;
 		background-color:var(--aside-background-colour);
 		overflow-x: var(--filter-overflowX);
 		overflow-y:auto;
-		white-space: nowrap;
+		white-space: var(--filter-white-space);
 		#filters-close-div{
 			display:grid;
 			grid-template-columns: 1fr 1fr;

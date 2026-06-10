@@ -98,12 +98,18 @@ export default class Root extends Page{
 		})
 
 		let toggle_filters_desktop = ()=> {
-			var display = document.getElementById("filters-aside")?.style.display;
-			if (display == "none"){
-				document.getElementById("filters-aside").style.display = "inline";
-			} else {
-				document.getElementById("filters-aside").style.display = "none";
+			
+			var isClosed = document.getElementById("root")?.classList.contains('filters-closed');
+			if (isClosed){
+				document.getElementById("root")?.classList.remove("filters-closed");
+				document.getElementById("root")?.classList.add("filters-open");
 			}
+			else {
+				document.getElementById("root")?.classList.remove("filters-open");
+				document.getElementById("root")?.classList.add("filters-closed");
+			}
+    		
+			
 		}
 
 		let toggle_filters_mobile = () =>{
@@ -114,10 +120,17 @@ export default class Root extends Page{
 			if (window.innerWidth > 1000){
 				document.getElementById("filters-button").onclick=  toggle_filters_desktop;
 				document.getElementById("filters-x").onclick=toggle_filters_desktop;
+				/*if (!document.getElementById("filters-aside")?.classList.contains('slide-in')
+				&& !document.getElementById("filters-aside")?.classList.contains('slide-out'))
+				{
+					document.getElementById("filters-aside")?.classList.add("slide-in");
+				}*/
 			}
 			else {
 				document.getElementById("filters-button").onclick=toggle_filters_mobile;
 				document.getElementById("filters-x").onclick= toggle_filters_mobile;
+				document.getElementById("filters-aside")?.classList.remove("slide-in");
+				document.getElementById("filters-aside")?.classList.remove("slide-out");
 			}
 		};
 		toggle_filters_test();

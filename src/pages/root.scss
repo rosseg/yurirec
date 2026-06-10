@@ -32,11 +32,51 @@ $article-max-height:calc(2 * $article-padding
 $aside-width: 18vw;
 $content-width: 100vw - $aside-width;
 $mobile-size-multiplier:1.5;
-
+.filters-open{
+	animation: make-filter-space 0.5s forwards;
+}
+.filters-closed{
+	animation: remove-filter-space 0.5s forwards;
+}
 #root.page{
-	display:flex;
+	display:grid;
+
+	grid-template-columns: 20% auto;
+	--filter-padding-left: 1em;
+	--filter-white-space: normal;
 	
 	font-family: "Quicksand", sans-serif;
+	//transition-behavior: allow-discrete;
+	@keyframes make-filter-space {
+		0% {
+			grid-template-columns: 0vw auto;
+			--filter-padding-left: 0em;
+			--filter-white-space: normal;
+		}
+		5% {
+			--filter-padding-left: 1em;
+			
+		}
+		100% {
+			grid-template-columns: 20vw auto;
+		}
+	}
+
+	@keyframes remove-filter-space {
+			0%{
+				grid-template-columns: 20vw auto;
+				-filter-white-space: nowrap;
+			}
+			
+			95%{
+				--filter-padding-left: 1em;
+			}
+
+		100% {
+			grid-template-columns: 0vw auto;
+			--filter-padding-left: 0em;
+		}
+	}
 	
 	.popup{
 		position:fixed;
@@ -74,31 +114,15 @@ $mobile-size-multiplier:1.5;
 			background-color: white;
 		}
 	}
-	aside{
-		flex-shrink:0;
-		flex-basis:250px;
-		//width:$aside-width;
+	#filters-aside{
+		grid-column:1;
 		height:100%;
-		padding-left:1em;
+		padding-left:var(--filter-padding-left);
 		padding-top:1em;
 		background-color:var(--aside-background-colour);
+		overflow-x: var(--filter-overflowX);
 		overflow-y:auto;
-
-		/*
-		//display:block;
-		position:fixed;
-		left:calc(-100% - 2em);
-		transition:all 0.3s;
-		//font-size:2em;
-		z-index:100;
-		width:100%;
-		
-		&.show{
-			//display:block;
-			left:0%;
-			//background-color: var(--aside-background-colour-mobile);
-		}
-*/
+		white-space: nowrap;
 		#filters-close-div{
 			display:grid;
 			grid-template-columns: "1fr 1fr";
@@ -214,16 +238,15 @@ $mobile-size-multiplier:1.5;
 		}
 	}
 
-	
-
 	.content{
+		grid-column:2;
 		display:inline-flex;
 		flex-wrap:wrap;
 		justify-content:start;
 		flex-direction:row;
 		align-items:flex-start;
 		overflow-y:auto;
-		flex-grow:1;
+		
 
 		background-size:cover;
 		background-blend-mode:multiply;
@@ -759,6 +782,7 @@ $mobile-size-multiplier:1.5;
 		
 	}
 	@media (max-width: 1000px) {
+		display:flex;
 		article:nth-child(even){
 			grid-template-columns:minmax(0, 1.2fr) minmax(0, 1fr);
 			grid-template-areas: "data-section cover-image"

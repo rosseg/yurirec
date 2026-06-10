@@ -647,7 +647,7 @@
 			"jp":"踊り場にスカートが鳴る"
 		},
 		"added": "10-05-2026",
-		"updated": "17-05-2026",
+		"updated": "10-06-2026",
 		"type":"manga",
 		"creators":["Utatane Yuu (うたたね游)"],
 		"artists":["Utatane Yuu (うたたね游)"],
@@ -664,7 +664,7 @@
 		"targets": [],
 		"image":"./assets/covers/skirt_sings_cover.v1.webp",
 		"recommendations":{
-			"priestess' reverence": 9.2,
+			"priestess' reverence": 9.3,
 			"uniqueness": 8.0,
 			"intensity": 8.0,
 			"story": 8.5,
@@ -1052,5 +1052,39 @@
 		"landmines": [], 
 		"tags": ["romance", "slice of life","office worker(s)", "adult mains", "mangaka", "roommates", "slow burn"],
 		"notes": "I actually liked this a lot more than Ohsawa-sensei's \"Hello Melancholic!\", which didn't quite make the cut for me"
+	},
+	{
+		"names":{
+			"en": "How Do We Relationship?",
+			"romanized-jp":"Tsukiatte Agete mo ii kana",
+			"jp":"付き合ってあげてもいいかな"
+		},
+		"added": "10-06-2026",
+		
+		"type":"manga",
+		"creators":["Tamifull (たみふる)"],
+		"artists":["Tamifull (たみふる)"],
+		"infoLinkLabels": ["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/slsjnt3/tsukiatte-agete-mo-ii-ka-na"],
+		"pairings": {
+			"lesbian" : 10.0
+		},
+		"short":"two uni light music club members get together",
+		"description":"whaaat a manga with a realistic depiction of lesbian relationships???",
+		"length": "long",
+		"status": "completed",
+		
+		"image":"./assets/covers/hwdr_cover.v1.webp",
+		"recommendations":{
+			"priestess' reverence": 9.6,
+			"uniqueness": 9.0,
+			"intensity": 8.0,
+			"story": 9.0,
+			"romance": 9.0
+			
+		},
+		"landmines": [], 
+		"tags": ["romance", "slice of life","drama", "university life", "adult mains", "music"]
+		
 	}
 ]

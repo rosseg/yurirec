@@ -161,8 +161,8 @@ $mobile-size-multiplier:1.5;
 		white-space: var(--filter-white-space);
 		#filters-close-div{
 			display:grid;
-			grid-template-columns: 1fr 1fr;
-			grid-template-rows: 1fr 1fr 1fr;
+			grid-template-columns: auto max-content;
+			grid-template-rows: max-content max-content max-content;
 			gap: 0.33em;
 			grid-template-areas: "msg X" 
 								"btn X"
@@ -178,7 +178,7 @@ $mobile-size-multiplier:1.5;
 				justify-self: start;
 				align-self: center;
 			}
-			.total-yuri{
+			.selected-yuri{
 				grid-area: total;
 			}
 			.close{

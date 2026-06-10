@@ -120,9 +120,6 @@ export default class Root extends Page{
 		this.SetElements();
 		this.SetFilters();
 
-		// how far am I adding my list
-		this.Element.querySelector<HTMLDivElement>(".total-yuri").innerText = "total yuri: "+items.length;
-
 		//populate the text of extras > new
 		let clonedNew = items.toSorted((a, b)=>{return ((b.recommendations[this.rating] ?? 0.0) - (a.recommendations[this.rating] ?? 0.0)) * this.ratingDir; });
 		var newCount = clonedNew.filter((a)=>a.added == Consolidator.latestDateNew).length;
@@ -346,6 +343,9 @@ export default class Root extends Page{
 		else if (this.onlyUpdated){
 			cloned = cloned.filter((a)=>a.updated == Consolidator.latestDateNew);
 		}
+
+		this.Element.querySelector<HTMLDivElement>(".selected-yuri").innerText = "# Selected Yuri: "+cloned.length+"/"+items.length;
+
 		for (let i = 0; i < cloned.length; i++){
 			const item = cloned[i];
 

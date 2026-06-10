@@ -46,6 +46,53 @@ export default class Root extends Page{
 	onlyUpdated : boolean = false;
 	hideTags : boolean = false;
 	showLandmines : boolean = false;
+
+	toggle_filters_desktop = ()=> {		
+		var isClosed = document.getElementById("root")?.classList.contains('filters-closed');
+		if (isClosed){
+			document.getElementById("root")?.classList.remove("filters-closed");
+			document.getElementById("root")?.classList.add("filters-open");
+		}
+		else {
+			document.getElementById("root")?.classList.remove("filters-open");
+			document.getElementById("root")?.classList.add("filters-closed");
+		}
+	};
+	toggle_filters_mobile = () =>{
+		document.getElementById("filters-aside")?.classList.toggle("show");
+	};
+	toggle_filters_init = () =>{
+		if (window.innerWidth > 1000){
+			document.getElementById("filters-button").onclick=  this.toggle_filters_desktop;
+			document.getElementById("filters-x").onclick=this.toggle_filters_desktop;
+		}
+		else {
+			document.getElementById("filters-button").onclick=this.toggle_filters_mobile;
+			document.getElementById("filters-x").onclick= this.toggle_filters_mobile;
+			document.getElementById("filters-aside")?.classList.remove("slide-in");
+			document.getElementById("filters-aside")?.classList.remove("slide-out");
+		}
+	};
+	toggle_qna = ()=>{
+		var id = "qna";
+		document.getElementById(id)?.classList.toggle("show");
+		var navbar_z = document.getElementById('navbar').style.zIndex;
+		if (navbar_z == "0") {
+			document.getElementById('navbar').style.zIndex = "3";
+		} else {
+			document.getElementById('navbar').style.zIndex = "0";
+		}
+	}
+	toggle_yuri_diary = ()=>{
+		var id = "yuri-diary";
+		document.getElementById(id)?.classList.toggle("show");
+		var navbar_z = document.getElementById('navbar').style.zIndex;
+		if (navbar_z == "0") {
+			document.getElementById('navbar').style.zIndex = "3";
+		} else {
+			document.getElementById('navbar').style.zIndex = "0";
+		}
+	};
 	
 	constructor(){
 		super(RootHTML);
@@ -97,48 +144,9 @@ export default class Root extends Page{
 			document.getElementById("filters-aside")?.classList.add("show");
 		})
 
-		let toggle_filters_desktop = ()=> {
-			
-			var isClosed = document.getElementById("root")?.classList.contains('filters-closed');
-			if (isClosed){
-				document.getElementById("root")?.classList.remove("filters-closed");
-				document.getElementById("root")?.classList.add("filters-open");
-			}
-			else {
-				document.getElementById("root")?.classList.remove("filters-open");
-				document.getElementById("root")?.classList.add("filters-closed");
-			}
-    		
-			
-		}
-
-		let toggle_filters_mobile = () =>{
-			document.getElementById("filters-aside")?.classList.toggle("show");
-		}
-		
-		var toggle_filters_test = () =>{
-			if (window.innerWidth > 1000){
-				document.getElementById("filters-button").onclick=  toggle_filters_desktop;
-				document.getElementById("filters-x").onclick=toggle_filters_desktop;
-				/*if (!document.getElementById("filters-aside")?.classList.contains('slide-in')
-				&& !document.getElementById("filters-aside")?.classList.contains('slide-out'))
-				{
-					document.getElementById("filters-aside")?.classList.add("slide-in");
-				}*/
-			}
-			else {
-				document.getElementById("filters-button").onclick=toggle_filters_mobile;
-				document.getElementById("filters-x").onclick= toggle_filters_mobile;
-				document.getElementById("filters-aside")?.classList.remove("slide-in");
-				document.getElementById("filters-aside")?.classList.remove("slide-out");
-			}
-		};
-		toggle_filters_test();
-		window.onresize = toggle_filters_test;
-		
-		
-		
-		
+		this.InitHeaderNavbarListeners();
+		window.onresize = this.toggle_filters_init;
+	
 		let headers = Array.from(this.Element.querySelectorAll("aside h2"));
 		for (let head of headers){
 			let className = head.className;
@@ -153,45 +161,7 @@ export default class Root extends Page{
 			});
 			head.classList.toggle("show", elem.classList.contains("show"));
 		}
-		let toggle_qna = ()=>{
-			var id = "qna";
-			this.Element.querySelector("#"+id).classList.toggle("show")
-			var navbar_z = document.getElementById('navbar').style.zIndex;
-			if (navbar_z == "0") {
-				document.getElementById('navbar').style.zIndex = "3";
-			} else {
-				document.getElementById('navbar').style.zIndex = "0";
-			}
-		}
-		this.Element.getElementsByClassName("qna-button")[0].addEventListener("click",toggle_qna);
-		this.Element.getElementsByClassName("qna-button")[1].addEventListener("click",toggle_qna);
-		this.Element.querySelector("#qna")?.addEventListener("click",(ev)=>{
-			if (ev.target == this.Element.querySelector("#qna")){
-				toggle_qna();
-			}
-		});
-		this.Element.querySelector("#qna .close")?.addEventListener("click",toggle_qna);
-
-		let toggle_yuri_diary = ()=>{
-			var id = "yuri-diary";
-			this.Element.querySelector("#"+id)?.classList.toggle("show")
-			var navbar_z = document.getElementById('navbar').style.zIndex;
-			if (navbar_z == "0") {
-				document.getElementById('navbar').style.zIndex = "3";
-			} else {
-				document.getElementById('navbar').style.zIndex = "0";
-			}
-		}
-
-		document.getElementById("yuri-diary-button").addEventListener("click",toggle_yuri_diary);
 		
-		this.Element.querySelector("#yuri-diary").addEventListener("click",(ev)=>{
-			if (ev.target == this.Element.querySelector("#yuri-diary")){
-				toggle_yuri_diary();
-			}
-		});
-		this.Element.querySelector("#yuri-diary .close").addEventListener("click",toggle_yuri_diary);
-
 		//console.log(test, test.match(new RegExp("--","g")).length);
 		let lines = test.replaceAll("\r","").split("\n").map((a)=>a.trim());
 		for (let line of lines){
@@ -225,7 +195,7 @@ export default class Root extends Page{
 
 
 	}
-
+	
 
 	// swiping tracker
 	lastA : any;
@@ -326,11 +296,34 @@ export default class Root extends Page{
 		return bur;
 	}
 
+	InitHeaderNavbarListeners(){
+		this.toggle_filters_init();
+		
+		(<HTMLButtonElement>this.Element.getElementsByClassName("qna-button")[0]).onclick = this.toggle_qna;
+		(<HTMLButtonElement>this.Element.getElementsByClassName("qna-button")[1]).onclick = this.toggle_qna;
+		(<HTMLDivElement>this.Element.querySelector("#qna")).onclick=(ev)=>{
+			if (ev.target == this.Element.querySelector("#qna")){
+				this.toggle_qna();
+			}
+		};
+		(<HTMLButtonElement>this.Element.querySelector("#qna .close")).onclick = this.toggle_qna;
+
+		(<HTMLButtonElement>document.getElementById("yuri-diary-button")).onclick = this.toggle_yuri_diary;
+		
+		(<HTMLDivElement>this.Element.querySelector("#yuri-diary")).onclick = (ev)=>{
+			if (ev.target == this.Element.querySelector("#yuri-diary")){
+				this.toggle_yuri_diary();
+			}
+		};
+		(<HTMLButtonElement>this.Element.querySelector("#yuri-diary .close")).onclick = this.toggle_yuri_diary;
+	}
+
 	SetElements(){
 		const ratings = this.Element.querySelector(".list.rating");
 		ratings.classList.toggle("down", this.ratingDir == 1);
 		const content = this.Element.querySelector(".content");
 		content.innerHTML = header + navbar;
+		this.InitHeaderNavbarListeners();
 
 		//take the list of yuri
 		let cloned = items.toSorted((a, b)=>{return ((b.recommendations[this.rating] ?? 0.0) - (a.recommendations[this.rating] ?? 0.0)) * this.ratingDir; });

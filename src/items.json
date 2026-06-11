@@ -242,19 +242,19 @@
 			"en":"PaperTeeth!"
 		},
 		"added": "06-05-2026",
-		"updated": "17-05-2026",
+		"updated": "10-06-2026",
 		"creators": ["Wulvert"],
 		"artists": ["Wulvert"],
 		"infoLinkLabels":["WEBTOON"],
 		"infoLinks":["https://www.webtoons.com/en/comedy/paperteeth/list?title_no=5969"],
 		"type":"webtoon",
 		"pairings": {
-			"lesbian" : "TBD"
+			"lesbian" : 1
 		},
 		"short": "vampire hunter gets turned into a vampire",
 		"description":"absurd. hilarious. The artist is amazing at expressions. I sense (toxic?) yuri afoot",
-		"length":"long",
-		"status": "ongoing",
+		"length":"medium",
+		"status": "hiatus",
 		"targets": [],
 		"image":"./assets/covers/paperteeth_cover.v1.webp",
 		"recommendations":{
@@ -266,7 +266,8 @@
 		},
 		"landmines":["blood"],
 		"tags":["comedy", "vampires", "drama", "Yuri TBD", "adult mains"],
-		"spoilerTags":[]
+		"spoilerTags":[],
+		"notes": "Post(?) season 2 hiatus"
 	},
 	{
 		"names":{

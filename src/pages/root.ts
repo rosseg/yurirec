@@ -160,19 +160,19 @@ export default class Root extends Page{
 		this.InitHeaderNavbarListeners();
 		window.onresize = this.toggle_filters_init;
 	
-		let headers = Array.from(this.Element.querySelectorAll("aside h2"));
-		for (let head of headers){
-			let className = head.className;
+		let titles = Array.from(this.Element.querySelectorAll("aside .extras-title"));
+		for (let title of titles){
+			let className = title.children[0].className;
 			const elem = this.Element.querySelector(".list."+className);
 			if (localStorage.getItem("cat"+className) == "true" || localStorage.getItem("cat"+className) == null){
 				elem.classList.add("show");
 			}
-			head.addEventListener("click", ()=>{
+			title.addEventListener("click", ()=>{
 				elem.classList.toggle("show");
-				head.classList.toggle("show", elem.classList.contains("show"));
+				title.classList.toggle("show", elem.classList.contains("show"));
 				localStorage.setItem("cat"+className, ""+elem.classList.contains("show"))
 			});
-			head.classList.toggle("show", elem.classList.contains("show"));
+			title.classList.toggle("show", elem.classList.contains("show"));
 		}
 		
 		//console.log(test, test.match(new RegExp("--","g")).length);

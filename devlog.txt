@@ -1,0 +1,14 @@
+???? : started development on the site
+???? - ????: Continued development and added the first ~20 yuris
+???? : launched website
+June 1 - June 10, 2026:
+- Added ...
+June 9, 2026:
+- Added the header and navbar 
+June 10, 2026:
+- Added selected yuri counter and clear filters functionality
+- Added "Sadistic Beauty: Side Story A", "How Do We Relationship?", and "2DK, G-pen, Alarm clock."
+- Updated "Our 'Love' is Disgusting", "The Skirt Sings at the Landing", "Doughnuts Under a Crescent Moon", "The Guy She Was Interested in Wasn't a Guy at All", "Monthly in the Garden with My Landlord", and "Not So Shoujo Love Story"
+- bug fixes
+June 14, 2026:
+- Updated "PaperTeeth!"

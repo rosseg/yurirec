@@ -275,14 +275,14 @@ $mobile-size-multiplier:1.5;
 		div.picked.language{
 			font-weight:bold;
 		}
-		.list.language, .list.rating{
+		.list.language, .list.sort-by{
 			>div{
 				&.active{
 					font-weight:bold;
 				}
 			}
 		}
-		.list.rating{
+		.list.sort-by{
 			>div{
 				padding-left:1em;
 				position:relative;

@@ -88,7 +88,7 @@ export default class Consolidator{
 
 	}
 	//requires format dd-mm-yyyy
-	static dateLateness (date: string): string{
-		return date.substring(6) + date.substring(3,5) + date.substring(0, 2);
+	static dateLateness (date: string): number{
+		return Number(date.substring(6) + date.substring(3,5) + date.substring(0, 2));
 	}
 }

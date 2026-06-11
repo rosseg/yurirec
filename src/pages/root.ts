@@ -126,10 +126,10 @@ export default class Root extends Page{
 		this.preferredLanguage_jp = localStorage.getItem("preferredLanguage_jp") ?? "en";
 		this.preferredLanguage_cn = localStorage.getItem("preferredLanguage_cn") ?? "en";
 		this.preferredLanguage_kr = localStorage.getItem("preferredLanguage_kr") ?? "en";
-		this.rating = localStorage.getItem("rating") ?? "uniqueness";
-		let ratingDir = localStorage.getItem("ratingDir");
+		this.sortBy = localStorage.getItem("sortBy") ?? "uniqueness";
+		let sortDir = localStorage.getItem("sortDir");
 		// up or down
-		this.ratingDir = (ratingDir == "1" || ratingDir == "-1") ? Number(ratingDir) : 1;
+		this.sortDir = (sortDir == "1" || sortDir == "-1") ? Number(sortDir) : 1;
 
 		this.SetElements();
 		this.SetFilters();
@@ -137,14 +137,28 @@ export default class Root extends Page{
 		document.getElementById("clear-filters-button")?.addEventListener("click", this.clear_all_filters);
 
 		//populate the text of extras > new
-		let clonedNew = items.toSorted((a, b)=>{return ((b.recommendations[this.rating] ?? 0.0) - (a.recommendations[this.rating] ?? 0.0)) * this.ratingDir; });
+		let clonedNew = items.toSorted(
+			(a, b)=>
+				{
+					if (this.sortBy == "date added") {
+						return (Consolidator.dateLateness(b.added) - Consolidator.dateLateness(a.added)) * this.sortDir;
+					}
+					return ((b.recommendations[this.sortBy] ?? 0.0) - (a.recommendations[this.sortBy] ?? 0.0)) * this.sortDir; 
+				});
 		var newCount = clonedNew.filter((a)=>a.added == Consolidator.latestDateNew).length;
 		var extrasNew = document.getElementById("extrasNew");
 		var newText = document.createTextNode("New ("+newCount+", "+Consolidator.latestDateNew+")");
 		extrasNew.appendChild(newText);
 		
 		//populate the text of extras > updated
-		let clonedUp = items.toSorted((a, b)=>{return ((b.recommendations[this.rating] ?? 0.0) - (a.recommendations[this.rating] ?? 0.0)) * this.ratingDir; });
+		let clonedUp = items.toSorted(
+			(a, b)=>
+				{
+					if (this.sortBy == "date added") {
+						return (Consolidator.dateLateness(b.added) - Consolidator.dateLateness(a.added)) * this.sortDir;
+					}
+					return ((b.recommendations[this.sortBy] ?? 0.0) - (a.recommendations[this.sortBy] ?? 0.0)) * this.sortDir; 
+				});
 		var updatedCount = clonedUp.filter((a)=>a.updated == Consolidator.latestDateNew).length;
 		var extrasUpdated = document.getElementById("extrasUpdated");
 		var updatedText = document.createTextNode("Updated ("+updatedCount+", "+Consolidator.latestDateNew+")");
@@ -258,8 +272,8 @@ export default class Root extends Page{
 	preferredLanguage_jp : string = "en";
 	preferredLanguage_cn : string = "en";
 	preferredLanguage_kr : string = "en";
-	rating : string = "uniqueness";
-	ratingDir : number = -1;
+	sortBy : string = "uniqueness";
+	sortDir : number = -1;
 
 	
 	Filter(source : any[], rkey : keyof this, inclusive : boolean = true){
@@ -332,14 +346,21 @@ export default class Root extends Page{
 	}
 
 	SetElements(){
-		const ratings = this.Element.querySelector(".list.rating");
-		ratings.classList.toggle("down", this.ratingDir == 1);
+		const sortCriteria = this.Element.querySelector(".list.sort-by");
+		sortCriteria.classList.toggle("down", this.sortDir == 1);
 		const content = this.Element.querySelector(".content");
 		content.innerHTML = header + navbar;
 		this.InitHeaderNavbarListeners();
 
 		//take the list of yuri
-		let cloned = items.toSorted((a, b)=>{return ((b.recommendations[this.rating] ?? 0.0) - (a.recommendations[this.rating] ?? 0.0)) * this.ratingDir; });
+		let cloned = items.toSorted(
+			(a, b)=>
+				{
+					if (this.sortBy == "date added") {
+						return (Consolidator.dateLateness(b.added) - Consolidator.dateLateness(a.added)) * this.sortDir;
+					}
+					return ((b.recommendations[this.sortBy] ?? 0.0) - (a.recommendations[this.sortBy] ?? 0.0)) * this.sortDir; 
+				});
 		
 		// filter out all the irrelevant tags, blocked landmines, etc. etc. etc.
 		cloned = this.Filter(cloned, "landmines");
@@ -462,7 +483,7 @@ export default class Root extends Page{
 				
 				//if (max - item.recommendations[key] < 2.5 || key == this.rating){ 
 					let rating = document.createElement("div");
-					if (key == this.rating){
+					if (key == this.sortBy){
 						rating.style.fontWeight = "bold";
 					}
 					rating.innerText = key+": "+item.recommendations[key];
@@ -605,8 +626,8 @@ export default class Root extends Page{
 		localStorage.setItem("preferredLanguage_jp", this.preferredLanguage_jp);
 		localStorage.setItem("preferredLanguage_cn", this.preferredLanguage_cn);
 		localStorage.setItem("preferredLanguage_kr", this.preferredLanguage_kr);
-		localStorage.setItem("rating", this.rating);
-		localStorage.setItem("ratingDir", ""+this.ratingDir);
+		localStorage.setItem("sortBy", this.sortBy);
+		localStorage.setItem("sortDir", ""+this.sortDir);
 
 		localStorage.setItem("onlyNew", this.onlyNew ? "true" : "false");
 		localStorage.setItem("onlyUpdated", this.onlyUpdated ? "true" : "false");
@@ -836,28 +857,28 @@ export default class Root extends Page{
 			}
 		}
 		{
-			const ratings = this.Element.querySelector(".list.rating");
-			const ls = Consolidator.ratings;
+			const ratings = this.Element.querySelector(".list.sort-by");
+			const ls = ["date added"].concat(Consolidator.ratings);
 			if (ratings?.children.length == 0)
 			for (let i = 0; i < ls.length; i++){
 				let elem = document.createElement("div");
 				elem.innerText = ls[i];
-				elem.classList.toggle("active", ls[i] == this.rating);
+				elem.classList.toggle("active", ls[i] == this.sortBy);
 				elem.addEventListener("click",()=>{
-					if (this.rating == ls[i]){
-						if (this.ratingDir == -1){
-							this.rating = "";
+					if (this.sortBy == ls[i]){
+						if (this.sortDir == -1){
+							this.sortBy = "";
 						}else{
-							this.ratingDir *= -1;
+							this.sortDir *= -1;
 						}
 					}else{
-						this.rating = ls[i];
-						this.ratingDir = 1;
+						this.sortBy = ls[i];
+						this.sortDir = 1;
 					}
 					for (let x = 0; x < ratings.children.length; x++){
 						ratings.children[x].classList.remove("active")
 					}
-					if (this.rating == ls[i]){
+					if (this.sortBy == ls[i]){
 						elem.classList.add("active");
 					}
 					this.UpdateFilters();

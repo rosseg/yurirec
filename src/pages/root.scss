@@ -161,7 +161,7 @@ $mobile-size-multiplier:1.5;
 		white-space: var(--filter-white-space);
 		#filters-close-div{
 			display:grid;
-			grid-template-columns: auto auto max-content;
+			grid-template-columns: min-content auto max-content;
 			grid-template-rows: max-content max-content max-content;
 			gap: 0.33em;
 			grid-template-areas: "msg msg X" 

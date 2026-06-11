@@ -161,12 +161,12 @@ $mobile-size-multiplier:1.5;
 		white-space: var(--filter-white-space);
 		#filters-close-div{
 			display:grid;
-			grid-template-columns: auto max-content;
+			grid-template-columns: auto auto max-content;
 			grid-template-rows: max-content max-content max-content;
 			gap: 0.33em;
-			grid-template-areas: "msg X" 
-								"btn X"
-								"total X";
+			grid-template-areas: "msg msg X" 
+								"qna clear X"
+								"total total X";
 
 			#swipe-msg{
 				grid-area: msg;
@@ -174,7 +174,12 @@ $mobile-size-multiplier:1.5;
 				display: none;
 			}
 			#aside-qna-button{
-				grid-area:btn;
+				grid-area:qna;
+				justify-self: start;
+				align-self: center;
+			}
+			#clear-filters-button{
+				grid-area:clear;
 				justify-self: start;
 				align-self: center;
 			}
@@ -194,6 +199,7 @@ $mobile-size-multiplier:1.5;
 				user-select:none;
 			}
 		}
+		
 		h2{
 			position:relative;
 			user-select:none;

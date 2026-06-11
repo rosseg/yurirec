@@ -93,6 +93,20 @@ export default class Root extends Page{
 			document.getElementById('navbar').style.zIndex = "0";
 		}
 	};
+	clear_all_filters= ()=>{
+		this.onlyNew = false;
+		this.onlyUpdated = false;
+		this.landmines = {};
+		this.tags = {};
+		this.targets = {};
+		this.status = {};
+		this.length = {};
+		this.pairings = {};
+		this.type  = {};
+		this.SetFilters();
+		this.ClearMultiCheckboxes();
+		this.UpdateFilters();
+	}
 	
 	constructor(){
 		super(RootHTML);
@@ -119,6 +133,8 @@ export default class Root extends Page{
 
 		this.SetElements();
 		this.SetFilters();
+
+		document.getElementById("clear-filters-button")?.addEventListener("click", this.clear_all_filters);
 
 		//populate the text of extras > new
 		let clonedNew = items.toSorted((a, b)=>{return ((b.recommendations[this.rating] ?? 0.0) - (a.recommendations[this.rating] ?? 0.0)) * this.ratingDir; });
@@ -542,6 +558,7 @@ export default class Root extends Page{
 	// the code the side bar for tags, landmines, etc.
 	AddFilter(text : string, value : "active" | "removed" | undefined, action){
 		let span = document.createElement("div");
+		
 			
 		let r = document.createElement("div");
 		r.className = "multi-checkbox";
@@ -594,45 +611,46 @@ export default class Root extends Page{
 
 	SetFilters(){
 		{
-			const elem = this.Element.querySelector(".extras .new");
+			const elem = <HTMLDivElement>this.Element.querySelector(".extras .new");
 			elem.querySelector(".multi-checkbox").classList.toggle("active", this.onlyNew);
-			elem.addEventListener("click",()=>{
+			elem.onclick = ()=>{
 				elem.querySelector(".multi-checkbox").classList.toggle("active");
 				this.onlyNew = (elem.querySelector(".multi-checkbox").classList.contains("active"));
 				this.UpdateFilters();
-			});
+			};
 		}
 		{
-			const elem = this.Element.querySelector(".extras .updated");
+			const elem = <HTMLDivElement>this.Element.querySelector(".extras .updated");
 			elem.querySelector(".multi-checkbox").classList.toggle("active", this.onlyUpdated);
-			elem.addEventListener("click",()=>{
+			elem.onclick = ()=>{
 				elem.querySelector(".multi-checkbox").classList.toggle("active");
 				this.onlyUpdated = (elem.querySelector(".multi-checkbox").classList.contains("active"));
 				this.UpdateFilters();
-			});
+			};
 		}
 		{
-			const elem = this.Element.querySelector(".extras .showlandmines");
+			const elem = <HTMLDivElement>this.Element.querySelector(".extras .showlandmines");
 			elem?.querySelector(".multi-checkbox")?.classList.toggle("active", this.showLandmines);
-			elem?.addEventListener("click",()=>{
+			elem.onclick = ()=>{
 				elem?.querySelector(".multi-checkbox")?.classList.toggle("active");
 				this.showLandmines = (elem.querySelector(".multi-checkbox").classList.contains("active"));
 				this.UpdateFilters();
-			});
+			};
 		}
 		{
-			const elem = this.Element.querySelector(".extras .hidetags");
+			const elem = <HTMLDivElement>this.Element.querySelector(".extras .hidetags");
 			elem.querySelector(".multi-checkbox").classList.toggle("active", this.hideTags);
-			elem.addEventListener("click",()=>{
+			elem.onclick = ()=>{
 				elem.querySelector(".multi-checkbox").classList.toggle("active");
 				this.hideTags = (elem.querySelector(".multi-checkbox").classList.contains("active"));
 				this.UpdateFilters();
-			});
+			};
 		}
 
 		{
 			const landmines = this.Element.querySelector(".list.landmines");
 			const ls = Consolidator.landmines;
+			if (landmines?.children.length == 0)
 			for (let i = 0; i < ls.length; i++){
 				landmines.append(this.AddFilter(ls[i], this.landmines[ls[i]] ?? undefined, (r, t)=>{
 					if (t == ""){
@@ -645,10 +663,11 @@ export default class Root extends Page{
 			}
 		}
 		{
-			const landmines = this.Element.querySelector(".list.targets");
+			const targets = this.Element.querySelector(".list.targets");
 			const ls = Consolidator.recomms;
+			if (targets?.children.length == 0)
 			for (let i = 0; i < ls.length; i++){
-				landmines.append(this.AddFilter(ls[i], this.targets[ls[i]] ?? undefined, (r, t)=>{
+				targets.append(this.AddFilter(ls[i], this.targets[ls[i]] ?? undefined, (r, t)=>{
 					if (t == ""){
 						delete this.targets[r];
 					}else{
@@ -661,6 +680,7 @@ export default class Root extends Page{
 		{
 			const tags = this.Element.querySelector(".list.tags");
 			const ls = Consolidator.tags;
+			if (tags?.children.length == 0)
 			for (let i = 0; i < ls.length; i++){
 				tags.append(this.AddFilter(ls[i], this.tags[ls[i]] ?? undefined, (r, t)=>{
 					if (t == ""){
@@ -673,10 +693,11 @@ export default class Root extends Page{
 			}
 		}
 		{
-			const tags = this.Element.querySelector(".list.pairings");
+			const pairings = this.Element.querySelector(".list.pairings");
 			const ls = Consolidator.pairings;
+			if (pairings?.children.length == 0)
 			for (let i = 0; i < ls.length; i++){
-				tags.append(this.AddFilter(ls[i], this.pairings[ls[i]] ?? undefined, (r, t)=>{
+				pairings.append(this.AddFilter(ls[i], this.pairings[ls[i]] ?? undefined, (r, t)=>{
 					if (t == ""){
 						delete this.pairings[r];
 					}else{
@@ -687,10 +708,11 @@ export default class Root extends Page{
 			}
 		}
 		{
-			const tags = this.Element.querySelector(".list.length");
+			const lengths = this.Element.querySelector(".list.length");
 			const ls = Consolidator.length;
+			if (lengths?.children.length == 0)
 			for (let i = 0; i < ls.length; i++){
-				tags.append(this.AddFilter(ls[i], this.length[ls[i]] ?? undefined, 
+				lengths.append(this.AddFilter(ls[i], this.length[ls[i]] ?? undefined, 
 					(r, t)=>{
 						if (t == ""){
 							delete this.length[r];
@@ -702,10 +724,11 @@ export default class Root extends Page{
 			}
 		}
 		{
-			const tags = this.Element.querySelector(".list.type");
+			const types = this.Element.querySelector(".list.type");
 			const ls = Consolidator.type;
+			if (types?.children.length == 0)
 			for (let i = 0; i < ls.length; i++){
-				tags.append(this.AddFilter(ls[i], this.type[ls[i]] ?? undefined, (r, t)=>{
+				types.append(this.AddFilter(ls[i], this.type[ls[i]] ?? undefined, (r, t)=>{
 					if (t == ""){
 						delete this.type[r];
 					}else{
@@ -716,10 +739,11 @@ export default class Root extends Page{
 			}
 		}
 		{
-			const tags = this.Element.querySelector(".list.completion");
+			const statuses = this.Element.querySelector(".list.completion");
 			const ls = Consolidator.completion;
+			if (statuses?.children.length == 0)
 			for (let i = 0; i < ls.length; i++){
-				tags.append(this.AddFilter(ls[i], this.status[ls[i]] ?? undefined, (r, t)=>{
+				statuses.append(this.AddFilter(ls[i], this.status[ls[i]] ?? undefined, (r, t)=>{
 					if (t == ""){
 						delete this.status[r];
 					}else{
@@ -730,8 +754,9 @@ export default class Root extends Page{
 			}
 		}
 		{
-			const tags = this.Element.querySelector(".list.language_jp");
+			const langs = this.Element.querySelector(".list.language_jp");
 			const ls = ["en", "romanized-jp", "jp"];
+			if (langs?.children.length == 0)
 			for (let i = 0; i < ls.length; i++){
 				let elem = document.createElement("div");
 				elem.innerText = ls[i];
@@ -741,21 +766,22 @@ export default class Root extends Page{
 				}
 				elem.addEventListener("click",()=>{
 					this.preferredLanguage_jp = ls[i];
-					for (let x = 0; x < tags.children.length; x++){
-						tags.children[x].classList.remove("active");
-						(<HTMLDivElement>tags.children[x]).style.fontWeight = "normal";
+					for (let x = 0; x < langs.children.length; x++){
+						langs.children[x].classList.remove("active");
+						(<HTMLDivElement>langs.children[x]).style.fontWeight = "normal";
 						//elem.style.fontWeight = "normal";
 					}
 					elem.classList.add("active");
 					elem.style.fontWeight = "bold";
 					this.UpdateFilters();
 				})
-				tags.append(elem)
+				langs.append(elem);
 			}
 		}
 		{
-			const tags = this.Element.querySelector(".list.language_cn");
+			const langs = this.Element.querySelector(".list.language_cn");
 			const ls = ["en", "romanized-cn", "cn"];
+			if (langs?.children.length == 0)
 			for (let i = 0; i < ls.length; i++){
 				let elem = document.createElement("div");
 				elem.innerText = ls[i];
@@ -765,20 +791,21 @@ export default class Root extends Page{
 				}
 				elem.addEventListener("click",()=>{
 					this.preferredLanguage_cn = ls[i];
-					for (let x = 0; x < tags.children.length; x++){
-						tags.children[x].classList.remove("active");
-						(<HTMLDivElement>tags.children[x]).style.fontWeight = "normal";
+					for (let x = 0; x < langs.children.length; x++){
+						langs.children[x].classList.remove("active");
+						(<HTMLDivElement>langs.children[x]).style.fontWeight = "normal";
 					}
 					elem.classList.add("active");
 					elem.style.fontWeight = "bold";
 					this.UpdateFilters();
 				})
-				tags.append(elem)
+				langs.append(elem)
 			}
 		}
 		{
-			const tags = this.Element.querySelector(".list.language_kr");
+			const langs = this.Element.querySelector(".list.language_kr");
 			const ls = ["en", "romanized-kr", "kr"];
+			if (langs?.children.length == 0)
 			for (let i = 0; i < ls.length; i++){
 				let elem = document.createElement("div");
 				elem.innerText = ls[i];
@@ -788,20 +815,21 @@ export default class Root extends Page{
 				}
 				elem.addEventListener("click",()=>{
 					this.preferredLanguage_kr = ls[i];
-					for (let x = 0; x < tags.children.length; x++){
-						tags.children[x].classList.remove("active");
-						(<HTMLDivElement>tags.children[x]).style.fontWeight = "normal";
+					for (let x = 0; x < langs.children.length; x++){
+						langs.children[x].classList.remove("active");
+						(<HTMLDivElement>langs.children[x]).style.fontWeight = "normal";
 					}
 					elem.classList.add("active");
 					elem.style.fontWeight = "bold";
 					this.UpdateFilters();
 				})
-				tags.append(elem)
+				langs.append(elem)
 			}
 		}
 		{
-			const tags = this.Element.querySelector(".list.rating");
+			const ratings = this.Element.querySelector(".list.rating");
 			const ls = Consolidator.ratings;
+			if (ratings?.children.length == 0)
 			for (let i = 0; i < ls.length; i++){
 				let elem = document.createElement("div");
 				elem.innerText = ls[i];
@@ -817,15 +845,15 @@ export default class Root extends Page{
 						this.rating = ls[i];
 						this.ratingDir = 1;
 					}
-					for (let x = 0; x < tags.children.length; x++){
-						tags.children[x].classList.remove("active")
+					for (let x = 0; x < ratings.children.length; x++){
+						ratings.children[x].classList.remove("active")
 					}
 					if (this.rating == ls[i]){
 						elem.classList.add("active");
 					}
 					this.UpdateFilters();
 				})
-				tags.append(elem)
+				ratings.append(elem)
 			}
 		}
 
@@ -861,13 +889,18 @@ export default class Root extends Page{
 		
 	}
 
-	ClearFilters(section : string){
-		this.SetElements();
-		if (section == "showLandmines" || section == "hideTags"){
-			this.Element.classList.toggle(section, false);
-		} else {
-			localStorage.setItem(section, "");
+	ClearMultiCheckboxes(){
+		const filtersAside = document.getElementById("filters-aside");
+		const lists = filtersAside?.getElementsByClassName("list");
+		for (var i = 1; i < lists?.length; i++){
+			const list = lists[i];
+			const multiCheckboxes = list.getElementsByClassName("multi-checkbox");
+			for (var j = 0; j < multiCheckboxes.length; j++){
+				multiCheckboxes[j].classList.remove("active");
+				multiCheckboxes[j].classList.remove("removed");
+			}
 		}
-		
 	}
+
+	
 }

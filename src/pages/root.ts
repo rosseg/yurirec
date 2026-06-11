@@ -446,9 +446,11 @@ export default class Root extends Page{
 					tabContent1.style.display="none";
 					
 					tabContent2.style.display="flex";
+
+					//tabContent2.style.flexDirection = "column";
+					//tabContent2.style.justifyContent = "space-between";
 					tabContent2.style.flexWrap="wrap";
-					//tabContent2.style.display="grid";
-					//tabContent2.style.gridTemplateRows = "repeat(4, minmax(max-content, 1fr))";
+					
 				};
 
 			elem.classList.toggle("new", item.added == Consolidator.latestDateNew);

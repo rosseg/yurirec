@@ -637,29 +637,26 @@ $mobile-size-multiplier:1.5;
 				width: 100%;
 				align-self: stretch;
 
-				
-
 				.creator-button-div{
+					width:100%;
 
-				}
-				#creators{
-					
-				}
-				#artists{
-					
-					.artist-label{
-						display:none;
+					&#artists{
+						width:100%;
+						.artist-label{
+							display:none;
+						}
+						display: none;
 					}
-					display: none;
 				}
+				
 				.date-added-div{
-					
+					width:100%;
 				}
 				.last-updated-div{
-					
+					width:100%;
 				}
 				.info-links-div{
-					
+					width:100%;
 				}
 				.notes-section{
 					display:none;

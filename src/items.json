@@ -210,7 +210,7 @@
 			"en":"Muted"
 		},
 		"added": "06-05-2026",
-		"updated": "17-05-2026",
+		"updated": "14-05-2026",
 		"creators": ["Miranda Mundt"],
 		"artists": ["Miranda Mundt"],
 		"infoLinkLabels":["WEBTOON"],
@@ -231,7 +231,7 @@
 			"intensity": 9.0,
 			"story":8.5,
 			"romance": 7.5,
-			"art": 10.0
+			"art": 9.5
 		},
 		"landmines":["family trauma", "abusive parental figure"],
 		"tags":["romance", "witches", "supernatural", "drama", "urban fantasy", "dark", "poly" ],
@@ -1086,6 +1086,40 @@
 		},
 		"landmines": [], 
 		"tags": ["romance", "slice of life","drama", "university life", "adult mains", "music", "sex"]
+		
+	},
+	{
+		"names":{
+			"en": "There is No Love Wishing Upon a Star",
+			"romanized-jp":"Kono Koi wo Hoshi ni wa Negawanai",
+			"jp":"この恋を星には願わない"
+		},
+		"added": "14-06-2026",
+		
+		"type":"manga",
+		"creators":["Shinoa (紫のあ)"],
+		"artists":["Shinoa (紫のあ)"],
+		"infoLinkLabels": ["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/82k97c8/kono-koi-wo-hoshi-ni-wa-negawanai"],
+		"pairings": {
+			"lesbian" : 10.0
+		},
+		"short":"childhood friends have different loves for each other",
+		"description":"Beyond stunning. Quite the emotional ride. A must-read",
+		"length": "medium",
+		"status": "completed",
+		
+		"image":"./assets/covers/there_is_no_love_wishing_cover.v1.webp",
+		"recommendations":{
+			"priestess' reverence": 10.0,
+			"uniqueness": 8.5,
+			"intensity": 9.0,
+			"story": 10.0,
+			"romance": 9.5,
+			"art": 10.0
+		},
+		"landmines": [], 
+		"tags": ["romance", "slice of life","drama", "university life", "adult mains", "love triangle"]
 		
 	}
 ]

@@ -643,20 +643,23 @@ $mobile-size-multiplier:1.5;
 
 				}
 				#creators{
-					grid-row: 1;
+					
 				}
 				#artists{
-					grid-row: 2;
+					
 					.artist-label{
 						display:none;
 					}
 					display: none;
 				}
 				.date-added-div{
-					grid-row: 3;
+					
+				}
+				.last-updated-div{
+					
 				}
 				.info-links-div{
-					grid-row: 4;
+					
 				}
 				.notes-section{
 					display:none;
@@ -664,6 +667,7 @@ $mobile-size-multiplier:1.5;
 						font-size: 0.8em;
 						
 					}
+					
 				}
 			}
 			.tabs-content1{

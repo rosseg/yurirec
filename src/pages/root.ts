@@ -526,6 +526,15 @@ export default class Root extends Page{
 			const btnAdded = document.createElement("button");
 			btnAdded.innerText = item.added;
 			dateAddedDiv?.append(btnAdded);
+			if (item.updated){
+				const lastUpdatedDiv = elem.querySelector(".last-updated-div");
+				const btnUpdated = document.createElement("button");
+				btnUpdated.innerText = item.updated;
+				lastUpdatedDiv?.append(btnUpdated);
+			}
+			
+
+
 			const linkDiv = elem.querySelector(".info-links-div");
 			if (item.infoLinkLabels && item.infoLinks){
 				for (let i = 0; i < item.infoLinkLabels.length; i++){

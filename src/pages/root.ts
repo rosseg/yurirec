@@ -93,6 +93,16 @@ export default class Root extends Page{
 			document.getElementById('navbar').style.zIndex = "0";
 		}
 	};
+	toggle_devlog = ()=>{
+		var id = "dev-log";
+		document.getElementById(id)?.classList.toggle("show");
+		var navbar_z = document.getElementById('navbar').style.zIndex;
+		if (navbar_z == "0") {
+			document.getElementById('navbar').style.zIndex = "3";
+		} else {
+			document.getElementById('navbar').style.zIndex = "0";
+		}
+	};
 	clear_all_filters= ()=>{
 		this.onlyNew = false;
 		this.onlyUpdated = false;
@@ -343,6 +353,15 @@ export default class Root extends Page{
 			}
 		};
 		(<HTMLButtonElement>this.Element.querySelector("#yuri-diary .close")).onclick = this.toggle_yuri_diary;
+
+		(<HTMLButtonElement>document.getElementById("dev-log-button")).onclick = this.toggle_devlog;
+		
+		(<HTMLDivElement>this.Element.querySelector("#dev-log")).onclick = (ev)=>{
+			if (ev.target == this.Element.querySelector("#dev-log")){
+				this.toggle_devlog();
+			}
+		};
+		(<HTMLButtonElement>this.Element.querySelector("#dev-log .close")).onclick = this.toggle_devlog;
 	}
 
 	SetElements(){

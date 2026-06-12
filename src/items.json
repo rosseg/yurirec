@@ -265,7 +265,7 @@
 			"art": 9.0
 		},
 		"landmines":["blood"],
-		"tags":["comedy", "vampires", "drama", "Yuri TBD", "adult mains"],
+		"tags":["comedy", "vampires", "drama", "yuri TBD", "adult mains"],
 		"spoilerTags":[],
 		"notes": "Post(?) season 2 hiatus"
 	},
@@ -1111,15 +1111,16 @@
 		
 		"image":"./assets/covers/there_is_no_love_wishing_cover.v1.webp",
 		"recommendations":{
-			"priestess' reverence": 10.0,
+			"priestess' reverence": 9.8,
 			"uniqueness": 8.5,
 			"intensity": 9.0,
-			"story": 10.0,
+			"story": 9.5,
 			"romance": 9.5,
+			"toxic": 5.0,
 			"art": 10.0
 		},
 		"landmines": [], 
-		"tags": ["romance", "slice of life","drama", "university life", "adult mains", "love triangle"]
+		"tags": ["romance", "slice of life","drama", "university life", "adult mains", "love triangle", "acting"]
 		
 	}
 ]

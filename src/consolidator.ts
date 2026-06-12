@@ -72,17 +72,17 @@ export default class Consolidator{
 		this.creators = Array.from(creators);
 		this.artists = Array.from(artists);
 
-		this.tags.sort();
-		this.ratings.sort();
-		this.landmines.sort();
-		this.languages.sort();
-		this.recomms.sort();
-		this.completion.sort();
-		this.length.sort();
-		this.pairings.sort();
-		this.type.sort();
-		this.creators.sort();
-		this.artists.sort();
+		this.tags.sort((a, b) => a.toLocaleLowerCase().localeCompare(b.toLocaleLowerCase()));
+		this.ratings.sort((a, b) => a.toLocaleLowerCase().localeCompare(b.toLocaleLowerCase()));
+		this.landmines.sort((a, b) => a.toLocaleLowerCase().localeCompare(b.toLocaleLowerCase()));
+		this.languages.sort((a, b) => a.toLocaleLowerCase().localeCompare(b.toLocaleLowerCase()));
+		this.recomms.sort((a, b) => a.toLocaleLowerCase().localeCompare(b.toLocaleLowerCase()));
+		this.completion.sort((a, b) => a.toLocaleLowerCase().localeCompare(b.toLocaleLowerCase()));
+		this.length.sort((a, b) => a.toLocaleLowerCase().localeCompare(b.toLocaleLowerCase()));
+		this.pairings.sort((a, b) => a.toLocaleLowerCase().localeCompare(b.toLocaleLowerCase()));
+		this.type.sort((a, b) => a.toLocaleLowerCase().localeCompare(b.toLocaleLowerCase()));
+		this.creators.sort((a, b) => a.toLocaleLowerCase().localeCompare(b.toLocaleLowerCase()));
+		this.artists.sort((a, b) => a.toLocaleLowerCase().localeCompare(b.toLocaleLowerCase()));
 
 
 

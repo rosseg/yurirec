@@ -117,7 +117,23 @@ export default class Root extends Page{
 		this.ClearMultiCheckboxes();
 		this.UpdateFilters();
 	}
-	
+	articleSort = (a, b)=>
+		{
+			var compareResult = 0;
+			if (this.sortBy == "date added") {
+				compareResult = (Consolidator.dateLateness(b.added) - Consolidator.dateLateness(a.added)) * this.sortDir;
+			}
+			if (Consolidator.pairings.includes(this.sortBy)){
+				compareResult = ((b.pairings[this.sortBy] ?? 0.0) - (a.pairings[this.sortBy] ?? 0.0)) * this.sortDir;
+			} else {
+				compareResult = ((b.recommendations[this.sortBy] ?? 0.0) - (a.recommendations[this.sortBy] ?? 0.0)) * this.sortDir;
+			}
+			if (compareResult == 0){
+				return a.names["en"].localeCompare(b.names["en"]);
+			}
+			return compareResult;
+			  
+		};
 	constructor(){
 		super(RootHTML);
 		// load all previous settings
@@ -147,28 +163,14 @@ export default class Root extends Page{
 		document.getElementById("clear-filters-button")?.addEventListener("click", this.clear_all_filters);
 
 		//populate the text of extras > new
-		let clonedNew = items.toSorted(
-			(a, b)=>
-				{
-					if (this.sortBy == "date added") {
-						return (Consolidator.dateLateness(b.added) - Consolidator.dateLateness(a.added)) * this.sortDir;
-					}
-					return ((b.recommendations[this.sortBy] ?? 0.0) - (a.recommendations[this.sortBy] ?? 0.0)) * this.sortDir; 
-				});
+		let clonedNew = items.toSorted(this.articleSort);
 		var newCount = clonedNew.filter((a)=>a.added == Consolidator.latestDateNew).length;
 		var extrasNew = document.getElementById("extrasNew");
 		var newText = document.createTextNode("New ("+newCount+", "+Consolidator.latestDateNew+")");
 		extrasNew.appendChild(newText);
 		
 		//populate the text of extras > updated
-		let clonedUp = items.toSorted(
-			(a, b)=>
-				{
-					if (this.sortBy == "date added") {
-						return (Consolidator.dateLateness(b.added) - Consolidator.dateLateness(a.added)) * this.sortDir;
-					}
-					return ((b.recommendations[this.sortBy] ?? 0.0) - (a.recommendations[this.sortBy] ?? 0.0)) * this.sortDir; 
-				});
+		let clonedUp = items.toSorted(this.articleSort);
 		var updatedCount = clonedUp.filter((a)=>a.updated == Consolidator.latestDateNew).length;
 		var extrasUpdated = document.getElementById("extrasUpdated");
 		var updatedText = document.createTextNode("Updated ("+updatedCount+", "+Consolidator.latestDateNew+")");
@@ -296,7 +298,7 @@ export default class Root extends Page{
 					list = [a[rkey]];
 				}else if (typeof a[rkey] === "object"){
 					for (let pkey in a[rkey]){
-						if (a[rkey][pkey] >= 6.0){
+						if (a[rkey][pkey] >= 4.0){
 							list.push(pkey);
 						}
 					}
@@ -372,14 +374,7 @@ export default class Root extends Page{
 		this.InitHeaderNavbarListeners();
 
 		//take the list of yuri
-		let cloned = items.toSorted(
-			(a, b)=>
-				{
-					if (this.sortBy == "date added") {
-						return (Consolidator.dateLateness(b.added) - Consolidator.dateLateness(a.added)) * this.sortDir;
-					}
-					return ((b.recommendations[this.sortBy] ?? 0.0) - (a.recommendations[this.sortBy] ?? 0.0)) * this.sortDir; 
-				});
+		let cloned = items.toSorted(this.articleSort);
 		
 		// filter out all the irrelevant tags, blocked landmines, etc. etc. etc.
 		cloned = this.Filter(cloned, "landmines");
@@ -879,7 +874,7 @@ export default class Root extends Page{
 		}
 		{
 			const ratings = this.Element.querySelector(".list.sort-by");
-			const ls = ["date added"].concat(Consolidator.ratings);
+			const ls = ["date added"].concat(Consolidator.pairings).concat(Consolidator.ratings);
 			if (ratings?.children.length == 0)
 			for (let i = 0; i < ls.length; i++){
 				let elem = document.createElement("div");

@@ -64,7 +64,11 @@
     --ml5-s10: #2f0056;
     --ml5-s20: #2a004d;
     --ml5-s50:#1a0030;
+    --ml5-s70:#10001d;
+    
     --ml5-s20-trans: #2a004d40;
+    --ml5-s50-trans:#1a0030dd;
+    --ml5-s70-trans:#10001de8;
 
     --background-image:url('../../assets/mooning5x3.png');
     --default-background-colour:var(--ml1-t20-trans);
@@ -72,11 +76,11 @@
     --default-button-hover-active-colour:rgb(41, 41, 41);
     --header-background-colour:var(--aside-background-colour);
     --header-text-colour:var(--default-text-colour);
-    --navbar-background-colour:var(--ml1-ln50);
-    --navbar-text-colour:#ED64F5;
+    --navbar-background-colour:var(--ml5-s20);
+    --navbar-text-colour:var(--ml2);
     --navbar-hover-colour: #a49cba;
     --page-background-colour:var(--ml5-s20-trans);
-    --qna-background-colour:#000000cc;
+    --qna-background-colour:var(--ml5-s70-trans);
     --aside-background-colour:var(--default-background-colour);
     --aside-background-colour-mobile:var(--ml1-t20);
     --article-background-colour:var(--default-background-colour);

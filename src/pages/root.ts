@@ -119,11 +119,11 @@ export default class Root extends Page{
 	}
 	articleSort = (a, b)=>
 		{
-			var compareResult = 0;
+			var compareResult = NaN;
 			if (this.sortBy == "date added") {
 				compareResult = (Consolidator.dateLateness(b.added) - Consolidator.dateLateness(a.added)) * this.sortDir;
 			}
-			if (Consolidator.pairings.includes(this.sortBy)){
+			 else if (Consolidator.pairings.includes(this.sortBy)){
 				compareResult = ((b.pairings[this.sortBy] ?? 0.0) - (a.pairings[this.sortBy] ?? 0.0)) * this.sortDir;
 			} else {
 				compareResult = ((b.recommendations[this.sortBy] ?? 0.0) - (a.recommendations[this.sortBy] ?? 0.0)) * this.sortDir;
@@ -152,7 +152,7 @@ export default class Root extends Page{
 		this.preferredLanguage_jp = localStorage.getItem("preferredLanguage_jp") ?? "en";
 		this.preferredLanguage_cn = localStorage.getItem("preferredLanguage_cn") ?? "en";
 		this.preferredLanguage_kr = localStorage.getItem("preferredLanguage_kr") ?? "en";
-		this.sortBy = localStorage.getItem("sortBy") ?? "uniqueness";
+		this.sortBy = localStorage.getItem("sortBy") ?? "date added";
 		let sortDir = localStorage.getItem("sortDir");
 		// up or down
 		this.sortDir = (sortDir == "1" || sortDir == "-1") ? Number(sortDir) : 1;

@@ -410,7 +410,7 @@
 			"cn":"她的山，她的海"
 		},
 		"added": "06-05-2026",
-		"updated": "17-05-2026",
+		"updated": "19-06-2026",
 		"type":"manhua",
 		"creators":["Fu Hua (扶华)"],
 		"artists":["Huo Hezi (火禾子)", "Jing Yuan Studio (鲸元社)", "悠作文化"],
@@ -426,7 +426,7 @@
 		"targets": [],
 		"image":"./assets/covers/her_mountain_cover.v1.webp",
 		"recommendations":{
-			"priestess' reverence": 9.0,
+			"priestess' reverence": 8.8,
 			"uniqueness": 6.0,
 			"intensity": 8.0,
 			"story":8.0,
@@ -481,7 +481,7 @@
 		"infoLinkLabels":["MangaUpdates"],
 		"infoLinks":["https://www.mangaupdates.com/series/0vw676l/gyaru-to-gyaru-no-yuri"],
 		"added": "06-05-2026",
-		"updated": "17-05-2026",
+		"updated": "19-06-2026",
 		"type":"manga",
 		"pairings": {
 			"lesbian" : 10
@@ -494,7 +494,7 @@
 		"image":"./assets/covers/gal_yuri_cover.v1.webp",
 		"recommendations":{
 			"priestess' reverence": 8.5,
-			"uniqueness": 7.5,
+			"uniqueness": 7.0,
 			"intensity": 4.0,
 			"romance": 9.0,
 			"comedy": 7.5,
@@ -995,6 +995,7 @@
 			"kr":"새디스틱 뷰티:외전"
 		},
 		"added": "10-06-2026",
+		"updated":"19-06-2026",
 		"type":"manhwa",
 		"creators":["Woo Yunhee (우연희)"],
 		"artists":["Lee Geumsan (이금산)"],
@@ -1010,7 +1011,7 @@
 		
 		"image":"./assets/covers/sadistic_beauty_cover.v1.webp",
 		"recommendations":{
-			"priestess' reverence": 8.2,
+			"priestess' reverence": 8.3,
 			"uniqueness": 7.0,
 			"intensity": 7.0,
 			"story":  8.0,
@@ -1018,7 +1019,7 @@
 			"kinky": 8.0
 		},
 		"landmines": [], 
-		"tags": ["romance", "comedy", "adult mains", "bdsm", "kink", "roleplay", "sex", "erotica", "university life", "full colour"]
+		"tags": ["romance", "comedy", "adult mains", "bdsm", "kink", "roleplay", "acting", "sex", "erotica", "university life", "full colour"]
 	},
 	{
 		"names":{
@@ -1122,5 +1123,40 @@
 		"landmines": [], 
 		"tags": ["romance", "slice of life","drama", "university life", "adult mains", "love triangle", "acting"]
 		
+	},
+	{
+		"names":{
+			"cn":"余情可待",
+			"romanized-cn":"Yú qíng kě dài",
+			"en":"Long-Awaited Feelings"
+		},
+		"creators":["Ice Free Herbal Jelly (去冰仙草冻)"],
+		"artists":["AirRabbitYan"],
+		"infoLinkLabels":["MangaUpdates"],
+		"infoLinks":["https://www.mangaupdates.com/series/nh7yu6v/my-feelings-can-wait"],
+		"added": "19-06-2026",
+		"type":"manhua",
+		"pairings": {
+			"lesbian" : 10
+		},
+		"short":"reincarnated actress x her actress ex",
+		"description":"beautiful look at being given a second chance to make amends",
+		
+		"length": "long",
+		"status": "completed",
+		"targets": [],
+		"image":"./assets/covers/long_awaited_cover.v1.webp",
+		"recommendations":{
+			"priestess' reverence": 8.6,
+			"uniqueness": 7.5,
+			"intensity": 7.5,
+			"story": 8.0,
+			"romance": 9.5,
+			"wholesome" : 9.0,
+			"art": 8.5
+			
+		},
+		"tags":["romance", "slice of life", "drama", "actress(es)", "exes", "adult mains", "fame", "slow burn", "reincarnation", "time travel", "full colour", "adaptation"],
+		"landmines":["sexual violence"]
 	}
 ]
